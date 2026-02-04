@@ -1,0 +1,222 @@
+[
+  {
+    "id": "57e2674fb7e8697d4b305384",
+    "slug": "whisk",
+    "name": "Varillas"
+  },
+  {
+    "id": "59d49a9319279f8fe60e866f",
+    "slug": "medium-bowl",
+    "name": "Bol mediano"
+  },
+  {
+    "id": "57e2674fb7e8697d4b305385",
+    "slug": "zester",
+    "name": "Rallador fino"
+  },
+  {
+    "id": "57e2674fb7e8697d4b305379",
+    "slug": "peeler",
+    "name": "Pelador"
+  },
+  {
+    "id": "57e2674fb7e8697d4b305375",
+    "slug": "pan",
+    "name": "Sartén"
+  },
+  {
+    "id": "5e3ad24dfcf61c18c30ff522",
+    "slug": "oven-tray-with-baking-paper",
+    "name": "Bandeja de horno con papel de horno"
+  },
+  {
+    "id": "636bd5d9d7cc354a94046877",
+    "slug": "large-frying-pan",
+    "name": "Sartén grande"
+  },
+  {
+    "id": "623c805661a1b9d0034f9066",
+    "slug": "measuring-jug",
+    "name": "Jarra medidora"
+  },
+  {
+    "id": "57e2674fb7e8697d4b3053a0",
+    "slug": "immersion-blender",
+    "name": "Túrmix"
+  },
+  {
+    "id": "5e3ad24efcf61c18c30ff538",
+    "slug": "colander",
+    "name": "Colador"
+  },
+  {
+    "id": "6351278800ba8b8f1c369774",
+    "slug": "lidded-saucepan",
+    "name": "Cazo con tapa"
+  },
+  {
+    "id": "57e2674fb7e8697d4b305372",
+    "slug": "large-bowl",
+    "name": "Bol grande"
+  },
+  {
+    "id": "57e2674fb7e8697d4b30536e",
+    "slug": "grater",
+    "name": "Rallador"
+  },
+  {
+    "id": "57e2674fb7e8697d4b305369",
+    "slug": "bowl",
+    "name": "Bol"
+  },
+  {
+    "id": "57e2674fb7e8697d4b30537c",
+    "slug": "pot",
+    "name": "Olla"
+  },
+  {
+    "id": "57e2674fb7e8697d4b305380",
+    "slug": "small-bowl",
+    "name": "Bol pequeño"
+  },
+  {
+    "id": "59d49a9319279f8fe60e8671",
+    "slug": "medium-pot",
+    "name": "Olla mediana"
+  },
+  {
+    "id": "57e2674fb7e8697d4b305367",
+    "slug": "baking-dish",
+    "name": "Fuente para el horno"
+  },
+  {
+    "id": "59d49a9319279f8fe60e866e",
+    "slug": "medium-pan",
+    "name": "Sartén mediana"
+  },
+  {
+    "id": "57e2674fb7e8697d4b305396",
+    "slug": "spatula",
+    "name": "Espátula"
+  },
+  {
+    "id": "59d49a9419279f8fe60e867a",
+    "slug": "shallow-dish",
+    "name": "Plato hondo"
+  },
+  {
+    "id": "57e2674fb7e8697d4b305376",
+    "slug": "papertowel",
+    "name": "Papel de cocina"
+  },
+  {
+    "id": "57e2674fb7e8697d4b305397",
+    "slug": "non-stick-pan",
+    "name": "Sartén antiadherente"
+  },
+  {
+    "id": "57e2674fb7e8697d4b30536b",
+    "slug": "lid",
+    "name": "Tapa"
+  },
+  {
+    "id": "57e2674fb7e8697d4b305393",
+    "slug": "potato-masher",
+    "name": "Pasapurés"
+  },
+  {
+    "id": "57e2674fb7e8697d4b30538d",
+    "slug": "saladbowl",
+    "name": "Ensaladera"
+  },
+  {
+    "id": "57e2674fb7e8697d4b30538b",
+    "slug": "pan-lid",
+    "name": "Sartén con tapa"
+  },
+  {
+    "id": "57e2674fb7e8697d4b30539c",
+    "slug": "largepot",
+    "name": "Olla grande"
+  },
+  {
+    "id": "57e2674fb7e8697d4b30536a",
+    "slug": "plasticwrap",
+    "name": "Papel film"
+  },
+  {
+    "id": "57e2674fb7e8697d4b30538e",
+    "slug": "mixingbowl",
+    "name": "Bol para mezclar"
+  },
+  {
+    "id": "57e2674fb7e8697d4b30538c",
+    "slug": "saucepan",
+    "name": "Cazo"
+  },
+  {
+    "id": "57e2674fb7e8697d4b305373",
+    "slug": "largepan",
+    "name": "Sartén grande"
+  },
+  {
+    "id": "5c0a9a5edbdd9fc57e863cd6",
+    "slug": "box-greater",
+    "name": "Rallador"
+  },
+  {
+    "id": "5e3ad24dfcf61c18c30ff525",
+    "slug": "soup-bowl",
+    "name": "Plato hondo"
+  },
+  {
+    "id": "59d49a9319279f8fe60e8670",
+    "slug": "silicone-brush",
+    "name": "Pincel de silicona"
+  },
+  {
+    "id": "57e2674fb7e8697d4b30537b",
+    "slug": "plate",
+    "name": "Plato"
+  },
+  {
+    "id": "623c805661a1b9d0034f9064",
+    "slug": "largeplate",
+    "name": "Plato plano"
+  },
+  {
+    "id": "623c805661a1b9d0034f9065",
+    "slug": "largesaucepan",
+    "name": "Cazo grande"
+  },
+  {
+    "id": "57e2674fb7e8697d4b305368",
+    "slug": "bakingsheet",
+    "name": "Bandeja de horno"
+  },
+  {
+    "id": "57e2674fb7e8697d4b30539f",
+    "slug": "soupbowl",
+    "name": "Plato hondo"
+  },
+  {
+    "id": "6351279f00ba8b8f1c377aaa",
+    "slug": "cake-tin-25cm-length",
+    "name": "Molde de pastel (largo 25 cm)"
+  },
+  {
+    "id": "57e2674fb7e8697d4b305394",
+    "slug": "brush",
+    "name": "Pincel"
+  },
+  {
+    "id": "64ba7d3d9d1f1314f17e6c06",
+    "slug": "pot-with-lid",
+    "name": "Olla con Tapa"
+  },
+  {
+    "id": "57e2674fb7e8697d4b305371",
+    "slug": "ladle",
+    "name": "Cucharón"
+  }
+]

@@ -1,0 +1,614 @@
+[
+  {
+    "recipe_id": "68fb936e29be8924040c2e43",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b8"
+  },
+  {
+    "recipe_id": "68fb936f29be8924040c2e4a",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b8"
+  },
+  {
+    "recipe_id": "68fb9370493c3115e3722678",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b3"
+  },
+  {
+    "recipe_id": "69245ef101ae5540a927f9ac",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b2"
+  },
+  {
+    "recipe_id": "68fb937129be8924040c2e5c",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b2"
+  },
+  {
+    "recipe_id": "68fb937287218af402500f17",
+    "cuisine_id": "57ebbc17b7e8697d4b3053a6"
+  },
+  {
+    "recipe_id": "68fb937a87218af402500f3c",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b2"
+  },
+  {
+    "recipe_id": "68fb937329be8924040c2e6e",
+    "cuisine_id": "57ebbc17b7e8697d4b3053bf"
+  },
+  {
+    "recipe_id": "68fb937429be8924040c2e70",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b8"
+  },
+  {
+    "recipe_id": "68fb937487218af402500f20",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b2"
+  },
+  {
+    "recipe_id": "68fb937e87218af402500f53",
+    "cuisine_id": "57ebbc17b7e8697d4b3053a6"
+  },
+  {
+    "recipe_id": "68fb937529be8924040c2e7e",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b2"
+  },
+  {
+    "recipe_id": "68ff4a0b29be8924040c5ecd",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b2"
+  },
+  {
+    "recipe_id": "68fb937787218af402500f2b",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b2"
+  },
+  {
+    "recipe_id": "68fb937f87218af402500f5c",
+    "cuisine_id": "57ebbc17b7e8697d4b3053a8"
+  },
+  {
+    "recipe_id": "68fb9378493c3115e372269a",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b3"
+  },
+  {
+    "recipe_id": "68fb9379493c3115e37226a3",
+    "cuisine_id": "57ebbc17b7e8697d4b3053ac"
+  },
+  {
+    "recipe_id": "68fb937a493c3115e37226ac",
+    "cuisine_id": "67ebf900b2ffe612cd83e51b"
+  },
+  {
+    "recipe_id": "68fb937a29be8924040c2e87",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b2"
+  },
+  {
+    "recipe_id": "68fb937b493c3115e37226b3",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b2"
+  },
+  {
+    "recipe_id": "68fb937c87218af402500f45",
+    "cuisine_id": "57ebbc17b7e8697d4b3053a6"
+  },
+  {
+    "recipe_id": "68fb937c29be8924040c2e8e",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b8"
+  },
+  {
+    "recipe_id": "68fb937f87218af402500f65",
+    "cuisine_id": "69009956134b3822590df894"
+  },
+  {
+    "recipe_id": "68fb9380493c3115e37226bc",
+    "cuisine_id": "57ebbc17b7e8697d4b3053a5"
+  },
+  {
+    "recipe_id": "68fb9381493c3115e37226c3",
+    "cuisine_id": "57ebbc17b7e8697d4b3053ac"
+  },
+  {
+    "recipe_id": "68fb938287218af402500f6e",
+    "cuisine_id": "57ebbc17b7e8697d4b3053bf"
+  },
+  {
+    "recipe_id": "68fb9383493c3115e37226ca",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b2"
+  },
+  {
+    "recipe_id": "68fb938329be8924040c2e9c",
+    "cuisine_id": "57ebbc17b7e8697d4b3053ac"
+  },
+  {
+    "recipe_id": "68fb938429be8924040c2ea4",
+    "cuisine_id": "5e0a5a4fdd368f2cf134de37"
+  },
+  {
+    "recipe_id": "68fb9385493c3115e37226cc",
+    "cuisine_id": "57ebbc17b7e8697d4b3053ad"
+  },
+  {
+    "recipe_id": "68fb938687218af402500f78",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b2"
+  },
+  {
+    "recipe_id": "68fb938887218af402500f7f",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b3"
+  },
+  {
+    "recipe_id": "691f34e471644dd339c44e28",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b3"
+  },
+  {
+    "recipe_id": "691f34e5927c3f76100b1e7e",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b2"
+  },
+  {
+    "recipe_id": "691f34e51d103273ffd5a807",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b3"
+  },
+  {
+    "recipe_id": "691f34e71d103273ffd5a80e",
+    "cuisine_id": "57ebbc17b7e8697d4b3053bf"
+  },
+  {
+    "recipe_id": "691f34ec1d103273ffd5a81c",
+    "cuisine_id": "57ebbc17b7e8697d4b3053a6"
+  },
+  {
+    "recipe_id": "691f34e7927c3f76100b1e8c",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b8"
+  },
+  {
+    "recipe_id": "693fcafe353e00bd89ba1aab",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b2"
+  },
+  {
+    "recipe_id": "691f34e8927c3f76100b1e95",
+    "cuisine_id": "57ebbc17b7e8697d4b3053bf"
+  },
+  {
+    "recipe_id": "691f34e91d103273ffd5a815",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b2"
+  },
+  {
+    "recipe_id": "691f34e971644dd339c44e38",
+    "cuisine_id": "57ebbc17b7e8697d4b3053ad"
+  },
+  {
+    "recipe_id": "69402f0d353e00bd89ba293f",
+    "cuisine_id": "57ebbc17b7e8697d4b3053ba"
+  },
+  {
+    "recipe_id": "691f34ea927c3f76100b1ea7",
+    "cuisine_id": "57ebbc17b7e8697d4b3053bf"
+  },
+  {
+    "recipe_id": "691f34ea71644dd339c44e3f",
+    "cuisine_id": "57ebbc17b7e8697d4b3053ac"
+  },
+  {
+    "recipe_id": "691f34eb71644dd339c44e47",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b2"
+  },
+  {
+    "recipe_id": "691f34f371644dd339c44e7a",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b4"
+  },
+  {
+    "recipe_id": "691f34ed1d103273ffd5a825",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b2"
+  },
+  {
+    "recipe_id": "691f34ee1d103273ffd5a82e",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b4"
+  },
+  {
+    "recipe_id": "691f34ee71644dd339c44e4e",
+    "cuisine_id": "57ebbc17b7e8697d4b3053a6"
+  },
+  {
+    "recipe_id": "691f34f071644dd339c44e63",
+    "cuisine_id": "57ebbc17b7e8697d4b3053ac"
+  },
+  {
+    "recipe_id": "691f34f071644dd339c44e6a",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b2"
+  },
+  {
+    "recipe_id": "691f34f1927c3f76100b1ebb",
+    "cuisine_id": "57ebbc17b7e8697d4b3053aa"
+  },
+  {
+    "recipe_id": "691f34f21d103273ffd5a837",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b8"
+  },
+  {
+    "recipe_id": "691f34f471644dd339c44e83",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b2"
+  },
+  {
+    "recipe_id": "6937fc7fc92924105ec9e9d2",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b2"
+  },
+  {
+    "recipe_id": "691f34f4927c3f76100b1edf",
+    "cuisine_id": "57ebbc17b7e8697d4b3053ac"
+  },
+  {
+    "recipe_id": "691f34f5927c3f76100b1ee6",
+    "cuisine_id": "57ebbc17b7e8697d4b3053bf"
+  },
+  {
+    "recipe_id": "691f34f61d103273ffd5a84c",
+    "cuisine_id": "57ebbc17b7e8697d4b3053ac"
+  },
+  {
+    "recipe_id": "691f34f7927c3f76100b1eef",
+    "cuisine_id": "623d9cb65bdfb809438c0dc8"
+  },
+  {
+    "recipe_id": "691f34f71d103273ffd5a855",
+    "cuisine_id": "57ebbc17b7e8697d4b3053bd"
+  },
+  {
+    "recipe_id": "691f34f871644dd339c44e8c",
+    "cuisine_id": "57ebbc17b7e8697d4b3053bf"
+  },
+  {
+    "recipe_id": "691f34f81d103273ffd5a857",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b2"
+  },
+  {
+    "recipe_id": "691f34f91d103273ffd5a860",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b2"
+  },
+  {
+    "recipe_id": "691f3507927c3f76100b1f5d",
+    "cuisine_id": "57ebbc17b7e8697d4b3053a5"
+  },
+  {
+    "recipe_id": "691f34f9927c3f76100b1ef4",
+    "cuisine_id": "57ebbc17b7e8697d4b3053ac"
+  },
+  {
+    "recipe_id": "691f34fa1d103273ffd5a868",
+    "cuisine_id": "57ebbc17b7e8697d4b3053bf"
+  },
+  {
+    "recipe_id": "691f34fa927c3f76100b1f02",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b2"
+  },
+  {
+    "recipe_id": "691f34fb927c3f76100b1f0b",
+    "cuisine_id": "67ebf900b2ffe612cd83e51a"
+  },
+  {
+    "recipe_id": "691f34fb927c3f76100b1f0d",
+    "cuisine_id": "57ebbc17b7e8697d4b3053aa"
+  },
+  {
+    "recipe_id": "691f35011d103273ffd5a890",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b4"
+  },
+  {
+    "recipe_id": "691f34fc927c3f76100b1f16",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b2"
+  },
+  {
+    "recipe_id": "691f34fd71644dd339c44e95",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b4"
+  },
+  {
+    "recipe_id": "691f34fe927c3f76100b1f26",
+    "cuisine_id": "57ebbc17b7e8697d4b3053ac"
+  },
+  {
+    "recipe_id": "691f350371644dd339c44eb3",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b4"
+  },
+  {
+    "recipe_id": "691f34ff927c3f76100b1f2f",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b4"
+  },
+  {
+    "recipe_id": "691f34ff927c3f76100b1f38",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b8"
+  },
+  {
+    "recipe_id": "691f34ff1d103273ffd5a881",
+    "cuisine_id": "57ebbc17b7e8697d4b3053a5"
+  },
+  {
+    "recipe_id": "691f350371644dd339c44eb5",
+    "cuisine_id": "57ebbc17b7e8697d4b3053a5"
+  },
+  {
+    "recipe_id": "691f34ff1d103273ffd5a883",
+    "cuisine_id": "57ebbc17b7e8697d4b3053a5"
+  },
+  {
+    "recipe_id": "691f35001d103273ffd5a88a",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b2"
+  },
+  {
+    "recipe_id": "691f350071644dd339c44e9e",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b2"
+  },
+  {
+    "recipe_id": "691f350171644dd339c44ea5",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b2"
+  },
+  {
+    "recipe_id": "691f3502927c3f76100b1f40",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b2"
+  },
+  {
+    "recipe_id": "691f3503927c3f76100b1f49",
+    "cuisine_id": "57ebbc17b7e8697d4b3053af"
+  },
+  {
+    "recipe_id": "691f35031d103273ffd5a899",
+    "cuisine_id": "57ebbc17b7e8697d4b3053ac"
+  },
+  {
+    "recipe_id": "691f35081d103273ffd5a8b4",
+    "cuisine_id": "623d9cb65bdfb809438c0dc8"
+  },
+  {
+    "recipe_id": "6937fc99dce6a2dc39a75c19",
+    "cuisine_id": "57ebbc17b7e8697d4b3053c1"
+  },
+  {
+    "recipe_id": "691f350571644dd339c44ec7",
+    "cuisine_id": "57ebbc17b7e8697d4b3053ac"
+  },
+  {
+    "recipe_id": "691f35091d103273ffd5a8b6",
+    "cuisine_id": "57ebbc17b7e8697d4b3053bf"
+  },
+  {
+    "recipe_id": "691f3505927c3f76100b1f52",
+    "cuisine_id": "57ebbc17b7e8697d4b3053ac"
+  },
+  {
+    "recipe_id": "691f3505927c3f76100b1f54",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b4"
+  },
+  {
+    "recipe_id": "691f350a71644dd339c44ed7",
+    "cuisine_id": "57ebbc17b7e8697d4b3053ad"
+  },
+  {
+    "recipe_id": "691f35061d103273ffd5a8a2",
+    "cuisine_id": "57ebbc17b7e8697d4b3053a8"
+  },
+  {
+    "recipe_id": "691f350671644dd339c44ece",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b8"
+  },
+  {
+    "recipe_id": "691f350a1d103273ffd5a8bf",
+    "cuisine_id": "67ebf900b2ffe612cd83e51e"
+  },
+  {
+    "recipe_id": "691f351471644dd339c44f34",
+    "cuisine_id": "57ebbc17b7e8697d4b3053ad"
+  },
+  {
+    "recipe_id": "691f350b71644dd339c44ede",
+    "cuisine_id": "57ebbc17b7e8697d4b3053bf"
+  },
+  {
+    "recipe_id": "691f350c71644dd339c44ee7",
+    "cuisine_id": "623d9cb65bdfb809438c0dc3"
+  },
+  {
+    "recipe_id": "691f350c71644dd339c44ef0",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b2"
+  },
+  {
+    "recipe_id": "691ca0951d103273ffd568f3",
+    "cuisine_id": "57ebbc17b7e8697d4b3053aa"
+  },
+  {
+    "recipe_id": "693fcb131101204cae751efa",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b4"
+  },
+  {
+    "recipe_id": "691f350d71644dd339c44ef9",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b2"
+  },
+  {
+    "recipe_id": "691f35161d103273ffd5a8e3",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b3"
+  },
+  {
+    "recipe_id": "691f350d927c3f76100b1f7f",
+    "cuisine_id": "57ebbc17b7e8697d4b3053ad"
+  },
+  {
+    "recipe_id": "691f351071644dd339c44f1b",
+    "cuisine_id": "57ebbc17b7e8697d4b3053a6"
+  },
+  {
+    "recipe_id": "691f350e71644dd339c44f0b",
+    "cuisine_id": "67ebf900b2ffe612cd83e51a"
+  },
+  {
+    "recipe_id": "691f35241d103273ffd5a930",
+    "cuisine_id": "57ebbc17b7e8697d4b3053a9"
+  },
+  {
+    "recipe_id": "691f350e927c3f76100b1f88",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b4"
+  },
+  {
+    "recipe_id": "691f351171644dd339c44f29",
+    "cuisine_id": "57ebbc17b7e8697d4b3053a5"
+  },
+  {
+    "recipe_id": "695fe0cb30d8e7c0c7668464",
+    "cuisine_id": "57ebbc17b7e8697d4b3053ad"
+  },
+  {
+    "recipe_id": "691f351671644dd339c44f44",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b2"
+  },
+  {
+    "recipe_id": "691f34e21d103273ffd5a802",
+    "cuisine_id": "57ebbc17b7e8697d4b3053ac"
+  },
+  {
+    "recipe_id": "691f351771644dd339c44f4b",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b2"
+  },
+  {
+    "recipe_id": "691f350f927c3f76100b1f91",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b3"
+  },
+  {
+    "recipe_id": "691f351071644dd339c44f22",
+    "cuisine_id": "57ebbc17b7e8697d4b3053ac"
+  },
+  {
+    "recipe_id": "691ca09fbc8059f9ea10a5c2",
+    "cuisine_id": "67ebf900b2ffe612cd83e51b"
+  },
+  {
+    "recipe_id": "691f3517927c3f76100b1faa",
+    "cuisine_id": "69009956134b3822590df8a7"
+  },
+  {
+    "recipe_id": "691f3511927c3f76100b1f98",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b2"
+  },
+  {
+    "recipe_id": "691f35121d103273ffd5a8ca",
+    "cuisine_id": "57ebbc17b7e8697d4b3053ac"
+  },
+  {
+    "recipe_id": "691f3518927c3f76100b1fac",
+    "cuisine_id": "57ebbc17b7e8697d4b3053bf"
+  },
+  {
+    "recipe_id": "691f3512927c3f76100b1fa1",
+    "cuisine_id": "57ebbc17b7e8697d4b3053ac"
+  },
+  {
+    "recipe_id": "691f35131d103273ffd5a8d1",
+    "cuisine_id": "57ebbc17b7e8697d4b3053ac"
+  },
+  {
+    "recipe_id": "691f351a927c3f76100b1fbe",
+    "cuisine_id": "57ebbc17b7e8697d4b3053a8"
+  },
+  {
+    "recipe_id": "691f351971644dd339c44f52",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b8"
+  },
+  {
+    "recipe_id": "691f351371644dd339c44f32",
+    "cuisine_id": "67ebf900b2ffe612cd83e523"
+  },
+  {
+    "recipe_id": "695fe13c30d8e7c0c766847c",
+    "cuisine_id": "67ebf900b2ffe612cd83e51a"
+  },
+  {
+    "recipe_id": "691f351a927c3f76100b1fc1",
+    "cuisine_id": "5d5b0360a1723700092bcda0"
+  },
+  {
+    "recipe_id": "691f351b71644dd339c44f62",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b8"
+  },
+  {
+    "recipe_id": "691f351c1d103273ffd5a8fc",
+    "cuisine_id": "57ebbc17b7e8697d4b3053bf"
+  },
+  {
+    "recipe_id": "691f351c927c3f76100b1fd3",
+    "cuisine_id": "57ebbc17b7e8697d4b3053aa"
+  },
+  {
+    "recipe_id": "691f351e71644dd339c44f74",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b2"
+  },
+  {
+    "recipe_id": "691f352971644dd339c44fa8",
+    "cuisine_id": "57ebbc17b7e8697d4b3053aa"
+  },
+  {
+    "recipe_id": "691f352271644dd339c44f7e",
+    "cuisine_id": "69009956134b3822590df8a7"
+  },
+  {
+    "recipe_id": "691f351e927c3f76100b1fdc",
+    "cuisine_id": "57ebbc17b7e8697d4b3053a8"
+  },
+  {
+    "recipe_id": "691f351f927c3f76100b1fe5",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b2"
+  },
+  {
+    "recipe_id": "691f352a71644dd339c44fb6",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b8"
+  },
+  {
+    "recipe_id": "691f352c71644dd339c44fc5",
+    "cuisine_id": "57ebbc17b7e8697d4b3053a5"
+  },
+  {
+    "recipe_id": "691f35201d103273ffd5a91e",
+    "cuisine_id": "57ebbc17b7e8697d4b3053ac"
+  },
+  {
+    "recipe_id": "691f3520927c3f76100b1ff7",
+    "cuisine_id": "57ebbc17b7e8697d4b3053ad"
+  },
+  {
+    "recipe_id": "691f352b71644dd339c44fbd",
+    "cuisine_id": "57ebbc17b7e8697d4b3053af"
+  },
+  {
+    "recipe_id": "691f352571644dd339c44f92",
+    "cuisine_id": "57ebbc17b7e8697d4b3053a5"
+  },
+  {
+    "recipe_id": "691f35211d103273ffd5a927",
+    "cuisine_id": "57ebbc17b7e8697d4b3053aa"
+  },
+  {
+    "recipe_id": "691f3521927c3f76100b1ffe",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b8"
+  },
+  {
+    "recipe_id": "691f352b927c3f76100b202b",
+    "cuisine_id": "67ebf900b2ffe612cd83e51b"
+  },
+  {
+    "recipe_id": "691f35261d103273ffd5a932",
+    "cuisine_id": "57ebbc17b7e8697d4b3053ac"
+  },
+  {
+    "recipe_id": "691f352671644dd339c44f9d",
+    "cuisine_id": "57ebbc17b7e8697d4b3053bf"
+  },
+  {
+    "recipe_id": "691f352d1d103273ffd5a95e",
+    "cuisine_id": "57ebbc17b7e8697d4b3053a8"
+  },
+  {
+    "recipe_id": "691f3527927c3f76100b201b",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b3"
+  },
+  {
+    "recipe_id": "691f3528927c3f76100b2022",
+    "cuisine_id": "57ebbc17b7e8697d4b3053ac"
+  },
+  {
+    "recipe_id": "691f352f1d103273ffd5a96e",
+    "cuisine_id": "623d9cb65bdfb809438c0dbf"
+  },
+  {
+    "recipe_id": "691f352871644dd339c44fa6",
+    "cuisine_id": "57ebbc17b7e8697d4b3053b2"
+  },
+  {
+    "recipe_id": "695fe122b2a0b177eea11b5e",
+    "cuisine_id": "57ebbc17b7e8697d4b3053a9"
+  }
+]

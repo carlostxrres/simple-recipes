@@ -1,0 +1,152 @@
+[
+  {
+    "id": "64db377d7e32e9eeac7125f5",
+    "slug": "dinner-lunch",
+    "name": "Lunch/Dinner"
+  },
+  {
+    "id": "659d6bc4849449eb80c0050c",
+    "slug": "internal-balanced",
+    "name": "Balanced"
+  },
+  {
+    "id": "5ed7c2835744cb08f60b5d8d",
+    "slug": "quick-prep",
+    "name": "Preparación en 15'"
+  },
+  {
+    "id": "594be44bc6243b76f8440332",
+    "slug": "quick",
+    "name": "Rápido"
+  },
+  {
+    "id": "596df0032c3e08133541c5d3",
+    "slug": "one-pan",
+    "name": "Una sartén"
+  },
+  {
+    "id": "619f65dae9aadf39547f9f65",
+    "slug": "under-650-calories",
+    "name": "Bajo en calorías"
+  },
+  {
+    "id": "57ea6f333a58fe2e422681e0",
+    "slug": "lunch",
+    "name": "Lunch"
+  },
+  {
+    "id": "5efb7686bd5c0d38b0058739",
+    "slug": "family-friendly",
+    "name": "Familia"
+  },
+  {
+    "id": "64809de2d26957317c9b6da7",
+    "slug": "dinners",
+    "name": "Dinner"
+  },
+  {
+    "id": "57d13370b7e8697d4b305317",
+    "slug": "veggie",
+    "name": "Vegetariano"
+  },
+  {
+    "id": "57d13370b7e8697d4b30531c",
+    "slug": "egg-free",
+    "name": "Huevos no incluidos"
+  },
+  {
+    "id": "57d13370b7e8697d4b305316",
+    "slug": "low-carb",
+    "name": "<50g carbohidratos"
+  },
+  {
+    "id": "57d13370b7e8697d4b305321",
+    "slug": "high-protein",
+    "name": "Proteico"
+  },
+  {
+    "id": "61bcc274f0aa2a6e79272a5a",
+    "slug": "extra-vegetables",
+    "name": ">250g de vegetales"
+  },
+  {
+    "id": "64b93188e10e1cea61958f7f",
+    "slug": "premium",
+    "name": "premium"
+  },
+  {
+    "id": "66f543f5acea206f785d315e",
+    "slug": "special",
+    "name": "Especialidades"
+  },
+  {
+    "id": "5f195acee60c1276593d855b",
+    "slug": "new",
+    "name": "Novedad"
+  },
+  {
+    "id": "62163c70143a35226e03d85e",
+    "slug": "super-quick",
+    "name": "Exprés"
+  },
+  {
+    "id": "5c0a7148e3f3397e2b672602",
+    "slug": "under-550-calories",
+    "name": "Bajo en calorías"
+  },
+  {
+    "id": "57d13370b7e8697d4b305312",
+    "slug": "one-pot",
+    "name": "Una olla"
+  },
+  {
+    "id": "672238b3b9eda7328f4d5c45",
+    "slug": "oven-only",
+    "name": "Solo horno"
+  },
+  {
+    "id": "6566f7d63bae852974651021",
+    "slug": "prepped-in-10",
+    "name": "Preparación en 10'"
+  },
+  {
+    "id": "57d13370b7e8697d4b305319",
+    "slug": "spicy",
+    "name": "Picante"
+  },
+  {
+    "id": "57d13370b7e8697d4b305311",
+    "slug": "vegan",
+    "name": "Vegano"
+  },
+  {
+    "id": "62388d0e819bac74ed3067ef",
+    "slug": "pescatarian",
+    "name": "Pescetariano"
+  },
+  {
+    "id": "6040bf55eda37d5a22154e52",
+    "slug": "optional-spice",
+    "name": "Picante opcional"
+  },
+  {
+    "id": "634f52cb7232b8c6440df4ef",
+    "slug": "street-food",
+    "name": "Street food"
+  },
+  {
+    "id": "66f6a1111d433193f0669d4d",
+    "slug": "regional-product",
+    "name": "Regional"
+  },
+  {
+    "id": "67efb4b9fb316d4edf08966f",
+    "slug": "cuisine-spotlight",
+    "name": "cuisine-spotlight"
+  },
+  {
+    "id": "64ac09afb242d927b909b45b",
+    "slug": "saint-valentine",
+    "name": "San Valentín"
+  }
+]

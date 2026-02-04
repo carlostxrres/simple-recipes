@@ -1,0 +1,11 @@
+Lighting setup: The lighting is bright and diffuse, coming directly from above, creating minimal shadows. The intensity is moderate to high, ensuring even illumination without harsh highlights. The color temperature is slightly cool, around 5500K, maintaining the natural color of the subjects.
+
+Background: The background is a pure, seamless white with no texture, providing a clean and consistent backdrop that isolates the subject effectively. There is no visible gradient, maintaining uniformity across the images.
+
+Camera settings feel: The images display a narrow depth of field, with the entire subject in sharp focus while the surroundings remain unobtrusive. The perspective is directly overhead, capturing the subject in a flat, uniform manner without distortion.
+
+Subject positioning and composition: Subjects are centrally positioned with ample space around them to emphasize their shape and color. The composition is simple and symmetrical, focusing solely on one subject per image to maintain clarity and emphasis.
+
+Overall mood and aesthetic: The mood is clinical and precise, with an emphasis on showcasing the subject’s natural textures and colors. The aesthetic is minimalist, aiming for a clear and analytical presentation of the food items.
+
+Post-processing characteristics: Post-processing is subtle, enhancing the subject’s natural tones and textures without altering their appearance. Shadows are minimized, and contrast is subtly increased to make the subjects pop against the white background. Edges are sharp, and the overall image is crisp, emphasizing detail.

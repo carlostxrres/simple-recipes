@@ -1,0 +1,137 @@
+[
+  {
+    "id": "57ebbc17b7e8697d4b3053b8",
+    "slug": "mediterranea",
+    "name": "Mediterránea"
+  },
+  {
+    "id": "57ebbc17b7e8697d4b3053b3",
+    "slug": "tailandesa",
+    "name": "Tailandesa"
+  },
+  {
+    "id": "57ebbc17b7e8697d4b3053b2",
+    "slug": "espanola",
+    "name": "Española"
+  },
+  {
+    "id": "57ebbc17b7e8697d4b3053a6",
+    "slug": "china",
+    "name": "China"
+  },
+  {
+    "id": "57ebbc17b7e8697d4b3053bf",
+    "slug": "europea",
+    "name": "Europea"
+  },
+  {
+    "id": "57ebbc17b7e8697d4b3053a8",
+    "slug": "francesa",
+    "name": "Francesa"
+  },
+  {
+    "id": "57ebbc17b7e8697d4b3053ac",
+    "slug": "italiana",
+    "name": "Italiana"
+  },
+  {
+    "id": "67ebf900b2ffe612cd83e51b",
+    "slug": "middle-eastern",
+    "name": "Middle Eastern"
+  },
+  {
+    "id": "69009956134b3822590df894",
+    "slug": "persian",
+    "name": "Persian"
+  },
+  {
+    "id": "57ebbc17b7e8697d4b3053a5",
+    "slug": "asiatica",
+    "name": "Asiática"
+  },
+  {
+    "id": "5e0a5a4fdd368f2cf134de37",
+    "slug": "filipino",
+    "name": "Filipino"
+  },
+  {
+    "id": "57ebbc17b7e8697d4b3053ad",
+    "slug": "japonesa",
+    "name": "Japonesa"
+  },
+  {
+    "id": "57ebbc17b7e8697d4b3053ba",
+    "slug": "vietnamese",
+    "name": "Vietnamese"
+  },
+  {
+    "id": "57ebbc17b7e8697d4b3053b4",
+    "slug": "fusion",
+    "name": "Fusión"
+  },
+  {
+    "id": "57ebbc17b7e8697d4b3053aa",
+    "slug": "india",
+    "name": "India"
+  },
+  {
+    "id": "623d9cb65bdfb809438c0dc8",
+    "slug": "svensk",
+    "name": "Svensk"
+  },
+  {
+    "id": "57ebbc17b7e8697d4b3053bd",
+    "slug": "british",
+    "name": "British"
+  },
+  {
+    "id": "67ebf900b2ffe612cd83e51a",
+    "slug": "american",
+    "name": "American"
+  },
+  {
+    "id": "57ebbc17b7e8697d4b3053af",
+    "slug": "mexicana",
+    "name": "Mexicana"
+  },
+  {
+    "id": "57ebbc17b7e8697d4b3053c1",
+    "slug": "nordic",
+    "name": "Nordic"
+  },
+  {
+    "id": "67ebf900b2ffe612cd83e51e",
+    "slug": "austrian",
+    "name": "Austrian"
+  },
+  {
+    "id": "623d9cb65bdfb809438c0dc3",
+    "slug": "peruvian",
+    "name": "Peruvian"
+  },
+  {
+    "id": "57ebbc17b7e8697d4b3053a9",
+    "slug": "griega",
+    "name": "Griega"
+  },
+  {
+    "id": "69009956134b3822590df8a7",
+    "slug": "latin-american",
+    "name": "Latin American"
+  },
+  {
+    "id": "67ebf900b2ffe612cd83e523",
+    "slug": "georgian",
+    "name": "Georgian"
+  },
+  {
+    "id": "5d5b0360a1723700092bcda0",
+    "slug": "hawaiian",
+    "name": "Hawaiian"
+  },
+  {
+    "id": "623d9cb65bdfb809438c0dbf",
+    "slug": "ungersk",
+    "name": "Ungersk"
+  }
+]

@@ -1,0 +1,202 @@
+[
+  {
+    "id": "57962a07b7e8697d4b3052fa",
+    "slug": "milk",
+    "name": "Leche"
+  },
+  {
+    "id": "57962a07b7e8697d4b3052fd",
+    "slug": "mustard",
+    "name": "Mostaza"
+  },
+  {
+    "id": "57962a07b7e8697d4b3052f8",
+    "slug": "peanuts",
+    "name": "Cacahuetes"
+  },
+  {
+    "id": "57962a07b7e8697d4b3052f3",
+    "slug": "maycontaintracesofallergens",
+    "name": "Puede contener trazas de alérgenos"
+  },
+  {
+    "id": "62cc417a2f15d58ec3559423",
+    "slug": "traces-of-gluten",
+    "name": "Gluten"
+  },
+  {
+    "id": "57962a07b7e8697d4b305302",
+    "slug": "traces-of-nuts",
+    "name": "Frutos secos"
+  },
+  {
+    "id": "5acf972fae08b54d333ac322",
+    "slug": "traces-of-sesame",
+    "name": "Sésamo"
+  },
+  {
+    "id": "57962a07b7e8697d4b3052f5",
+    "slug": "gluten",
+    "name": "Gluten"
+  },
+  {
+    "id": "60368d89cdbdf450236ad8cd",
+    "slug": "wheat",
+    "name": "Trigo"
+  },
+  {
+    "id": "5de91d27f4c17e42c17aef94",
+    "slug": "traces-of-mustard",
+    "name": "Mostaza"
+  },
+  {
+    "id": "5b0532aaae08b52eb9420552",
+    "slug": "traces-of-soya",
+    "name": "Soja"
+  },
+  {
+    "id": "57962a07b7e8697d4b3052fe",
+    "slug": "sesame",
+    "name": "Sésamo"
+  },
+  {
+    "id": "57962a07b7e8697d4b3052ff",
+    "slug": "sulphites",
+    "name": "Sulfitos"
+  },
+  {
+    "id": "57962a07b7e8697d4b3052f9",
+    "slug": "soya",
+    "name": "Soja"
+  },
+  {
+    "id": "5a9614ab30006c2c026cf562",
+    "slug": "traces-of-peanuts",
+    "name": "Cacahuetes"
+  },
+  {
+    "id": "57962a07b7e8697d4b3052f7",
+    "slug": "fish",
+    "name": "Pescado"
+  },
+  {
+    "id": "5acf97a2ae08b54dad34eb82",
+    "slug": "traces-of-sulphites",
+    "name": "Sulfitos"
+  },
+  {
+    "id": "5acf967d30006c4cbc61d152",
+    "slug": "traces-of-crustaceans",
+    "name": "Crustáceos"
+  },
+  {
+    "id": "57962a07b7e8697d4b305303",
+    "slug": "traces-of-egg",
+    "name": "Huevo"
+  },
+  {
+    "id": "5acf97b7ae08b54d88061162",
+    "slug": "traces-of-milk",
+    "name": "Leche"
+  },
+  {
+    "id": "5fdcacf19520e811397b51c9",
+    "slug": "traces-of-molluscs",
+    "name": "Moluscos"
+  },
+  {
+    "id": "57962a07b7e8697d4b3052fc",
+    "slug": "celery",
+    "name": "Apio"
+  },
+  {
+    "id": "5de91db7c7d1a818111194b2",
+    "slug": "traces-of-celery",
+    "name": "Apio"
+  },
+  {
+    "id": "57962a07b7e8697d4b3052fb",
+    "slug": "nuts",
+    "name": "Frutos secos"
+  },
+  {
+    "id": "5fdcaafebae25f267232a16f",
+    "slug": "cashew_nuts",
+    "name": "Anacardos"
+  },
+  {
+    "id": "63c00da4c4bb723852bbf3ef",
+    "slug": "traces-of-pistachio",
+    "name": "Pistachos"
+  },
+  {
+    "id": "62cc417a2f15d58ec3559424",
+    "slug": "traces-of-hazelnuts",
+    "name": "Avellanas"
+  },
+  {
+    "id": "63c00da40c675b6b333afd9e",
+    "slug": "traces-of-macadamia",
+    "name": "Nueces de Macadamia"
+  },
+  {
+    "id": "63c00da40c675b6b333afdb4",
+    "slug": "traces-of-pecan_nuts",
+    "name": "Nueces de pecán"
+  },
+  {
+    "id": "62038a7c614fc10b645e85b9",
+    "slug": "traces-of-almonds",
+    "name": "Almendras"
+  },
+  {
+    "id": "62038b0335f8ee1bcc1ce196",
+    "slug": "traces-of-walnuts",
+    "name": "Nueces"
+  },
+  {
+    "id": "63c00da40c675b6b333afdb0",
+    "slug": "traces-of-brazil_nuts",
+    "name": "Nueces de Brasil"
+  },
+  {
+    "id": "57962a07b7e8697d4b3052f6",
+    "slug": "egg",
+    "name": "Huevo"
+  },
+  {
+    "id": "57962a07b7e8697d4b3052f4",
+    "slug": "crustaceans",
+    "name": "Crustáceos"
+  },
+  {
+    "id": "630d1b7dcee9d269c9017102",
+    "slug": "hazelnuts",
+    "name": "Avellanas"
+  },
+  {
+    "id": "5acdaebaae08b54a70609b02",
+    "slug": "traces-of-lupin",
+    "name": "Lupino"
+  },
+  {
+    "id": "5acf974c30006c4d667f88f1",
+    "slug": "traces-of-fish",
+    "name": "Pescado"
+  },
+  {
+    "id": "62cec8ddeaf1cc376f06a53b",
+    "slug": "walnuts",
+    "name": "Nueces"
+  },
+  {
+    "id": "57962a07b7e8697d4b305301",
+    "slug": "molluscs",
+    "name": "Moluscos"
+  },
+  {
+    "id": "5fdcaac412e5336f910e70bd",
+    "slug": "almonds",
+    "name": "Almendras"
+  }
+]

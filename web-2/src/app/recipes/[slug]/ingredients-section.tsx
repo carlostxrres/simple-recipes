@@ -1,0 +1,251 @@
+"use client"
+
+import { useState } from "react"
+import Image from "next/image"
+import { motion } from "framer-motion"
+import {
+  IconUsers,
+  IconMinus,
+  IconPlus,
+  IconAlertTriangle,
+} from "@tabler/icons-react"
+import { Button } from "@/components/ui/button"
+import { Card } from "@/components/ui/card"
+import { formatQuantity } from "@/lib/api"
+import type { RecipeIngredient } from "@/lib/types"
+
+interface IngredientsSectionProps {
+  regularIngredients: RecipeIngredient[]
+  pantryIngredients: RecipeIngredient[]
+  allAllergens: Map<
+    string,
+    {
+      name: string
+      slug: string
+      ingredients: { name: string; traces_of: boolean }[]
+    }
+  >
+}
+
+// Placeholder ingredient image
+const PLACEHOLDER_IMAGE =
+  "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='%23d1d5db' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z'/%3E%3Cpath d='M12 8v8M8 12h8'/%3E%3C/svg%3E"
+
+export function IngredientsSection({
+  regularIngredients,
+  pantryIngredients,
+  allAllergens,
+}: IngredientsSectionProps) {
+  const [servings, setServings] = useState(2)
+
+  const decreaseServings = () => {
+    if (servings > 1) setServings(servings - 1)
+  }
+
+  const increaseServings = () => {
+    if (servings < 6) setServings(servings + 1)
+  }
+
+  // Get allergen index for an ingredient
+  const getAllergenBadges = (ingredient: RecipeIngredient) => {
+    const badges: { id: string; index: number; tracesOf: boolean }[] = []
+    const allergenArray = Array.from(allAllergens.entries())
+
+    ingredient.allergens.forEach((allergen) => {
+      const index = allergenArray.findIndex(([id]) => id === allergen.id)
+      if (index !== -1) {
+        badges.push({
+          id: allergen.id,
+          index: index + 1,
+          tracesOf: allergen.traces_of,
+        })
+      }
+    })
+
+    return badges
+  }
+
+  const scrollToAllergen = (allergenId: string) => {
+    const element = document.getElementById(`allergen-${allergenId}`)
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "center" })
+      element.classList.add("allergen-highlight")
+      setTimeout(() => {
+        element.classList.remove("allergen-highlight")
+      }, 1500)
+    }
+  }
+
+  return (
+    <section>
+      <Card className="p-6">
+        {/* Header with servings control */}
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+          <h2 className="text-xl font-bold text-text-primary">Ingredientes</h2>
+
+          <div className="flex items-center gap-3 glass-light rounded-xl p-2">
+            <IconUsers className="w-5 h-5 text-text-secondary" />
+            <span className="text-sm text-text-secondary">Raciones:</span>
+            <div className="flex items-center gap-2">
+              <Button
+                variant="ghost"
+                size="icon-sm"
+                onClick={decreaseServings}
+                disabled={servings <= 1}
+              >
+                <IconMinus className="w-4 h-4" />
+              </Button>
+              <span className="w-8 text-center font-semibold text-lg">
+                {servings}
+              </span>
+              <Button
+                variant="ghost"
+                size="icon-sm"
+                onClick={increaseServings}
+                disabled={servings >= 6}
+              >
+                <IconPlus className="w-4 h-4" />
+              </Button>
+            </div>
+          </div>
+        </div>
+
+        {/* Regular ingredients */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          {regularIngredients.map((ingredient, index) => {
+            const allergenBadges = getAllergenBadges(ingredient)
+
+            return (
+              <motion.div
+                key={ingredient.ingredient_id}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: index * 0.03 }}
+                className="flex items-center gap-3 p-3 rounded-xl bg-white/50 hover:bg-white/80 transition-colors"
+              >
+                {/* Ingredient image */}
+                <div className="relative w-12 h-12 rounded-lg overflow-hidden bg-gray-100 shrink-0">
+                  <Image
+                    src={PLACEHOLDER_IMAGE}
+                    alt={ingredient.name}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+
+                {/* Ingredient info */}
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-start gap-2">
+                    <span className="font-medium text-text-primary truncate">
+                      {ingredient.name}
+                    </span>
+                    {allergenBadges.length > 0 && (
+                      <div className="flex gap-1 shrink-0">
+                        {allergenBadges.map((badge) => (
+                          <button
+                            key={badge.id}
+                            onClick={() => scrollToAllergen(badge.id)}
+                            className={`w-5 h-5 rounded-full text-xs font-bold flex items-center justify-center transition-transform hover:scale-110 ${
+                              badge.tracesOf
+                                ? "bg-yellow-100 text-yellow-700 border border-yellow-300"
+                                : "bg-red-100 text-red-700 border border-red-300"
+                            }`}
+                            title={
+                              badge.tracesOf
+                                ? "Puede contener trazas"
+                                : "Contiene"
+                            }
+                          >
+                            {badge.index}
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                  <span className="text-sm text-text-secondary">
+                    {formatQuantity(
+                      ingredient.quantity_amount,
+                      ingredient.quantity_unit,
+                      servings,
+                    )}
+                  </span>
+                </div>
+              </motion.div>
+            )
+          })}
+        </div>
+
+        {/* Pantry ingredients */}
+        {pantryIngredients.length > 0 && (
+          <div className="mt-8">
+            <h3 className="text-lg font-semibold text-text-primary mb-4 flex items-center gap-2">
+              <span className="w-8 h-0.5 bg-primary-300 rounded-full" />
+              De tu despensa
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+              {pantryIngredients.map((ingredient, index) => {
+                const allergenBadges = getAllergenBadges(ingredient)
+
+                return (
+                  <motion.div
+                    key={ingredient.ingredient_id}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{
+                      duration: 0.3,
+                      delay: (regularIngredients.length + index) * 0.03,
+                    }}
+                    className="flex items-center gap-3 p-3 rounded-xl bg-gray-50/50 hover:bg-gray-50 transition-colors"
+                  >
+                    {/* Ingredient image */}
+                    <div className="relative w-10 h-10 rounded-lg overflow-hidden bg-gray-100 shrink-0">
+                      <Image
+                        src={PLACEHOLDER_IMAGE}
+                        alt={ingredient.name}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+
+                    {/* Ingredient info */}
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-start gap-2">
+                        <span className="text-sm font-medium text-text-secondary truncate">
+                          {ingredient.name}
+                        </span>
+                        {allergenBadges.length > 0 && (
+                          <div className="flex gap-1 shrink-0">
+                            {allergenBadges.map((badge) => (
+                              <button
+                                key={badge.id}
+                                onClick={() => scrollToAllergen(badge.id)}
+                                className={`w-4 h-4 rounded-full text-[10px] font-bold flex items-center justify-center transition-transform hover:scale-110 ${
+                                  badge.tracesOf
+                                    ? "bg-yellow-100 text-yellow-700"
+                                    : "bg-red-100 text-red-700"
+                                }`}
+                              >
+                                {badge.index}
+                              </button>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                      <span className="text-xs text-text-muted">
+                        {formatQuantity(
+                          ingredient.quantity_amount,
+                          ingredient.quantity_unit,
+                          servings,
+                        )}
+                      </span>
+                    </div>
+                  </motion.div>
+                )
+              })}
+            </div>
+          </div>
+        )}
+      </Card>
+    </section>
+  )
+}

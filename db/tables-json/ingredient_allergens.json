@@ -1,0 +1,1522 @@
+[
+  {
+    "ingredient_id": "634d280debf08332f1bff1a3",
+    "allergen_id": "57962a07b7e8697d4b3052fa",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "634814de4eacd7e8b5e77c23",
+    "allergen_id": "57962a07b7e8697d4b3052fd",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "636bc5ee371ed3efb1da61da",
+    "allergen_id": "57962a07b7e8697d4b3052f3",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "636bc5ee371ed3efb1da61da",
+    "allergen_id": "57962a07b7e8697d4b3052f8",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "636bc5ee371ed3efb1da61da",
+    "allergen_id": "62cc417a2f15d58ec3559423",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "636bc5ee371ed3efb1da61da",
+    "allergen_id": "57962a07b7e8697d4b305302",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "636bc5ee371ed3efb1da61da",
+    "allergen_id": "5acf972fae08b54d333ac322",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "67ebb3fb347a212fa8302be5",
+    "allergen_id": "5de91d27f4c17e42c17aef94",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "67ebb3fb347a212fa8302be5",
+    "allergen_id": "5b0532aaae08b52eb9420552",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "67ebb3fb347a212fa8302be5",
+    "allergen_id": "57962a07b7e8697d4b3052f3",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "67ebb3fb347a212fa8302be5",
+    "allergen_id": "57962a07b7e8697d4b3052f5",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "67ebb3fb347a212fa8302be5",
+    "allergen_id": "60368d89cdbdf450236ad8cd",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "63481b08bb36093c54997960",
+    "allergen_id": "57962a07b7e8697d4b3052fa",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "660c9e473f0f2e6d306d9c5e",
+    "allergen_id": "5a9614ab30006c2c026cf562",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "660c9e473f0f2e6d306d9c5e",
+    "allergen_id": "57962a07b7e8697d4b305302",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "660c9e473f0f2e6d306d9c5e",
+    "allergen_id": "62cc417a2f15d58ec3559423",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "660c9e473f0f2e6d306d9c5e",
+    "allergen_id": "57962a07b7e8697d4b3052f3",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "660c9e473f0f2e6d306d9c5e",
+    "allergen_id": "57962a07b7e8697d4b3052fe",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "636ee2296875fac468eeb9ce",
+    "allergen_id": "57962a07b7e8697d4b3052ff",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "68d11b051040d6c32b9bf3fd",
+    "allergen_id": "57962a07b7e8697d4b3052f5",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "68d11b051040d6c32b9bf3fd",
+    "allergen_id": "60368d89cdbdf450236ad8cd",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "68d11b051040d6c32b9bf3fd",
+    "allergen_id": "57962a07b7e8697d4b3052f9",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "63652cde50d7477cd4c1cbc2",
+    "allergen_id": "57962a07b7e8697d4b3052f8",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "65a5166d70cc438cf4f7d21a",
+    "allergen_id": "57962a07b7e8697d4b3052fa",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "635bf32c715b05ed6af180bd",
+    "allergen_id": "57962a07b7e8697d4b3052fa",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "68936cd49643892dc8fb4ed8",
+    "allergen_id": "5a9614ab30006c2c026cf562",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68936cd49643892dc8fb4ed8",
+    "allergen_id": "57962a07b7e8697d4b305302",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68936cd49643892dc8fb4ed8",
+    "allergen_id": "62cc417a2f15d58ec3559423",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68936cd49643892dc8fb4ed8",
+    "allergen_id": "5acf972fae08b54d333ac322",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68936cd49643892dc8fb4ed8",
+    "allergen_id": "57962a07b7e8697d4b3052f3",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68936cd49643892dc8fb4ed8",
+    "allergen_id": "57962a07b7e8697d4b3052f5",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "68936cd49643892dc8fb4ed8",
+    "allergen_id": "57962a07b7e8697d4b3052fa",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "6633472d270adf4f95c57fc5",
+    "allergen_id": "57962a07b7e8697d4b3052fa",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "6364ef331c8a9adf8ea7f79e",
+    "allergen_id": "57962a07b7e8697d4b3052fa",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "63404376233160a36674ba16",
+    "allergen_id": "57962a07b7e8697d4b3052ff",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "680d749a80e0f84c774cad60",
+    "allergen_id": "57962a07b7e8697d4b3052f5",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "680d749a80e0f84c774cad60",
+    "allergen_id": "57962a07b7e8697d4b3052f9",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "680d749a80e0f84c774cad60",
+    "allergen_id": "60368d89cdbdf450236ad8cd",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "6874cb2f5a587f17f4588c97",
+    "allergen_id": "57962a07b7e8697d4b3052f5",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "6874cb2f5a587f17f4588c97",
+    "allergen_id": "60368d89cdbdf450236ad8cd",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "6340436f2268bc1bff0d3ca7",
+    "allergen_id": "57962a07b7e8697d4b3052fa",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "66512a50d7e2204fdd095bc9",
+    "allergen_id": "5acf97a2ae08b54dad34eb82",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "66512a50d7e2204fdd095bc9",
+    "allergen_id": "5acf967d30006c4cbc61d152",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "66512a50d7e2204fdd095bc9",
+    "allergen_id": "62cc417a2f15d58ec3559423",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "66512a50d7e2204fdd095bc9",
+    "allergen_id": "57962a07b7e8697d4b305303",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "66512a50d7e2204fdd095bc9",
+    "allergen_id": "5acf97b7ae08b54d88061162",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "66512a50d7e2204fdd095bc9",
+    "allergen_id": "5fdcacf19520e811397b51c9",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "66512a50d7e2204fdd095bc9",
+    "allergen_id": "5b0532aaae08b52eb9420552",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "66512a50d7e2204fdd095bc9",
+    "allergen_id": "57962a07b7e8697d4b3052f3",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "66512a50d7e2204fdd095bc9",
+    "allergen_id": "57962a07b7e8697d4b3052f7",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "6924890401ae5540a928075a",
+    "allergen_id": "57962a07b7e8697d4b3052fa",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "63481b08bb36093c54997962",
+    "allergen_id": "57962a07b7e8697d4b3052fc",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "691f34f61d103273ffd5a84b",
+    "allergen_id": "5b0532aaae08b52eb9420552",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "691f34f61d103273ffd5a84b",
+    "allergen_id": "57962a07b7e8697d4b3052f3",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "691f34f61d103273ffd5a84b",
+    "allergen_id": "57962a07b7e8697d4b3052f5",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "691f34f61d103273ffd5a84b",
+    "allergen_id": "60368d89cdbdf450236ad8cd",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "687994717299475a5b057413",
+    "allergen_id": "5de91db7c7d1a818111194b2",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "687994717299475a5b057413",
+    "allergen_id": "57962a07b7e8697d4b3052f3",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "634e576fab4a7ae25c41cb82",
+    "allergen_id": "57962a07b7e8697d4b3052f9",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "6348219ebb36093c54997964",
+    "allergen_id": "57962a07b7e8697d4b3052f5",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "686db75ca5a49c635d8a15ef",
+    "allergen_id": "57962a07b7e8697d4b3052f5",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "686db75ca5a49c635d8a15ef",
+    "allergen_id": "57962a07b7e8697d4b3052f9",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "686db75ca5a49c635d8a15ef",
+    "allergen_id": "57962a07b7e8697d4b3052fe",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "686db75ca5a49c635d8a15ef",
+    "allergen_id": "60368d89cdbdf450236ad8cd",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "6640069a4e43120cb074afb5",
+    "allergen_id": "5acf972fae08b54d333ac322",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "6640069a4e43120cb074afb5",
+    "allergen_id": "5a9614ab30006c2c026cf562",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "6640069a4e43120cb074afb5",
+    "allergen_id": "57962a07b7e8697d4b305302",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "6640069a4e43120cb074afb5",
+    "allergen_id": "5b0532aaae08b52eb9420552",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "6640069a4e43120cb074afb5",
+    "allergen_id": "57962a07b7e8697d4b3052f3",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "6640069a4e43120cb074afb5",
+    "allergen_id": "57962a07b7e8697d4b3052f5",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "67868c0a8df7073882b2a25f",
+    "allergen_id": "5b0532aaae08b52eb9420552",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "67868c0a8df7073882b2a25f",
+    "allergen_id": "57962a07b7e8697d4b3052f3",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "67868c0a8df7073882b2a25f",
+    "allergen_id": "57962a07b7e8697d4b3052f9",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "659c8d3fc7596f421e5449b1",
+    "allergen_id": "57962a07b7e8697d4b3052fa",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "63497cbcebf08332f1bff18e",
+    "allergen_id": "57962a07b7e8697d4b3052fd",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "68253233e8cfeb704a4745b3",
+    "allergen_id": "63c00da4c4bb723852bbf3ef",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68253233e8cfeb704a4745b3",
+    "allergen_id": "62cc417a2f15d58ec3559424",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68253233e8cfeb704a4745b3",
+    "allergen_id": "57962a07b7e8697d4b305302",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68253233e8cfeb704a4745b3",
+    "allergen_id": "62cc417a2f15d58ec3559423",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68253233e8cfeb704a4745b3",
+    "allergen_id": "5acf972fae08b54d333ac322",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68253233e8cfeb704a4745b3",
+    "allergen_id": "63c00da40c675b6b333afd9e",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68253233e8cfeb704a4745b3",
+    "allergen_id": "63c00da40c675b6b333afdb4",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68253233e8cfeb704a4745b3",
+    "allergen_id": "62038a7c614fc10b645e85b9",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68253233e8cfeb704a4745b3",
+    "allergen_id": "62038b0335f8ee1bcc1ce196",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68253233e8cfeb704a4745b3",
+    "allergen_id": "63c00da40c675b6b333afdb0",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68253233e8cfeb704a4745b3",
+    "allergen_id": "5a9614ab30006c2c026cf562",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68253233e8cfeb704a4745b3",
+    "allergen_id": "57962a07b7e8697d4b3052f3",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68253233e8cfeb704a4745b3",
+    "allergen_id": "57962a07b7e8697d4b3052fb",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "68253233e8cfeb704a4745b3",
+    "allergen_id": "5fdcaafebae25f267232a16f",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "687994697299475a5b0573eb",
+    "allergen_id": "5b0532aaae08b52eb9420552",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "687994697299475a5b0573eb",
+    "allergen_id": "5de91d27f4c17e42c17aef94",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "687994697299475a5b0573eb",
+    "allergen_id": "57962a07b7e8697d4b3052f3",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "687994697299475a5b0573eb",
+    "allergen_id": "60368d89cdbdf450236ad8cd",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "687994697299475a5b0573eb",
+    "allergen_id": "57962a07b7e8697d4b3052f5",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "6340436b233160a36674b9ed",
+    "allergen_id": "57962a07b7e8697d4b3052ff",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "67bd8172c26c652538b7bb06",
+    "allergen_id": "57962a07b7e8697d4b3052f6",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "6397c09b9b30e60070f163ee",
+    "allergen_id": "57962a07b7e8697d4b3052ff",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "63fc92b0bbe06d8c7489ce76",
+    "allergen_id": "57962a07b7e8697d4b3052ff",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "63724760422e0b6ac4f85686",
+    "allergen_id": "57962a07b7e8697d4b3052f4",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "634043a62268bc1bff0d3cd4",
+    "allergen_id": "57962a07b7e8697d4b3052f6",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "68bf70f7f655999316001eaa",
+    "allergen_id": "5acf972fae08b54d333ac322",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68bf70f7f655999316001eaa",
+    "allergen_id": "5a9614ab30006c2c026cf562",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68bf70f7f655999316001eaa",
+    "allergen_id": "62cc417a2f15d58ec3559423",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68bf70f7f655999316001eaa",
+    "allergen_id": "57962a07b7e8697d4b3052f3",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68bf70f7f655999316001eaa",
+    "allergen_id": "630d1b7dcee9d269c9017102",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "68bf70f7f655999316001eaa",
+    "allergen_id": "57962a07b7e8697d4b3052fb",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "635bdce25ebcac2718d2feda",
+    "allergen_id": "57962a07b7e8697d4b3052fa",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "6340436c2268bc1bff0d3ca4",
+    "allergen_id": "57962a07b7e8697d4b3052ff",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "635f88bb5ebcac2718d2fee9",
+    "allergen_id": "57962a07b7e8697d4b3052f7",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "636923bb4cc379a27f60cc05",
+    "allergen_id": "57962a07b7e8697d4b3052f3",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "636923bb4cc379a27f60cc05",
+    "allergen_id": "62cc417a2f15d58ec3559423",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "636923bb4cc379a27f60cc05",
+    "allergen_id": "57962a07b7e8697d4b305302",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "636923bb4cc379a27f60cc05",
+    "allergen_id": "5a9614ab30006c2c026cf562",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "636923bb4cc379a27f60cc05",
+    "allergen_id": "5acf972fae08b54d333ac322",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68da497a1d20e752a6dbcdd3",
+    "allergen_id": "5acf97b7ae08b54d88061162",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68da497a1d20e752a6dbcdd3",
+    "allergen_id": "57962a07b7e8697d4b3052f3",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68da497a1d20e752a6dbcdd3",
+    "allergen_id": "57962a07b7e8697d4b3052f5",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "68da497a1d20e752a6dbcdd3",
+    "allergen_id": "60368d89cdbdf450236ad8cd",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "68248cf6b511ee4a266be130",
+    "allergen_id": "57962a07b7e8697d4b305303",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68248cf6b511ee4a266be130",
+    "allergen_id": "5acdaebaae08b54a70609b02",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68248cf6b511ee4a266be130",
+    "allergen_id": "5de91d27f4c17e42c17aef94",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68248cf6b511ee4a266be130",
+    "allergen_id": "5b0532aaae08b52eb9420552",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68248cf6b511ee4a266be130",
+    "allergen_id": "57962a07b7e8697d4b3052f3",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68248cf6b511ee4a266be130",
+    "allergen_id": "57962a07b7e8697d4b3052f5",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "68248cf6b511ee4a266be130",
+    "allergen_id": "60368d89cdbdf450236ad8cd",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "634d532eebf08332f1bff1a5",
+    "allergen_id": "57962a07b7e8697d4b3052fd",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "634e5f90ab4a7ae25c41cb84",
+    "allergen_id": "57962a07b7e8697d4b3052f5",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "6399e2044fc733684f4c6900",
+    "allergen_id": "57962a07b7e8697d4b3052fd",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "636b7f74371ed3efb1da61cd",
+    "allergen_id": "57962a07b7e8697d4b3052f3",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "636b7f74371ed3efb1da61cd",
+    "allergen_id": "57962a07b7e8697d4b3052fe",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "636b7f74371ed3efb1da61cd",
+    "allergen_id": "62cc417a2f15d58ec3559423",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "636b7f74371ed3efb1da61cd",
+    "allergen_id": "57962a07b7e8697d4b305302",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "636b7f74371ed3efb1da61cd",
+    "allergen_id": "5a9614ab30006c2c026cf562",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "69417137351bdfaa40d8008a",
+    "allergen_id": "57962a07b7e8697d4b3052f7",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "68776b755a587f17f4594030",
+    "allergen_id": "57962a07b7e8697d4b3052f5",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "68776b755a587f17f4594030",
+    "allergen_id": "57962a07b7e8697d4b3052f3",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68776b755a587f17f4594030",
+    "allergen_id": "57962a07b7e8697d4b305303",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68776b755a587f17f4594030",
+    "allergen_id": "5acf97b7ae08b54d88061162",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68776b755a587f17f4594030",
+    "allergen_id": "5de91d27f4c17e42c17aef94",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68776b755a587f17f4594030",
+    "allergen_id": "5acf972fae08b54d333ac322",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68776b755a587f17f4594030",
+    "allergen_id": "5b0532aaae08b52eb9420552",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "663dd43a5e4dcee2f122a3d9",
+    "allergen_id": "57962a07b7e8697d4b3052f9",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "634977d1ebf08332f1bff177",
+    "allergen_id": "57962a07b7e8697d4b3052ff",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "63ea5ff190bc56dfb0dd016b",
+    "allergen_id": "57962a07b7e8697d4b3052ff",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "691ca09abc8059f9ea10a5be",
+    "allergen_id": "5acf967d30006c4cbc61d152",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "691ca09abc8059f9ea10a5be",
+    "allergen_id": "57962a07b7e8697d4b305302",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "691ca09abc8059f9ea10a5be",
+    "allergen_id": "5fdcacf19520e811397b51c9",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "691ca09abc8059f9ea10a5be",
+    "allergen_id": "5de91d27f4c17e42c17aef94",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "691ca09abc8059f9ea10a5be",
+    "allergen_id": "62038b0335f8ee1bcc1ce196",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "691ca09abc8059f9ea10a5be",
+    "allergen_id": "5acf974c30006c4d667f88f1",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "691ca09abc8059f9ea10a5be",
+    "allergen_id": "5b0532aaae08b52eb9420552",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "691ca09abc8059f9ea10a5be",
+    "allergen_id": "57962a07b7e8697d4b3052f3",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "691ca09abc8059f9ea10a5be",
+    "allergen_id": "57962a07b7e8697d4b3052f6",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "691ca09abc8059f9ea10a5be",
+    "allergen_id": "57962a07b7e8697d4b3052fa",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "691ca09abc8059f9ea10a5be",
+    "allergen_id": "60368d89cdbdf450236ad8cd",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "691ca09abc8059f9ea10a5be",
+    "allergen_id": "57962a07b7e8697d4b3052f5",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "63739c1608cf0b02479225a8",
+    "allergen_id": "57962a07b7e8697d4b3052fd",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "63497d88971d5eddb3ff71b3",
+    "allergen_id": "57962a07b7e8697d4b3052fa",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "6619cb8a5c9ad41013c04d48",
+    "allergen_id": "57962a07b7e8697d4b3052fa",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "6900d709493c3115e3728ce8",
+    "allergen_id": "57962a07b7e8697d4b3052fd",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "6855fa5f5baaf2916c050ba3",
+    "allergen_id": "57962a07b7e8697d4b3052f9",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "6855fa5f5baaf2916c050ba3",
+    "allergen_id": "60368d89cdbdf450236ad8cd",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "6855fa5f5baaf2916c050ba3",
+    "allergen_id": "57962a07b7e8697d4b3052f5",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "651fde076c05521bbf6dcf15",
+    "allergen_id": "57962a07b7e8697d4b305303",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "651fde076c05521bbf6dcf15",
+    "allergen_id": "5acf97b7ae08b54d88061162",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "651fde076c05521bbf6dcf15",
+    "allergen_id": "5b0532aaae08b52eb9420552",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "651fde076c05521bbf6dcf15",
+    "allergen_id": "5acf972fae08b54d333ac322",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "651fde076c05521bbf6dcf15",
+    "allergen_id": "57962a07b7e8697d4b3052f3",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "651fde076c05521bbf6dcf15",
+    "allergen_id": "57962a07b7e8697d4b3052f5",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "68bf22d69f91a82a63bea4b9",
+    "allergen_id": "62cc417a2f15d58ec3559423",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68bf22d69f91a82a63bea4b9",
+    "allergen_id": "5acf972fae08b54d333ac322",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68bf22d69f91a82a63bea4b9",
+    "allergen_id": "5a9614ab30006c2c026cf562",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68bf22d69f91a82a63bea4b9",
+    "allergen_id": "57962a07b7e8697d4b3052f3",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68bf22d69f91a82a63bea4b9",
+    "allergen_id": "57962a07b7e8697d4b3052fb",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "68bf22d69f91a82a63bea4b9",
+    "allergen_id": "62cec8ddeaf1cc376f06a53b",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "686e3eed69ddbf20131a6a7d",
+    "allergen_id": "5acf972fae08b54d333ac322",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "686e3eed69ddbf20131a6a7d",
+    "allergen_id": "5a9614ab30006c2c026cf562",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "686e3eed69ddbf20131a6a7d",
+    "allergen_id": "57962a07b7e8697d4b305302",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "686e3eed69ddbf20131a6a7d",
+    "allergen_id": "62cc417a2f15d58ec3559423",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "686e3eed69ddbf20131a6a7d",
+    "allergen_id": "57962a07b7e8697d4b3052f3",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "686e3eed69ddbf20131a6a7d",
+    "allergen_id": "57962a07b7e8697d4b3052f5",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "6437b676b11f6c1474a8a014",
+    "allergen_id": "5b0532aaae08b52eb9420552",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "6437b676b11f6c1474a8a014",
+    "allergen_id": "5acf97b7ae08b54d88061162",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "6437b676b11f6c1474a8a014",
+    "allergen_id": "57962a07b7e8697d4b3052f3",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "634976b3e9568549b784980e",
+    "allergen_id": "57962a07b7e8697d4b3052fa",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "687994677299475a5b0573e1",
+    "allergen_id": "5b0532aaae08b52eb9420552",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "687994677299475a5b0573e1",
+    "allergen_id": "5de91d27f4c17e42c17aef94",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "687994677299475a5b0573e1",
+    "allergen_id": "57962a07b7e8697d4b3052f3",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "687994677299475a5b0573e1",
+    "allergen_id": "57962a07b7e8697d4b3052f5",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "687994677299475a5b0573e1",
+    "allergen_id": "60368d89cdbdf450236ad8cd",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "692809c5d4fb034401632d0a",
+    "allergen_id": "57962a07b7e8697d4b3052ff",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "636e0b21422e0b6ac4f8566a",
+    "allergen_id": "57962a07b7e8697d4b3052fa",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "69287e5201ae5540a92870cc",
+    "allergen_id": "5b0532aaae08b52eb9420552",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "69287e5201ae5540a92870cc",
+    "allergen_id": "5de91d27f4c17e42c17aef94",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "69287e5201ae5540a92870cc",
+    "allergen_id": "57962a07b7e8697d4b3052f3",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "69287e5201ae5540a92870cc",
+    "allergen_id": "57962a07b7e8697d4b3052f5",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "69287e5201ae5540a92870cc",
+    "allergen_id": "60368d89cdbdf450236ad8cd",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "6758d7ec4f0b0d39dcbeb25a",
+    "allergen_id": "5de91d27f4c17e42c17aef94",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "6758d7ec4f0b0d39dcbeb25a",
+    "allergen_id": "5b0532aaae08b52eb9420552",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "6758d7ec4f0b0d39dcbeb25a",
+    "allergen_id": "57962a07b7e8697d4b3052f3",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "6758d7ec4f0b0d39dcbeb25a",
+    "allergen_id": "57962a07b7e8697d4b3052f5",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "6758d7ec4f0b0d39dcbeb25a",
+    "allergen_id": "60368d89cdbdf450236ad8cd",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "6967c493850f974aa212e09e",
+    "allergen_id": "630d1b7dcee9d269c9017102",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "6967c493850f974aa212e09e",
+    "allergen_id": "57962a07b7e8697d4b3052fb",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "6893f5fd9643892dc8fb80b3",
+    "allergen_id": "5de91db7c7d1a818111194b2",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "6893f5fd9643892dc8fb80b3",
+    "allergen_id": "57962a07b7e8697d4b3052f3",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "6340437141033266d7be9519",
+    "allergen_id": "57962a07b7e8697d4b3052fa",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "6619cb8aa0f8bf5f811e4efc",
+    "allergen_id": "57962a07b7e8697d4b305303",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "6619cb8aa0f8bf5f811e4efc",
+    "allergen_id": "5acf97b7ae08b54d88061162",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "6619cb8aa0f8bf5f811e4efc",
+    "allergen_id": "5fdcacf19520e811397b51c9",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "6619cb8aa0f8bf5f811e4efc",
+    "allergen_id": "5b0532aaae08b52eb9420552",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "6619cb8aa0f8bf5f811e4efc",
+    "allergen_id": "5acf97a2ae08b54dad34eb82",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "6619cb8aa0f8bf5f811e4efc",
+    "allergen_id": "5acf967d30006c4cbc61d152",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "6619cb8aa0f8bf5f811e4efc",
+    "allergen_id": "62cc417a2f15d58ec3559423",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "6619cb8aa0f8bf5f811e4efc",
+    "allergen_id": "57962a07b7e8697d4b3052f3",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "6619cb8aa0f8bf5f811e4efc",
+    "allergen_id": "57962a07b7e8697d4b3052f7",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "63404378233160a36674ba22",
+    "allergen_id": "5acf97b7ae08b54d88061162",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "63404378233160a36674ba22",
+    "allergen_id": "57962a07b7e8697d4b3052f3",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68f202cbc310625e1718e3d8",
+    "allergen_id": "5b0532aaae08b52eb9420552",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68f202cbc310625e1718e3d8",
+    "allergen_id": "57962a07b7e8697d4b3052f3",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "634fc20ad60c92f32eff1cb4",
+    "allergen_id": "57962a07b7e8697d4b3052f5",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "680d74a580e0f84c774cadb0",
+    "allergen_id": "57962a07b7e8697d4b3052f5",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "680d74a580e0f84c774cadb0",
+    "allergen_id": "57962a07b7e8697d4b3052f3",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "680d74a580e0f84c774cadb0",
+    "allergen_id": "57962a07b7e8697d4b3052fe",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "680d74a580e0f84c774cadb0",
+    "allergen_id": "57962a07b7e8697d4b3052f9",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "680d74a580e0f84c774cadb0",
+    "allergen_id": "62cc417a2f15d58ec3559423",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "680d74a580e0f84c774cadb0",
+    "allergen_id": "5b0532aaae08b52eb9420552",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "680d74a580e0f84c774cadb0",
+    "allergen_id": "60368d89cdbdf450236ad8cd",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "6797564089d6104200fdc4c2",
+    "allergen_id": "57962a07b7e8697d4b3052f9",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "6797564089d6104200fdc4c2",
+    "allergen_id": "57962a07b7e8697d4b3052ff",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "634977d1ebf08332f1bff179",
+    "allergen_id": "57962a07b7e8697d4b3052fe",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "6499912eb4dbfc471f9896ea",
+    "allergen_id": "5acf967d30006c4cbc61d152",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "6499912eb4dbfc471f9896ea",
+    "allergen_id": "5fdcacf19520e811397b51c9",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "6499912eb4dbfc471f9896ea",
+    "allergen_id": "5acf97b7ae08b54d88061162",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "6499912eb4dbfc471f9896ea",
+    "allergen_id": "57962a07b7e8697d4b305303",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "6499912eb4dbfc471f9896ea",
+    "allergen_id": "5b0532aaae08b52eb9420552",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "6499912eb4dbfc471f9896ea",
+    "allergen_id": "62cc417a2f15d58ec3559423",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "6499912eb4dbfc471f9896ea",
+    "allergen_id": "5acf97a2ae08b54dad34eb82",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "6499912eb4dbfc471f9896ea",
+    "allergen_id": "57962a07b7e8697d4b3052f3",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "6499912eb4dbfc471f9896ea",
+    "allergen_id": "57962a07b7e8697d4b3052f7",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "68f13da9710fb89fbc52aace",
+    "allergen_id": "57962a07b7e8697d4b3052f6",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "68f13da9710fb89fbc52aace",
+    "allergen_id": "57962a07b7e8697d4b3052f5",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "68f13da9710fb89fbc52aace",
+    "allergen_id": "57962a07b7e8697d4b3052f3",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68f13da9710fb89fbc52aace",
+    "allergen_id": "57962a07b7e8697d4b3052fa",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "68f13da9710fb89fbc52aace",
+    "allergen_id": "57962a07b7e8697d4b3052fe",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "68f13da9710fb89fbc52aace",
+    "allergen_id": "5de91d27f4c17e42c17aef94",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68f13da9710fb89fbc52aace",
+    "allergen_id": "5b0532aaae08b52eb9420552",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "67f67015fd9f35ae4fe98070",
+    "allergen_id": "5de91d27f4c17e42c17aef94",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "67f67015fd9f35ae4fe98070",
+    "allergen_id": "5b0532aaae08b52eb9420552",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "67f67015fd9f35ae4fe98070",
+    "allergen_id": "57962a07b7e8697d4b3052f3",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "67f67015fd9f35ae4fe98070",
+    "allergen_id": "57962a07b7e8697d4b3052f6",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "67f67015fd9f35ae4fe98070",
+    "allergen_id": "60368d89cdbdf450236ad8cd",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "67f67015fd9f35ae4fe98070",
+    "allergen_id": "57962a07b7e8697d4b3052f5",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "66f1724758baf82d2a96789f",
+    "allergen_id": "5acf967d30006c4cbc61d152",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "66f1724758baf82d2a96789f",
+    "allergen_id": "5acf974c30006c4d667f88f1",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "66f1724758baf82d2a96789f",
+    "allergen_id": "57962a07b7e8697d4b3052f3",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "66f1724758baf82d2a96789f",
+    "allergen_id": "57962a07b7e8697d4b305301",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "68817ab50e296dba6fd6baef",
+    "allergen_id": "57962a07b7e8697d4b3052f5",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "68817ab50e296dba6fd6baef",
+    "allergen_id": "60368d89cdbdf450236ad8cd",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "68befa92f655999316000c6e",
+    "allergen_id": "5a9614ab30006c2c026cf562",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68befa92f655999316000c6e",
+    "allergen_id": "62cc417a2f15d58ec3559423",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68befa92f655999316000c6e",
+    "allergen_id": "5acf972fae08b54d333ac322",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68befa92f655999316000c6e",
+    "allergen_id": "57962a07b7e8697d4b3052f3",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68befa92f655999316000c6e",
+    "allergen_id": "57962a07b7e8697d4b3052fb",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "68befa92f655999316000c6e",
+    "allergen_id": "5fdcaac412e5336f910e70bd",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "67aa98e1d479b9c2257734c2",
+    "allergen_id": "57962a07b7e8697d4b3052f9",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "67aa98e1d479b9c2257734c2",
+    "allergen_id": "60368d89cdbdf450236ad8cd",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "67aa98e1d479b9c2257734c2",
+    "allergen_id": "57962a07b7e8697d4b3052f5",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "63497d88971d5eddb3ff71b2",
+    "allergen_id": "57962a07b7e8697d4b3052f5",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "6351196d34c59d5ef0faeb58",
+    "allergen_id": "57962a07b7e8697d4b3052fe",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "6351196d34c59d5ef0faeb58",
+    "allergen_id": "57962a07b7e8697d4b3052fd",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "67f9b34a4babcdca041cac13",
+    "allergen_id": "5acf97b7ae08b54d88061162",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "67f9b34a4babcdca041cac13",
+    "allergen_id": "5fdcacf19520e811397b51c9",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "67f9b34a4babcdca041cac13",
+    "allergen_id": "5de91d27f4c17e42c17aef94",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "67f9b34a4babcdca041cac13",
+    "allergen_id": "62038b0335f8ee1bcc1ce196",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "67f9b34a4babcdca041cac13",
+    "allergen_id": "5acf974c30006c4d667f88f1",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "67f9b34a4babcdca041cac13",
+    "allergen_id": "5b0532aaae08b52eb9420552",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "67f9b34a4babcdca041cac13",
+    "allergen_id": "5acf967d30006c4cbc61d152",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "67f9b34a4babcdca041cac13",
+    "allergen_id": "57962a07b7e8697d4b305302",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "67f9b34a4babcdca041cac13",
+    "allergen_id": "57962a07b7e8697d4b3052f3",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "67f9b34a4babcdca041cac13",
+    "allergen_id": "57962a07b7e8697d4b3052f5",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "67f9b34a4babcdca041cac13",
+    "allergen_id": "57962a07b7e8697d4b3052f6",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "67f9b34a4babcdca041cac13",
+    "allergen_id": "60368d89cdbdf450236ad8cd",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "6451269fe915ac78ee7c67ec",
+    "allergen_id": "57962a07b7e8697d4b3052fa",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "690900329140c7b54ff03b76",
+    "allergen_id": "57962a07b7e8697d4b3052fd",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "690900329140c7b54ff03b76",
+    "allergen_id": "57962a07b7e8697d4b3052fe",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "657992cf41ffdf9a7be0d050",
+    "allergen_id": "5acf97b7ae08b54d88061162",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "657992cf41ffdf9a7be0d050",
+    "allergen_id": "5fdcacf19520e811397b51c9",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "657992cf41ffdf9a7be0d050",
+    "allergen_id": "5b0532aaae08b52eb9420552",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "657992cf41ffdf9a7be0d050",
+    "allergen_id": "5acf97a2ae08b54dad34eb82",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "657992cf41ffdf9a7be0d050",
+    "allergen_id": "5acf967d30006c4cbc61d152",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "657992cf41ffdf9a7be0d050",
+    "allergen_id": "62cc417a2f15d58ec3559423",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "657992cf41ffdf9a7be0d050",
+    "allergen_id": "57962a07b7e8697d4b305303",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "657992cf41ffdf9a7be0d050",
+    "allergen_id": "57962a07b7e8697d4b3052f3",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "657992cf41ffdf9a7be0d050",
+    "allergen_id": "57962a07b7e8697d4b3052f7",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "690a12f379e2c370e491c870",
+    "allergen_id": "62cc417a2f15d58ec3559423",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "690a12f379e2c370e491c870",
+    "allergen_id": "5acf97b7ae08b54d88061162",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "690a12f379e2c370e491c870",
+    "allergen_id": "57962a07b7e8697d4b3052f3",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "6352b13f0f0324d2cd53b1bd",
+    "allergen_id": "57962a07b7e8697d4b3052fa",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "68cd34ee478b7ea4b4a72a0b",
+    "allergen_id": "5a9614ab30006c2c026cf562",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68cd34ee478b7ea4b4a72a0b",
+    "allergen_id": "57962a07b7e8697d4b3052f3",
+    "traces_of": true
+  },
+  {
+    "ingredient_id": "68cd34ee478b7ea4b4a72a0b",
+    "allergen_id": "57962a07b7e8697d4b3052fb",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "68cd34ee478b7ea4b4a72a0b",
+    "allergen_id": "57962a07b7e8697d4b3052fa",
+    "traces_of": false
+  },
+  {
+    "ingredient_id": "68cd34ee478b7ea4b4a72a0b",
+    "allergen_id": "5fdcaafebae25f267232a16f",
+    "traces_of": false
+  }
+]

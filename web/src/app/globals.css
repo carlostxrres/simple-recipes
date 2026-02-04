@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@keyframes highlight {
+  0%, 20% {
+    background-color: rgb(254 215 170); /* orange-200 */
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+.allergen-item.highlight {
+  animation: highlight 2s ease-out;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+}
