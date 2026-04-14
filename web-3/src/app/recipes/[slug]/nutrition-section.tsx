@@ -1,6 +1,3 @@
-"use client"
-
-// import { motion } from "framer-motion"
 import { IconFlame, IconInfoCircle } from "@tabler/icons-react"
 import { Card } from "@/components/ui/Card"
 
@@ -78,7 +75,7 @@ export function NutritionSection({
 
         {/* Nutrition grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-          {nutritionItems.map((item, index) => (
+          {nutritionItems.map((item) => (
             // <motion.div
             //   key={item.label}
             //   initial={{ opacity: 0, y: 10 }}
