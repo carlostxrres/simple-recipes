@@ -16,6 +16,7 @@ import {
 import { Badge } from "@/components/ui/Badge"
 import RecipeActions from "@/components/RecipeActions"
 import CookModeButton from "@/components/CookModeButton"
+import RecipeTimer from "@/components/RecipeTimer"
 import { IngredientsSection } from "./ingredients-section"
 import { AllergensSection } from "./allergens-section"
 import { UtensilsSection } from "./utensils-section"
@@ -182,6 +183,11 @@ export default async function RecipePage({ params }: RecipePageProps) {
                   {Math.round(recipe.nutrition_energy_kcal)} kcal
                 </span>
               </div>
+            </div>
+
+            {/* Timer */}
+            <div className="pt-1">
+              <RecipeTimer totalMinutes={recipe.time_minutes} />
             </div>
 
             {/* Description */}

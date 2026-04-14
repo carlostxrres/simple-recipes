@@ -290,7 +290,7 @@ export function IngredientsSection({
               <IconMinus className="w-4 h-4" />
             </Button>
             <span className="w-8 text-center font-semibold text-lg">{servings}</span>
-            <Button variant="ghost" size="icon-sm" onClick={() => setServings((s) => Math.min(6, s + 1))} disabled={servings >= 6}>
+            <Button variant="ghost" size="icon-sm" onClick={() => setServings((s) => Math.min(12, s + 1))} disabled={servings >= 12}>
               <IconPlus className="w-4 h-4" />
             </Button>
           </div>
