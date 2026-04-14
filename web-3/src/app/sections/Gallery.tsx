@@ -1,65 +1,20 @@
 import { IconArrowRight } from "@tabler/icons-react"
+import MasonryGrid from "../../components/MasonryGrid"
 import RecipeCard from "../../components/RecipeCard"
-import {
-  getRecipes,
-  getTags,
-  getCuisines,
-  getAllergens,
-  getIngredients,
-} from "../../lib/api"
+import GalleryFilters from "./GalleryFilters"
+import { getRecipes, getTags } from "../../lib/api"
 
-interface Params {
-  page?: string
-  search?: string
-  tag?: string
-  cuisine?: string
-  includeIngredients?: string | string[]
-  excludeAllergens?: string | string[]
-  maxTime?: string
+interface GalleryProps {
+  selectedTags: string[]
 }
 
-export default async function () {
-  const params: Params = {}
-
-  const page = parseInt(params.page || "1")
-  const search = params.search || ""
-  const tag = params.tag || ""
-  const cuisine = params.cuisine || ""
-  const maxTime = params.maxTime ? parseInt(params.maxTime) : undefined
-
-  // Handle array params
-  const includeIngredients = params.includeIngredients
-    ? Array.isArray(params.includeIngredients)
-      ? params.includeIngredients
-      : [params.includeIngredients]
-    : []
-  const excludeAllergens = params.excludeAllergens
-    ? Array.isArray(params.excludeAllergens)
-      ? params.excludeAllergens
-      : [params.excludeAllergens]
-    : []
-
-  // Fetch data
-  const [recipesData, tagsData, cuisinesData, allergensData, ingredientsData] =
-    await Promise.all([
-      getRecipes({
-        page,
-        limit: 12,
-        search,
-        tag,
-        cuisine,
-        includeIngredients,
-        excludeAllergens,
-        maxTime,
-      }),
-      getTags(),
-      getCuisines(),
-      getAllergens(),
-      getIngredients(),
-    ])
-
+export default async function Gallery({ selectedTags }: GalleryProps) {
+  const [recipesData, tagsData] = await Promise.all([
+    getRecipes({ page: 1, limit: 12, tag: selectedTags.length ? selectedTags : undefined }),
+    getTags(),
+  ])
   const recipes = recipesData.data
-  const pagination = recipesData.pagination
+  const tags = tagsData.data
 
   return (
     <section id="gallery" className="flex flex-col gap-8">
@@ -73,11 +28,16 @@ export default async function () {
           kitchens.
         </p>
       </div>
-      <div className="grid gap-5 sm:gap-6 md:grid-cols-2 lg:auto-rows-[380px] lg:grid-cols-3">
-        {recipes.map((recipe, index) => (
-          <RecipeCard key={recipe.id} recipe={recipe} index={index} />
-        ))}
+
+      <div className="flex justify-end">
+        <GalleryFilters tags={tags} selectedTags={selectedTags} />
       </div>
+
+      <MasonryGrid>
+        {recipes.map((recipe) => (
+          <RecipeCard key={recipe.id} recipe={recipe} />
+        ))}
+      </MasonryGrid>
 
       {/* To do: make button work */}
       <div className="mt-10 flex justify-center">
