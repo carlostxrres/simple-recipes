@@ -136,17 +136,21 @@ export default async function RecipePage({ params }: RecipePageProps) {
         {/* Recipe info overlay */}
         <div className="container mx-auto px-4">
           <div className="relative -mt-32 sm:-mt-40 glass-frost rounded-2xl p-6 md:p-8 space-y-4">
-            {/* Tags and cuisines */}
+            {/* Tags and cuisines — clickable links to filter gallery */}
             <div className="flex flex-wrap gap-2">
               {recipe.cuisines.map((cuisine) => (
-                <Badge key={cuisine.id} variant="default">
-                  {cuisine.name}
-                </Badge>
+                <Link key={cuisine.id} href={`/recipes?cuisine=${cuisine.slug}`}>
+                  <Badge variant="default" className="transition hover:opacity-80 cursor-pointer">
+                    {cuisine.name}
+                  </Badge>
+                </Link>
               ))}
               {recipe.tags.map((tag) => (
-                <Badge key={tag.id} variant="secondary">
-                  {tag.name}
-                </Badge>
+                <Link key={tag.id} href={`/recipes?tag=${tag.slug}`}>
+                  <Badge variant="secondary" className="transition hover:opacity-80 cursor-pointer">
+                    {tag.name}
+                  </Badge>
+                </Link>
               ))}
             </div>
 

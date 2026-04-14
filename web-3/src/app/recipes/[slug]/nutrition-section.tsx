@@ -17,7 +17,6 @@ interface NutritionItem {
   label: string
   value: string
   subLabel?: string
-  highlight?: boolean
 }
 
 export function NutritionSection({
@@ -36,17 +35,16 @@ export function NutritionSection({
       label: "Energía",
       value: `${Math.round(energyKcal)} kcal`,
       subLabel: `${Math.round(energyKj)} kJ`,
-      // highlight: true,
     },
     {
       label: "Grasas",
       value: `${fat} g`,
-      subLabel: `de las cuales saturadas: ${fatSaturated} g`,
+      subLabel: `saturadas: ${fatSaturated} g`,
     },
     {
       label: "Carbohidratos",
       value: `${carbs} g`,
-      subLabel: `de los cuales azúcares: ${carbsSugar} g`,
+      subLabel: `azúcares: ${carbsSugar} g`,
     },
     {
       label: "Fibra",
@@ -55,7 +53,6 @@ export function NutritionSection({
     {
       label: "Proteínas",
       value: `${protein} g`,
-      // highlight: true,
     },
     {
       label: "Sodio",
@@ -64,66 +61,32 @@ export function NutritionSection({
   ]
 
   return (
-    <CollapsibleSection title="Información nutricional" icon={<IconFlame className="w-5 h-5" />}>
-      <p className="text-sm text-text-secondary mb-6">Por 100g:</p>
+    <CollapsibleSection
+      title="Información nutricional"
+      icon={<IconFlame className="w-5 h-5" />}
+      defaultOpen={false}
+    >
+      <p className="text-sm text-text-secondary mb-4">Por 100g:</p>
 
-        {/* Nutrition grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-          {nutritionItems.map((item) => (
-            // <motion.div
-            //   key={item.label}
-            //   initial={{ opacity: 0, y: 10 }}
-            //   animate={{ opacity: 1, y: 0 }}
-            //   transition={{ duration: 0.3, delay: index * 0.05 }}
-            //   className={`p-4 rounded-xl text-center ${
-            //     item.highlight
-            //       ? "bg-primary-50 border border-primary-100"
-            //       : "bg-white/50"
-            //   }`}
-            // >
-            <div
-              key={item.label}
-              className={`p-4 rounded-xl text-center ${
-                item.highlight
-                  ? "bg-primary-50 border border-primary-100"
-                  : "bg-white/50"
-              }`}
-            >
-              <div
-                className={`text-2xl font-bold ${
-                  item.highlight ? "text-primary-600" : "text-text-primary"
-                }`}
-              >
-                {item.value}
-              </div>
-              <div className="text-sm font-medium text-text-secondary mt-1">
-                {item.label}
-              </div>
-              {item.subLabel && (
-                <div className="text-xs text-text-muted mt-1">
-                  {item.subLabel}
-                </div>
-              )}
-              {/* </motion.div> */}
-            </div>
-          ))}
-        </div>
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+        {nutritionItems.map((item) => (
+          <div key={item.label} className="p-4 rounded-xl text-center bg-white/50">
+            <div className="text-2xl font-bold text-text-primary">{item.value}</div>
+            <div className="text-sm font-medium text-text-secondary mt-1">{item.label}</div>
+            {item.subLabel && (
+              <div className="text-xs text-text-muted mt-1">{item.subLabel}</div>
+            )}
+          </div>
+        ))}
+      </div>
 
-        {/* Disclaimer */}
-        {/* <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.4, delay: 0.4 }}
-          className="mt-6 flex items-start gap-3 p-4 bg-gray-50 rounded-xl"
-        > */}
-        <div className="mt-6 flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
-          <IconInfoCircle className="w-5 h-5 text-text-secondary shrink-0 mt-0.5" />
-          <p className="text-sm text-text-secondary">
-            La información nutricional por comida es aproximada y puede variar
-            dependiendo de los productos exactos que uses.
-          </p>
-          {/* </motion.div> */}
-        </div>
+      <div className="mt-6 flex items-start gap-3 p-4 bg-gray-50 rounded-xl dark:bg-slate-800/50">
+        <IconInfoCircle className="w-5 h-5 text-text-secondary shrink-0 mt-0.5" />
+        <p className="text-sm text-text-secondary">
+          La información nutricional es aproximada y puede variar según los
+          productos exactos que uses.
+        </p>
+      </div>
     </CollapsibleSection>
   )
 }

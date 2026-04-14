@@ -8,7 +8,7 @@ interface AllergensSectionProps {
 
 export function AllergensSection({ allergens }: AllergensSectionProps) {
   return (
-    <CollapsibleSection title="Alérgenos" icon={<IconAlertTriangle className="w-5 h-5" />}>
+    <CollapsibleSection title="Alérgenos" icon={<IconAlertTriangle className="w-5 h-5" />} defaultOpen={false}>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
         {allergens.map((allergen, index) => {
           const containsIngredients = allergen.ingredients.filter((i) => !i.traces_of)

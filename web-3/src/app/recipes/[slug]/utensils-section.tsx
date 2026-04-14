@@ -13,7 +13,7 @@ const PLACEHOLDER_IMAGE =
 
 export function UtensilsSection({ utensils }: UtensilsSectionProps) {
   return (
-    <CollapsibleSection title="Utensilios" icon={<IconToolsKitchen2 className="w-5 h-5" />}>
+    <CollapsibleSection title="Utensilios" icon={<IconToolsKitchen2 className="w-5 h-5" />} defaultOpen={false}>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
         {utensils.map((utensil) => (
           <div

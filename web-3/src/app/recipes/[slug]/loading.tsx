@@ -1,83 +1,51 @@
-import { IconChefHat } from "@tabler/icons-react";
+import { IconChefHat } from "@tabler/icons-react"
 
 export default function RecipeLoading() {
   return (
     <main className="min-h-screen">
-      {/* Back button skeleton */}
-      <div className="sticky top-0 z-40 glass border-b border-white/20">
-        <div className="container mx-auto px-4 py-3">
-          <div className="w-32 h-8 bg-gray-200 rounded-lg animate-pulse" />
-        </div>
-      </div>
+      {/* Back link skeleton */}
+      <div className="mb-4 h-5 w-36 rounded bg-slate-200 dark:bg-slate-800 animate-pulse" />
 
       {/* Hero skeleton */}
       <section className="relative">
-        <div className="h-64 sm:h-80 md:h-96 bg-gray-200 animate-pulse flex items-center justify-center">
-          <IconChefHat className="w-16 h-16 text-gray-300" />
+        <div className="h-64 sm:h-80 md:h-96 bg-slate-200 dark:bg-slate-800 animate-pulse flex items-center justify-center rounded-xl">
+          <IconChefHat className="w-16 h-16 text-slate-300 dark:text-slate-700" />
         </div>
 
         <div className="container mx-auto px-4">
           <div className="relative -mt-32 sm:-mt-40 glass-frost rounded-2xl p-6 md:p-8 space-y-4">
             {/* Tags skeleton */}
             <div className="flex gap-2">
-              <div className="w-20 h-6 bg-gray-200 rounded-full animate-pulse" />
-              <div className="w-24 h-6 bg-gray-200 rounded-full animate-pulse" />
+              <div className="h-6 w-20 rounded-full bg-slate-200 dark:bg-slate-700 animate-pulse" />
+              <div className="h-6 w-24 rounded-full bg-slate-200 dark:bg-slate-700 animate-pulse" />
             </div>
 
             {/* Title skeleton */}
-            <div className="w-3/4 h-10 bg-gray-200 rounded-lg animate-pulse" />
-
-            {/* Headline skeleton */}
-            <div className="w-full h-6 bg-gray-200 rounded-lg animate-pulse" />
+            <div className="space-y-2">
+              <div className="h-9 w-3/4 rounded-lg bg-slate-200 dark:bg-slate-700 animate-pulse" />
+              <div className="h-6 w-1/2 rounded-lg bg-slate-200 dark:bg-slate-700 animate-pulse" />
+            </div>
 
             {/* Meta info skeleton */}
-            <div className="flex gap-4">
-              <div className="w-20 h-8 bg-gray-200 rounded-lg animate-pulse" />
-              <div className="w-16 h-8 bg-gray-200 rounded-lg animate-pulse" />
-              <div className="w-24 h-8 bg-gray-200 rounded-lg animate-pulse" />
+            <div className="flex gap-4 pt-2">
+              <div className="h-7 w-20 rounded-lg bg-slate-200 dark:bg-slate-700 animate-pulse" />
+              <div className="h-7 w-16 rounded-lg bg-slate-200 dark:bg-slate-700 animate-pulse" />
+              <div className="h-7 w-24 rounded-lg bg-slate-200 dark:bg-slate-700 animate-pulse" />
             </div>
           </div>
         </div>
       </section>
 
       {/* Content skeletons */}
-      <div className="container mx-auto px-4 mt-8 space-y-8">
-        {/* Ingredients skeleton */}
-        <div className="glass-frost rounded-2xl p-6">
-          <div className="w-40 h-8 bg-gray-200 rounded-lg animate-pulse mb-6" />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-            {[...Array(6)].map((_, i) => (
-              <div
-                key={i}
-                className="flex items-center gap-3 p-3 rounded-xl bg-white/50"
-              >
-                <div className="w-12 h-12 bg-gray-200 rounded-lg animate-pulse" />
-                <div className="flex-1 space-y-2">
-                  <div className="w-3/4 h-4 bg-gray-200 rounded animate-pulse" />
-                  <div className="w-1/2 h-3 bg-gray-200 rounded animate-pulse" />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Steps skeleton */}
-        <div className="glass-frost rounded-2xl p-6">
-          <div className="w-32 h-8 bg-gray-200 rounded-lg animate-pulse mb-6" />
-          <div className="space-y-6">
-            {[...Array(3)].map((_, i) => (
-              <div key={i} className="flex gap-4">
-                <div className="w-10 h-10 bg-gray-200 rounded-full animate-pulse" />
-                <div className="flex-1 space-y-3">
-                  <div className="w-full h-4 bg-gray-200 rounded animate-pulse" />
-                  <div className="w-5/6 h-4 bg-gray-200 rounded animate-pulse" />
-                  <div className="w-2/3 h-4 bg-gray-200 rounded animate-pulse" />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+      <div className="container mx-auto px-4 mt-8 space-y-4">
+        {[220, 320, 180].map((h, i) => (
+          <div
+            key={i}
+            className="rounded-2xl bg-slate-200 dark:bg-slate-800 animate-pulse"
+            style={{ height: `${h}px` }}
+          />
+        ))}
       </div>
     </main>
-  );
+  )
 }
