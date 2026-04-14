@@ -114,17 +114,17 @@ export async function getAllergens(): Promise<{ success: boolean; data: Allergen
   return res.json();
 }
 
-// Get all utensils
+// Get all utensils (returns empty list if endpoint not yet available)
 export async function getUtensils(): Promise<{ success: boolean; data: Utensil[] }> {
-  const res = await fetch(`${API_URL}/api/utensils`, {
-    next: { revalidate: 300 },
-  });
-
-  if (!res.ok) {
-    throw new Error("Failed to fetch utensils");
+  try {
+    const res = await fetch(`${API_URL}/api/utensils`, {
+      next: { revalidate: 300 },
+    });
+    if (!res.ok) return { success: false, data: [] };
+    return res.json();
+  } catch {
+    return { success: false, data: [] };
   }
-
-  return res.json();
 }
 
 // Get all ingredients (for search)
