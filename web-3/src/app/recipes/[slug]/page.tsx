@@ -20,6 +20,7 @@ import { AllergensSection } from "./allergens-section"
 import { UtensilsSection } from "./utensils-section"
 import { StepsSection } from "./steps-section"
 import { NutritionSection } from "./nutrition-section"
+import { RelatedSection } from "./related-section"
 import type { Metadata } from "next"
 import type { AllergenEntry } from "@/lib/types"
 
@@ -225,6 +226,13 @@ export default async function RecipePage({ params }: RecipePageProps) {
 
         {/* Allergens */}
         {allergenList.length > 0 && <AllergensSection allergens={allergenList} />}
+
+        {/* Related recipes */}
+        <RelatedSection
+          currentId={recipe.id}
+          cuisines={recipe.cuisines}
+          tags={recipe.tags}
+        />
       </div>
     </main>
   )
