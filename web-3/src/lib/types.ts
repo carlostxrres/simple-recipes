@@ -108,6 +108,9 @@ export interface SearchFilters {
   tag?: string | string[];
   cuisine?: string;
   includeIngredients?: string[];
+  excludeIngredients?: string[];
+  includeUtensils?: string[];
+  excludeUtensils?: string[];
   excludeAllergens?: string[];
   maxTime?: number;
   page?: number;

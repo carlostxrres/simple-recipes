@@ -8,6 +8,7 @@ import type {
   Cuisine,
   Allergen,
   Ingredient,
+  Utensil,
 } from "./types";
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001";
@@ -41,6 +42,9 @@ export async function getRecipes(
     tag: filters.tag,
     cuisine: filters.cuisine,
     includeIngredients: filters.includeIngredients,
+    excludeIngredients: filters.excludeIngredients,
+    includeUtensils: filters.includeUtensils,
+    excludeUtensils: filters.excludeUtensils,
     excludeAllergens: filters.excludeAllergens,
     maxTime: filters.maxTime,
   });
@@ -105,6 +109,19 @@ export async function getAllergens(): Promise<{ success: boolean; data: Allergen
 
   if (!res.ok) {
     throw new Error("Failed to fetch allergens");
+  }
+
+  return res.json();
+}
+
+// Get all utensils
+export async function getUtensils(): Promise<{ success: boolean; data: Utensil[] }> {
+  const res = await fetch(`${API_URL}/api/utensils`, {
+    next: { revalidate: 300 },
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch utensils");
   }
 
   return res.json();
