@@ -15,6 +15,7 @@ import {
 } from "@/lib/api"
 import { Badge } from "@/components/ui/Badge"
 import RecipeActions from "@/components/RecipeActions"
+import CookModeButton from "@/components/CookModeButton"
 import { IngredientsSection } from "./ingredients-section"
 import { AllergensSection } from "./allergens-section"
 import { UtensilsSection } from "./utensils-section"
@@ -191,8 +192,9 @@ export default async function RecipePage({ params }: RecipePageProps) {
             )}
 
             {/* Actions */}
-            <div className="pt-2">
+            <div className="flex flex-wrap items-center gap-2 pt-2">
               <RecipeActions title={recipe.name} />
+              <CookModeButton />
             </div>
           </div>
         </div>
