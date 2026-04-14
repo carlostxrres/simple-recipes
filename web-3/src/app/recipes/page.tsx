@@ -1,3 +1,4 @@
+import { Suspense } from "react"
 import { IconChefHat } from "@tabler/icons-react"
 import type { Metadata } from "next"
 import MasonryGrid from "@/components/MasonryGrid"
@@ -87,13 +88,19 @@ export default async function RecipesPage({ searchParams }: RecipesPageProps) {
 
       {/* Filters */}
       <div className="flex justify-end">
-        <GalleryFilters
-          tags={tagsData.data}
-          cuisines={cuisinesData.data}
-          ingredients={ingredientsData.data}
-          allergens={allergensData.data}
-          utensils={utensilsData.data}
-        />
+        <Suspense
+          fallback={
+            <div className="h-10 w-28 animate-pulse rounded-full bg-slate-200 dark:bg-slate-800" />
+          }
+        >
+          <GalleryFilters
+            tags={tagsData.data}
+            cuisines={cuisinesData.data}
+            ingredients={ingredientsData.data}
+            allergens={allergensData.data}
+            utensils={utensilsData.data}
+          />
+        </Suspense>
       </div>
 
       {/* Results */}

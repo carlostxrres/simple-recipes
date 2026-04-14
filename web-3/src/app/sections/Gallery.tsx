@@ -1,3 +1,4 @@
+import { Suspense } from "react"
 import { IconArrowRight, IconChefHat } from "@tabler/icons-react"
 import Link from "next/link"
 import MasonryGrid from "../../components/MasonryGrid"
@@ -44,13 +45,19 @@ export default async function Gallery({ filters }: GalleryProps) {
       </div>
 
       <div className="flex justify-end">
-        <GalleryFilters
-          tags={tagsData.data}
-          cuisines={cuisinesData.data}
-          ingredients={ingredientsData.data}
-          allergens={allergensData.data}
-          utensils={utensilsData.data}
-        />
+        <Suspense
+          fallback={
+            <div className="h-10 w-28 animate-pulse rounded-full bg-slate-200 dark:bg-slate-800" />
+          }
+        >
+          <GalleryFilters
+            tags={tagsData.data}
+            cuisines={cuisinesData.data}
+            ingredients={ingredientsData.data}
+            allergens={allergensData.data}
+            utensils={utensilsData.data}
+          />
+        </Suspense>
       </div>
 
       {recipes.length === 0 ? (
