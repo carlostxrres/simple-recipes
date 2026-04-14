@@ -1,9 +1,6 @@
-"use client"
-
 import Image from "next/image"
-// import { motion } from "framer-motion"
 import { IconToolsKitchen2 } from "@tabler/icons-react"
-import { Card } from "@/components/ui/Card"
+import CollapsibleSection from "@/components/CollapsibleSection"
 import type { Utensil } from "@/lib/types"
 
 interface UtensilsSectionProps {
@@ -16,42 +13,27 @@ const PLACEHOLDER_IMAGE =
 
 export function UtensilsSection({ utensils }: UtensilsSectionProps) {
   return (
-    <section>
-      <Card className="p-6">
-        <h2 className="text-xl font-bold text-text-primary mb-4 flex items-center gap-2">
-          <IconToolsKitchen2 className="w-5 h-5 text-primary-500" />
-          Utensilios
-        </h2>
-
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-          {utensils.map((utensil, index) => (
-            // <motion.div
-            //   key={utensil.id}
-            //   initial={{ opacity: 0, scale: 0.9 }}
-            //   animate={{ opacity: 1, scale: 1 }}
-            //   transition={{ duration: 0.3, delay: index * 0.05 }}
-            //   className="flex flex-col items-center gap-2 p-3 rounded-xl bg-white/50 hover:bg-white/80 transition-colors text-center"
-            // >
-            <div
-              key={utensil.id}
-              className="flex flex-col items-center gap-2 p-3 rounded-xl bg-white/50 hover:bg-white/80 transition-colors text-center"
-            >
-              <div className="relative w-16 h-16 rounded-lg overflow-hidden bg-gray-100">
-                <Image
-                  src={PLACEHOLDER_IMAGE}
-                  alt={utensil.name}
-                  fill
-                  className="object-contain p-2"
-                />
-              </div>
-              <span className="text-sm font-medium text-text-primary">
-                {utensil.name}
-              </span>
-              {/* </motion.div> */}
+    <CollapsibleSection title="Utensilios" icon={<IconToolsKitchen2 className="w-5 h-5" />}>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+        {utensils.map((utensil) => (
+          <div
+            key={utensil.id}
+            className="flex flex-col items-center gap-2 p-3 rounded-xl bg-white/50 hover:bg-white/80 transition-colors text-center"
+          >
+            <div className="relative w-16 h-16 rounded-lg overflow-hidden bg-gray-100">
+              <Image
+                src={PLACEHOLDER_IMAGE}
+                alt={utensil.name}
+                fill
+                className="object-contain p-2"
+              />
             </div>
-          ))}
-        </div>
-      </Card>
-    </section>
+            <span className="text-sm font-medium text-text-primary">
+              {utensil.name}
+            </span>
+          </div>
+        ))}
+      </div>
+    </CollapsibleSection>
   )
 }

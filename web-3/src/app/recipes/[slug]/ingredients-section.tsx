@@ -2,15 +2,16 @@
 
 import { useState } from "react"
 import Image from "next/image"
+import { motion, LayoutGroup } from "framer-motion"
 import {
+  IconBasket,
   IconUsers,
   IconMinus,
   IconPlus,
-  IconAlertTriangle,
   IconCheck,
 } from "@tabler/icons-react"
 import { Button } from "@/components/ui/Button"
-import { Card } from "@/components/ui/Card"
+import CollapsibleSection from "@/components/CollapsibleSection"
 import { formatQuantity } from "@/lib/api"
 import type { RecipeIngredient, AllergenEntry } from "@/lib/types"
 
@@ -73,20 +74,22 @@ function AllergenBadges({
     )
   }
 
-  // Collapsed pill
+  // Collapsed: show first badge + a "+N" overflow badge in the same circle style
   if (!expanded) {
     return (
-      <button
-        onClick={(e) => {
-          e.stopPropagation()
-          setExpanded(true)
-        }}
-        className="inline-flex shrink-0 items-center gap-1 rounded-full border border-orange-300 bg-orange-100 px-1.5 py-0.5 text-[11px] font-semibold text-orange-700 transition hover:bg-orange-200"
-        title="Ver alérgenos"
-      >
-        <IconAlertTriangle className="h-3 w-3" />
-        {badges.length}
-      </button>
+      <div className="flex shrink-0 gap-1">
+        <BadgeButton badge={badges[0]} onClick={() => {}} />
+        <button
+          onClick={(e) => {
+            e.stopPropagation()
+            setExpanded(true)
+          }}
+          className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-slate-300 bg-slate-100 text-xs font-bold text-slate-600 transition hover:bg-slate-200"
+          title="Ver todos los alérgenos"
+        >
+          +{badges.length - 1}
+        </button>
+      </div>
     )
   }
 
@@ -239,67 +242,76 @@ export function IngredientsSection({
     }
   }
 
-  function renderGrid(list: RecipeIngredient[]) {
-    return sorted(list).map((ingredient) => (
-      <IngredientItem
-        key={ingredient.ingredient_id}
-        ingredient={ingredient}
-        servings={servings}
-        allergenBadges={getAllergenBadges(ingredient)}
-        onAllergenClick={scrollToAllergen}
-        checked={checkedIds.has(ingredient.ingredient_id)}
-        onToggle={() => toggleChecked(ingredient.ingredient_id)}
-      />
-    ))
+  function renderGrid(list: RecipeIngredient[], groupId: string) {
+    return (
+      <LayoutGroup id={groupId}>
+        {sorted(list).map((ingredient) => (
+          <motion.div
+            key={ingredient.ingredient_id}
+            layout
+            transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
+          >
+            <IngredientItem
+              ingredient={ingredient}
+              servings={servings}
+              allergenBadges={getAllergenBadges(ingredient)}
+              onAllergenClick={scrollToAllergen}
+              checked={checkedIds.has(ingredient.ingredient_id)}
+              onToggle={() => toggleChecked(ingredient.ingredient_id)}
+            />
+          </motion.div>
+        ))}
+      </LayoutGroup>
+    )
   }
 
   const totalChecked = checkedIds.size
   const totalIngredients = regularIngredients.length + pantryIngredients.length
 
+  const title = (
+    <>
+      Ingredientes
+      {totalChecked > 0 && (
+        <span className="text-sm font-normal text-slate-400">
+          {totalChecked}/{totalIngredients}
+        </span>
+      )}
+    </>
+  )
+
   return (
-    <section>
-      <Card className="p-6">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
-          <div className="flex items-baseline gap-3">
-            <h2 className="text-xl font-bold text-text-primary">Ingredientes</h2>
-            {totalChecked > 0 && (
-              <span className="text-sm text-slate-400">
-                {totalChecked}/{totalIngredients}
-              </span>
-            )}
-          </div>
-
-          <div className="flex items-center gap-3 glass-light rounded-xl p-2">
-            <IconUsers className="w-5 h-5 text-text-secondary" />
-            <span className="text-sm text-text-secondary">Raciones:</span>
-            <div className="flex items-center gap-2">
-              <Button variant="ghost" size="icon-sm" onClick={() => setServings((s) => Math.max(1, s - 1))} disabled={servings <= 1}>
-                <IconMinus className="w-4 h-4" />
-              </Button>
-              <span className="w-8 text-center font-semibold text-lg">{servings}</span>
-              <Button variant="ghost" size="icon-sm" onClick={() => setServings((s) => Math.min(6, s + 1))} disabled={servings >= 6}>
-                <IconPlus className="w-4 h-4" />
-              </Button>
-            </div>
+    <CollapsibleSection title={title} icon={<IconBasket className="w-5 h-5" />}>
+      <div className="flex justify-end mb-6">
+        <div className="flex items-center gap-3 glass-light rounded-xl p-2">
+          <IconUsers className="w-5 h-5 text-text-secondary" />
+          <span className="text-sm text-text-secondary">Raciones:</span>
+          <div className="flex items-center gap-2">
+            <Button variant="ghost" size="icon-sm" onClick={() => setServings((s) => Math.max(1, s - 1))} disabled={servings <= 1}>
+              <IconMinus className="w-4 h-4" />
+            </Button>
+            <span className="w-8 text-center font-semibold text-lg">{servings}</span>
+            <Button variant="ghost" size="icon-sm" onClick={() => setServings((s) => Math.min(6, s + 1))} disabled={servings >= 6}>
+              <IconPlus className="w-4 h-4" />
+            </Button>
           </div>
         </div>
+      </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-          {renderGrid(regularIngredients)}
-        </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+        {renderGrid(regularIngredients, "regular")}
+      </div>
 
-        {pantryIngredients.length > 0 && (
-          <div className="mt-8">
-            <h3 className="text-lg font-semibold text-text-primary mb-4 flex items-center gap-2">
-              <span className="w-8 h-0.5 bg-primary-300 rounded-full" />
-              De tu despensa
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-              {renderGrid(pantryIngredients)}
-            </div>
+      {pantryIngredients.length > 0 && (
+        <div className="mt-8">
+          <h3 className="text-lg font-semibold text-text-primary mb-4 flex items-center gap-2">
+            <span className="w-8 h-0.5 bg-primary-300 rounded-full" />
+            De tu despensa
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+            {renderGrid(pantryIngredients, "pantry")}
           </div>
-        )}
-      </Card>
-    </section>
+        </div>
+      )}
+    </CollapsibleSection>
   )
 }
