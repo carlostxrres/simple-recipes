@@ -3,10 +3,10 @@ import {
   IconBrandLinkedin,
   IconBrandInstagram,
   IconBrandDiscord,
-  IconSun,
 } from "@tabler/icons-react"
+import ThemeToggle from "../../components/ThemeToggle"
 
-export default function () {
+export default function Footer() {
   const links = [
     { href: "/terms", name: "Terms" },
     { href: "/privacy", name: "Privacy" },
@@ -69,16 +69,7 @@ export default function () {
             )
           })}
 
-          {/* To do: make button work */}
-          <button
-            type="button"
-            translate="no"
-            aria-label="Switch to dark mode"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 transition hover:border-slate-300 hover:bg-slate-50 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-slate-900 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:border-slate-600 dark:hover:bg-slate-800 dark:focus-visible:outline-slate-100"
-          >
-            <span className="sr-only">Toggle theme</span>
-            <IconSun className="w-5 h-5" />
-          </button>
+          <ThemeToggle />
         </div>
       </footer>
     </div>
