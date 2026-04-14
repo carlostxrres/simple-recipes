@@ -94,10 +94,18 @@ export interface SingleResponse<T> {
   data: T;
 }
 
+// Allergen entry with ingredient breakdown (used for allergen display and cross-referencing)
+export interface AllergenEntry {
+  id: string
+  name: string
+  slug: string
+  ingredients: { name: string; traces_of: boolean }[]
+}
+
 // Search/filter options
 export interface SearchFilters {
   search?: string;
-  tag?: string;
+  tag?: string | string[];
   cuisine?: string;
   includeIngredients?: string[];
   excludeAllergens?: string[];

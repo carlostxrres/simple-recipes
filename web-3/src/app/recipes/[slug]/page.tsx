@@ -21,6 +21,7 @@ import { UtensilsSection } from "./utensils-section"
 import { StepsSection } from "./steps-section"
 import { NutritionSection } from "./nutrition-section"
 import type { Metadata } from "next"
+import type { AllergenEntry } from "@/lib/types"
 
 // to do: allergens section: at the end
 // to do: utensils section: second to last end
@@ -87,6 +88,11 @@ export default async function RecipePage({ params }: RecipePageProps) {
       }
     })
   })
+
+  const allergenList: AllergenEntry[] = Array.from(
+    allAllergens,
+    ([id, data]) => ({ id, ...data }),
+  )
 
   // Separate pantry and regular ingredients
   const regularIngredients = recipe.ingredients.filter(
@@ -194,7 +200,7 @@ export default async function RecipePage({ params }: RecipePageProps) {
         <IngredientsSection
           regularIngredients={regularIngredients}
           pantryIngredients={pantryIngredients}
-          allAllergens={allAllergens}
+          allAllergens={allergenList}
         />
 
         {/* Steps */}
@@ -219,7 +225,7 @@ export default async function RecipePage({ params }: RecipePageProps) {
         )}
 
         {/* Allergens */}
-        {allAllergens.size > 0 && <AllergensSection allergens={allAllergens} />}
+        {allergenList.length > 0 && <AllergensSection allergens={allergenList} />}
       </div>
     </main>
   )
