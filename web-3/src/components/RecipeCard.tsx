@@ -1,4 +1,5 @@
 import { Badge } from "./ui/Badge"
+import FavoriteButton from "./FavoriteButton"
 import { formatTime, getDifficultyLabel, getDifficultyColor } from "../lib/api"
 import { IconClock, IconFlame, IconChefHat } from "@tabler/icons-react"
 import type { Recipe } from "../lib/types"
@@ -28,6 +29,10 @@ export default function RecipeCard({ recipe }: RecipeCardProps) {
               <IconChefHat className="w-16 h-16 text-primary-400" />
             </div>
           )}
+          {/* Favorite button overlay */}
+          <div className="absolute top-2 right-2 pointer-events-auto">
+            <FavoriteButton recipeId={recipe.id} recipeName={recipe.name} />
+          </div>
         </div>
 
         {/* Content */}

@@ -14,6 +14,7 @@ import {
   formatTime,
 } from "@/lib/api"
 import { Badge } from "@/components/ui/Badge"
+import RecipeActions from "@/components/RecipeActions"
 import { IngredientsSection } from "./ingredients-section"
 import { AllergensSection } from "./allergens-section"
 import { UtensilsSection } from "./utensils-section"
@@ -183,6 +184,11 @@ export default async function RecipePage({ params }: RecipePageProps) {
                 {recipe.description}
               </p>
             )}
+
+            {/* Actions */}
+            <div className="pt-2">
+              <RecipeActions title={recipe.name} />
+            </div>
           </div>
         </div>
       </section>
