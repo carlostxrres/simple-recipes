@@ -33,7 +33,7 @@ function IngredientItem({ ingredient, servings, allergenBadges, onAllergenClick 
       {visible && (
         <div className="relative w-8 h-8 overflow-visible shrink-0">
           <Image
-            src={`${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/images/ingredients/${ingredient.slug}.png`}
+            src={`${process.env.NEXT_PUBLIC_SUPABASE_URL ?? "https://xwpzmtcjxfyncnltgnmc.supabase.co"}/storage/v1/object/public/images/ingredients/${ingredient.slug}.png`}
             alt=""
             width={48}
             height={48}
