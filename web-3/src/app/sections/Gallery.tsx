@@ -2,19 +2,30 @@ import { IconArrowRight } from "@tabler/icons-react"
 import MasonryGrid from "../../components/MasonryGrid"
 import RecipeCard from "../../components/RecipeCard"
 import GalleryFilters from "./GalleryFilters"
-import { getRecipes, getTags } from "../../lib/api"
+import {
+  getRecipes,
+  getTags,
+  getCuisines,
+  getIngredients,
+  getAllergens,
+  getUtensils,
+} from "../../lib/api"
+import type { SearchFilters } from "../../lib/types"
 
 interface GalleryProps {
-  selectedTags: string[]
+  filters: SearchFilters
 }
 
-export default async function Gallery({ selectedTags }: GalleryProps) {
-  const [recipesData, tagsData] = await Promise.all([
-    getRecipes({ page: 1, limit: 12, tag: selectedTags.length ? selectedTags : undefined }),
-    getTags(),
-  ])
-  const recipes = recipesData.data
-  const tags = tagsData.data
+export default async function Gallery({ filters }: GalleryProps) {
+  const [recipesData, tagsData, cuisinesData, ingredientsData, allergensData, utensilsData] =
+    await Promise.all([
+      getRecipes({ ...filters, page: 1, limit: 12 }),
+      getTags(),
+      getCuisines(),
+      getIngredients(),
+      getAllergens(),
+      getUtensils(),
+    ])
 
   return (
     <section id="gallery" className="flex flex-col gap-8">
@@ -30,16 +41,21 @@ export default async function Gallery({ selectedTags }: GalleryProps) {
       </div>
 
       <div className="flex justify-end">
-        <GalleryFilters tags={tags} selectedTags={selectedTags} />
+        <GalleryFilters
+          tags={tagsData.data}
+          cuisines={cuisinesData.data}
+          ingredients={ingredientsData.data}
+          allergens={allergensData.data}
+          utensils={utensilsData.data}
+        />
       </div>
 
       <MasonryGrid>
-        {recipes.map((recipe) => (
+        {recipesData.data.map((recipe) => (
           <RecipeCard key={recipe.id} recipe={recipe} />
         ))}
       </MasonryGrid>
 
-      {/* To do: make button work */}
       <div className="mt-10 flex justify-center">
         <a
           className="inline-flex items-end gap-2 rounded-full font-semibold transition focus-visible:outline focus-visible:outline-offset-2 border border-slate-200 bg-white text-slate-900 hover:border-slate-300 hover:bg-slate-50 focus-visible:outline-slate-900 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:hover:border-slate-600 dark:hover:bg-slate-800 px-6 py-3 text-sm shadow-sm hover:shadow-md"
