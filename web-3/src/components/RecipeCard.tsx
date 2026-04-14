@@ -36,7 +36,7 @@ export default function RecipeCard({ recipe }: RecipeCardProps) {
         </div>
 
         {/* Content */}
-        <div className="p-4 pointer-events-none text-slate-900">
+        <div className="p-4 pointer-events-none">
           <h3 className="font-semibold text-lg leading-tight group-hover:text-primary-600 transition-colors">
             <span>{recipe.name}</span>{" "}
             <span className="text-text-secondary">{recipe.headline}</span>
