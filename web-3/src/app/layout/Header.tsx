@@ -51,7 +51,7 @@ export default function Header() {
             className="inline-flex items-center justify-center gap-2 rounded-full font-semibold transition focus-visible:outline focus-visible:outline-offset-2 bg-slate-900 text-white hover:bg-slate-800 focus-visible:outline-slate-900 dark:hover:bg-slate-700 px-4 py-2 text-sm"
             href="/new"
           >
-            Upload Recipe
+            Subir receta
           </a>
         </div>
       )}
@@ -73,7 +73,7 @@ export default function Header() {
           className="inline-flex items-center gap-2 rounded-full font-semibold transition focus-visible:outline focus-visible:outline-offset-2 bg-slate-900 text-white hover:bg-slate-800 focus-visible:outline-slate-900 dark:hover:bg-slate-700 px-4 py-2 text-sm"
           href="/new"
         >
-          Upload Recipe
+          Subir receta
         </a>
       </div>
     </header>

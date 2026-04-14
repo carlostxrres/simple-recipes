@@ -1,6 +1,6 @@
 import FigureCard from "@/components/FigureCard"
 
-export default function () {
+export default function Hero() {
   return (
     <section className="flex flex-col gap-8 text-balance mt-12">
       {/* <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-slate-500 dark:border-slate-700 dark:bg-slate-900/70 dark:text-slate-300">

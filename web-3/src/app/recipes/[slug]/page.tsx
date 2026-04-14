@@ -14,7 +14,6 @@ import {
   formatTime,
 } from "@/lib/api"
 import { Badge } from "@/components/ui/Badge"
-import { Button } from "@/components/ui/Button"
 import { IngredientsSection } from "./ingredients-section"
 import { AllergensSection } from "./allergens-section"
 import { UtensilsSection } from "./utensils-section"
@@ -22,9 +21,6 @@ import { StepsSection } from "./steps-section"
 import { NutritionSection } from "./nutrition-section"
 import type { Metadata } from "next"
 import type { AllergenEntry } from "@/lib/types"
-
-// to do: allergens section: at the end
-// to do: utensils section: second to last end
 
 interface RecipePageProps {
   params: Promise<{ slug: string }>
@@ -104,17 +100,14 @@ export default async function RecipePage({ params }: RecipePageProps) {
 
   return (
     <main className="min-h-screen">
-      {/* Back button - sticky */}
-      {/* <div className="sticky top-0 z-40 glass border-b border-white/20">
-        <div className="container mx-auto px-4 py-3">
-          <Button variant="ghost" size="sm">
-            <Link href="/" className="gap-2">
-              <IconArrowLeft className="w-4 h-4" />
-              Volver a recetas
-            </Link>
-          </Button>
-        </div>
-      </div> */}
+      {/* Back link */}
+      <Link
+        href="/recipes"
+        className="inline-flex items-center gap-1.5 text-sm text-slate-500 hover:text-slate-900 transition-colors dark:text-slate-400 dark:hover:text-slate-100 mb-4"
+      >
+        <IconArrowLeft className="w-4 h-4" />
+        Todas las recetas
+      </Link>
 
       {/* Hero section */}
       <section className="relative">
