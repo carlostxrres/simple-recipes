@@ -1,26 +1,18 @@
 "use client"
 
-import { useState } from "react"
 import Image from "next/image"
 import { IconListNumbers, IconCheck } from "@tabler/icons-react"
 import CollapsibleSection from "@/components/CollapsibleSection"
+import { usePersistedSet } from "@/hooks/usePersistedSet"
 import type { Step } from "@/lib/types"
 
 interface StepsSectionProps {
+  recipeId: string
   steps: Step[]
 }
 
-export function StepsSection({ steps }: StepsSectionProps) {
-  const [checkedIds, setCheckedIds] = useState<Set<string>>(new Set())
-
-  function toggle(id: string) {
-    setCheckedIds((prev) => {
-      const next = new Set(prev)
-      if (next.has(id)) next.delete(id)
-      else next.add(id)
-      return next
-    })
-  }
+export function StepsSection({ recipeId, steps }: StepsSectionProps) {
+  const { ids: checkedIds, toggle } = usePersistedSet(`recipe-steps-${recipeId}`)
 
   const completedCount = checkedIds.size
 

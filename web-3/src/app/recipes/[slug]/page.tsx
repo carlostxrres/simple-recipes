@@ -38,12 +38,26 @@ export async function generateMetadata({
   try {
     const { data: recipe } = await getRecipeBySlug(slug)
     return {
-      title: `${recipe.name} | Recetas`,
+      title: `${recipe.name} | Simple Eats`,
       description: recipe.headline,
+      openGraph: {
+        title: recipe.name,
+        description: recipe.headline,
+        type: "article",
+        ...(recipe.image_url && {
+          images: [{ url: recipe.image_url, alt: recipe.name }],
+        }),
+      },
+      twitter: {
+        card: recipe.image_url ? "summary_large_image" : "summary",
+        title: recipe.name,
+        description: recipe.headline,
+        ...(recipe.image_url && { images: [recipe.image_url] }),
+      },
     }
   } catch {
     return {
-      title: "Receta no encontrada | Recetas",
+      title: "Receta no encontrada | Simple Eats",
     }
   }
 }
@@ -210,13 +224,14 @@ export default async function RecipePage({ params }: RecipePageProps) {
       <div className="container mx-auto px-4 mt-8 space-y-8">
         {/* Ingredients */}
         <IngredientsSection
+          recipeId={recipe.id}
           regularIngredients={regularIngredients}
           pantryIngredients={pantryIngredients}
           allAllergens={allergenList}
         />
 
         {/* Steps */}
-        <StepsSection steps={recipe.steps} />
+        <StepsSection recipeId={recipe.id} steps={recipe.steps} />
 
         {/* Nutrition */}
         <NutritionSection

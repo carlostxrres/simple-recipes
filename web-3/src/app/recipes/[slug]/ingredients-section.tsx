@@ -13,6 +13,7 @@ import {
 import { Button } from "@/components/ui/Button"
 import CollapsibleSection from "@/components/CollapsibleSection"
 import { formatQuantity } from "@/lib/api"
+import { usePersistedSet } from "@/hooks/usePersistedSet"
 import type { RecipeIngredient, AllergenEntry } from "@/lib/types"
 
 // ─── Types ───────────────────────────────────────────────────────────────────
@@ -195,27 +196,22 @@ function IngredientItem({
 // ─── IngredientsSection ───────────────────────────────────────────────────────
 
 interface IngredientsSectionProps {
+  recipeId: string
   regularIngredients: RecipeIngredient[]
   pantryIngredients: RecipeIngredient[]
   allAllergens: AllergenEntry[]
 }
 
 export function IngredientsSection({
+  recipeId,
   regularIngredients,
   pantryIngredients,
   allAllergens,
 }: IngredientsSectionProps) {
   const [servings, setServings] = useState(2)
-  const [checkedIds, setCheckedIds] = useState<Set<string>>(new Set())
-
-  function toggleChecked(id: string) {
-    setCheckedIds((prev) => {
-      const next = new Set(prev)
-      if (next.has(id)) next.delete(id)
-      else next.add(id)
-      return next
-    })
-  }
+  const { ids: checkedIds, toggle: toggleChecked } = usePersistedSet(
+    `recipe-ingredients-${recipeId}`,
+  )
 
   // Unchecked items first (original order), checked items last (original order)
   function sorted(list: RecipeIngredient[]): RecipeIngredient[] {

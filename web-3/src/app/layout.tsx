@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Header from "./layout/Header"
 import Footer from "./layout/Footer"
 import ThemeProvider from "../components/ThemeProvider"
+import ScrollToTop from "../components/ScrollToTop"
 import { Geist, Geist_Mono } from "next/font/google"
 import "./globals.css"
 
@@ -30,6 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Header />
               {children}
               <Footer />
+              <ScrollToTop />
             </div>
           </div>
         </ThemeProvider>
