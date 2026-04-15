@@ -17,7 +17,7 @@ function timeAgo(ts: number): string {
 }
 
 export default function RecentlyViewedSection() {
-  const { recent } = useRecentlyViewed()
+  const { recent, clearAll } = useRecentlyViewed()
   const [hydrated, setHydrated] = useState(false)
 
   useEffect(() => {
@@ -28,10 +28,19 @@ export default function RecentlyViewedSection() {
 
   return (
     <div className="mt-12">
-      <h2 className="mb-4 flex items-center gap-2 text-lg font-semibold text-slate-900 dark:text-slate-100">
-        <IconClock className="h-5 w-5 text-slate-400" />
-        Vistas recientemente
-      </h2>
+      <div className="mb-4 flex items-center justify-between gap-2">
+        <h2 className="flex items-center gap-2 text-lg font-semibold text-slate-900 dark:text-slate-100">
+          <IconClock className="h-5 w-5 text-slate-400" />
+          Vistas recientemente
+        </h2>
+        <button
+          type="button"
+          onClick={clearAll}
+          className="text-xs text-slate-400 transition hover:text-slate-600 dark:hover:text-slate-300"
+        >
+          Limpiar
+        </button>
+      </div>
       <div className="flex flex-wrap gap-2">
         {recent.map((entry) => (
           <Link

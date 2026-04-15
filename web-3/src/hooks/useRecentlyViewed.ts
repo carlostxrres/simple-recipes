@@ -46,5 +46,10 @@ export function useRecentlyViewed() {
     })
   }, [])
 
-  return { recent, track }
+  const clearAll = useCallback(() => {
+    setRecent([])
+    writeStorage([])
+  }, [])
+
+  return { recent, track, clearAll }
 }
