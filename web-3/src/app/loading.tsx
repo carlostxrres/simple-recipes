@@ -18,10 +18,6 @@ export default function HomeLoading() {
           <div className="h-5 w-2/3 rounded bg-slate-200 dark:bg-slate-800 animate-pulse" />
         </div>
 
-        <div className="flex justify-end">
-          <div className="h-10 w-28 rounded-full bg-slate-200 dark:bg-slate-800 animate-pulse" />
-        </div>
-
         <div className="columns-1 gap-4 sm:columns-2 lg:columns-3">
           {Array.from({ length: 6 }).map((_, i) => (
             <div

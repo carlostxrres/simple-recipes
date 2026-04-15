@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useCallback } from "react"
 import Image from "next/image"
 import { motion, LayoutGroup } from "framer-motion"
 import {
@@ -9,6 +9,8 @@ import {
   IconMinus,
   IconPlus,
   IconCheck,
+  IconClipboard,
+  IconClipboardCheck,
 } from "@tabler/icons-react"
 import { Button } from "@/components/ui/Button"
 import CollapsibleSection from "@/components/CollapsibleSection"
@@ -209,9 +211,26 @@ export function IngredientsSection({
   allAllergens,
 }: IngredientsSectionProps) {
   const [servings, setServings] = useState(2)
+  const [copied, setCopied] = useState(false)
   const { ids: checkedIds, toggle: toggleChecked } = usePersistedSet(
     `recipe-ingredients-${recipeId}`,
   )
+
+  const copyShoppingList = useCallback(async () => {
+    const allIngredients = [...regularIngredients, ...pantryIngredients]
+    const unchecked = allIngredients.filter((i) => !checkedIds.has(i.ingredient_id))
+    const lines = unchecked.map(
+      (i) => `• ${i.name}: ${formatQuantity(i.quantity_amount, i.quantity_unit, servings)}`,
+    )
+    if (lines.length === 0) return
+    try {
+      await navigator.clipboard.writeText(lines.join("\n"))
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    } catch {
+      // clipboard unavailable
+    }
+  }, [regularIngredients, pantryIngredients, checkedIds, servings])
 
   // Unchecked items first (original order), checked items last (original order)
   function sorted(list: RecipeIngredient[]): RecipeIngredient[] {
@@ -277,7 +296,7 @@ export function IngredientsSection({
 
   return (
     <CollapsibleSection title={title} icon={<IconBasket className="w-5 h-5" />}>
-      <div className="flex justify-end mb-6">
+      <div className="flex flex-wrap items-center justify-between gap-3 mb-6">
         <div className="flex items-center gap-3 glass-light rounded-xl p-2">
           <IconUsers className="w-5 h-5 text-text-secondary" />
           <span className="text-sm text-text-secondary">Raciones:</span>
@@ -291,6 +310,19 @@ export function IngredientsSection({
             </Button>
           </div>
         </div>
+
+        <button
+          type="button"
+          onClick={copyShoppingList}
+          className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white/50 px-3 py-2 text-sm text-slate-600 transition hover:bg-white hover:text-slate-900 dark:border-slate-700 dark:bg-slate-800/40 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-100"
+        >
+          {copied ? (
+            <IconClipboardCheck className="w-4 h-4 text-green-500" />
+          ) : (
+            <IconClipboard className="w-4 h-4" />
+          )}
+          {copied ? "¡Copiado!" : "Copiar lista"}
+        </button>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
