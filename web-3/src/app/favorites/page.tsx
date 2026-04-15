@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { IconArrowLeft } from "@tabler/icons-react"
 import FavoritesContent from "./FavoritesContent"
+import RecentlyViewedSection from "./RecentlyViewedSection"
 
 export const metadata: Metadata = {
   title: "Favoritos | Simple Eats",
@@ -29,6 +30,7 @@ export default function FavoritesPage() {
       </div>
 
       <FavoritesContent />
+      <RecentlyViewedSection />
     </main>
   )
 }

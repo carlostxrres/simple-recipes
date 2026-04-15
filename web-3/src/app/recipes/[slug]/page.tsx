@@ -25,6 +25,7 @@ import { UtensilsSection } from "./utensils-section"
 import { StepsSection } from "./steps-section"
 import { NutritionSection } from "./nutrition-section"
 import { RelatedSection } from "./related-section"
+import RecipeViewTracker from "@/components/RecipeViewTracker"
 import type { Metadata } from "next"
 import type { AllergenEntry } from "@/lib/types"
 
@@ -129,6 +130,7 @@ export default async function RecipePage({ params }: RecipePageProps) {
 
   return (
     <main className="min-h-screen">
+      <RecipeViewTracker slug={recipe.slug} name={recipe.name} />
       {/* Back link */}
       <Link
         href="/recipes"
