@@ -5,6 +5,7 @@ import MasonryGrid from "@/components/MasonryGrid"
 import RecipeCard from "@/components/RecipeCard"
 import GalleryFilters from "@/app/sections/GalleryFilters"
 import ActiveFilterPills from "./ActiveFilterPills"
+import RecipeSearch from "./RecipeSearch"
 import Pagination from "@/components/Pagination"
 import {
   getRecipes,
@@ -87,32 +88,35 @@ export default async function RecipesPage({ searchParams }: RecipesPageProps) {
         </p>
       </div>
 
-      {/* Filter row */}
-      <div className="flex flex-wrap items-center justify-between gap-3">
-        <ActiveFilterPills
-          searchParams={p}
-          tags={tagsData.data}
-          cuisines={cuisinesData.data}
-          ingredients={ingredientsData.data}
-          allergens={allergensData.data}
-          utensils={utensilsData.data}
-        />
-        <div className="ml-auto">
-          <Suspense
-            fallback={
-              <div className="h-10 w-28 animate-pulse rounded-full bg-slate-200 dark:bg-slate-800" />
-            }
-          >
-            <GalleryFilters
-              tags={tagsData.data}
-              cuisines={cuisinesData.data}
-              ingredients={ingredientsData.data}
-              allergens={allergensData.data}
-              utensils={utensilsData.data}
-            />
-          </Suspense>
-        </div>
+      {/* Search + filter row */}
+      <div className="flex flex-wrap items-center gap-3">
+        <Suspense fallback={<div className="h-9 flex-1 max-w-md rounded-xl bg-slate-200 dark:bg-slate-800 animate-pulse" />}>
+          <RecipeSearch />
+        </Suspense>
+        <Suspense
+          fallback={
+            <div className="h-10 w-28 animate-pulse rounded-full bg-slate-200 dark:bg-slate-800" />
+          }
+        >
+          <GalleryFilters
+            tags={tagsData.data}
+            cuisines={cuisinesData.data}
+            ingredients={ingredientsData.data}
+            allergens={allergensData.data}
+            utensils={utensilsData.data}
+          />
+        </Suspense>
       </div>
+
+      {/* Active filter pills */}
+      <ActiveFilterPills
+        searchParams={p}
+        tags={tagsData.data}
+        cuisines={cuisinesData.data}
+        ingredients={ingredientsData.data}
+        allergens={allergensData.data}
+        utensils={utensilsData.data}
+      />
 
       {/* Results */}
       {recipes.length === 0 ? (
