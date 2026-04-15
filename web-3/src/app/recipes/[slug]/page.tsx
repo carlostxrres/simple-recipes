@@ -18,6 +18,7 @@ import { Badge } from "@/components/ui/Badge"
 import RecipeActions from "@/components/RecipeActions"
 import CookModeButton from "@/components/CookModeButton"
 import RecipeTimer from "@/components/RecipeTimer"
+import FavoriteButton from "@/components/FavoriteButton"
 import { IngredientsSection } from "./ingredients-section"
 import { AllergensSection } from "./allergens-section"
 import { UtensilsSection } from "./utensils-section"
@@ -148,7 +149,7 @@ export default async function RecipePage({ params }: RecipePageProps) {
               fill
               className="object-cover"
               priority
-              sizes="100vw"
+              sizes="(max-width: 1280px) 100vw, 1280px"
             />
           ) : (
             <div className="absolute inset-0 bg-linear-to-br from-primary-200 to-primary-300 flex items-center justify-center">
@@ -162,8 +163,8 @@ export default async function RecipePage({ params }: RecipePageProps) {
         {/* Recipe info overlay */}
         <div className="container mx-auto px-4">
           <div className="relative -mt-32 sm:-mt-40 glass-frost rounded-2xl p-6 md:p-8 space-y-4">
-            {/* Tags and cuisines — clickable links to filter gallery */}
-            <div className="flex flex-wrap gap-2">
+            {/* Tags, cuisines, and favorite */}
+            <div className="flex flex-wrap items-center gap-2">
               {recipe.cuisines.map((cuisine) => (
                 <Link key={cuisine.id} href={`/recipes?cuisine=${cuisine.slug}`}>
                   <Badge variant="default" className="transition hover:opacity-80 cursor-pointer">
@@ -178,6 +179,9 @@ export default async function RecipePage({ params }: RecipePageProps) {
                   </Badge>
                 </Link>
               ))}
+              <div className="ml-auto">
+                <FavoriteButton recipeId={recipe.id} recipeName={recipe.name} />
+              </div>
             </div>
 
             {/* Title */}
