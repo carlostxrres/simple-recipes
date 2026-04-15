@@ -4,6 +4,7 @@ import type { Metadata } from "next"
 import MasonryGrid from "@/components/MasonryGrid"
 import RecipeCard from "@/components/RecipeCard"
 import GalleryFilters from "@/app/sections/GalleryFilters"
+import ActiveFilterPills from "./ActiveFilterPills"
 import Pagination from "@/components/Pagination"
 import {
   getRecipes,
@@ -86,21 +87,31 @@ export default async function RecipesPage({ searchParams }: RecipesPageProps) {
         </p>
       </div>
 
-      {/* Filters */}
-      <div className="flex justify-end">
-        <Suspense
-          fallback={
-            <div className="h-10 w-28 animate-pulse rounded-full bg-slate-200 dark:bg-slate-800" />
-          }
-        >
-          <GalleryFilters
-            tags={tagsData.data}
-            cuisines={cuisinesData.data}
-            ingredients={ingredientsData.data}
-            allergens={allergensData.data}
-            utensils={utensilsData.data}
-          />
-        </Suspense>
+      {/* Filter row */}
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <ActiveFilterPills
+          searchParams={p}
+          tags={tagsData.data}
+          cuisines={cuisinesData.data}
+          ingredients={ingredientsData.data}
+          allergens={allergensData.data}
+          utensils={utensilsData.data}
+        />
+        <div className="ml-auto">
+          <Suspense
+            fallback={
+              <div className="h-10 w-28 animate-pulse rounded-full bg-slate-200 dark:bg-slate-800" />
+            }
+          >
+            <GalleryFilters
+              tags={tagsData.data}
+              cuisines={cuisinesData.data}
+              ingredients={ingredientsData.data}
+              allergens={allergensData.data}
+              utensils={utensilsData.data}
+            />
+          </Suspense>
+        </div>
       </div>
 
       {/* Results */}
