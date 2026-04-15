@@ -1,3 +1,5 @@
+import HeroSearch from "@/components/HeroSearch"
+
 export default function Hero() {
   return (
     <section className="flex flex-col gap-8 text-balance mt-12">
@@ -9,6 +11,7 @@ export default function Hero() {
         ingredientes, mínima preparación y sin desperdicio. Cocina más rápido, come
         mejor.
       </p>
+      <HeroSearch />
     </section>
   )
 }

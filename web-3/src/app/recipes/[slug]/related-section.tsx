@@ -3,6 +3,7 @@ import Image from "next/image"
 import { IconChefHat, IconClock, IconFlame } from "@tabler/icons-react"
 import { getRecipes, formatTime, getDifficultyColor, getDifficultyLabel } from "@/lib/api"
 import { Badge } from "@/components/ui/Badge"
+import FavoriteButton from "@/components/FavoriteButton"
 import type { Tag, Cuisine } from "@/lib/types"
 
 interface RelatedSectionProps {
@@ -28,7 +29,7 @@ export async function RelatedSection({ currentId, cuisines, tags }: RelatedSecti
   if (related.length === 0) return null
 
   const sectionLabel = cuisineSlug
-    ? `Más recetas de ${cuisines[0].name}`
+    ? `Más recetas de cocina ${cuisines[0].name}`
     : `Recetas similares`
 
   return (
@@ -53,6 +54,9 @@ export async function RelatedSection({ currentId, cuisines, tags }: RelatedSecti
                     <IconChefHat className="w-10 h-10 text-primary-400" />
                   </div>
                 )}
+                <div className="absolute top-2 right-2">
+                  <FavoriteButton recipeSlug={recipe.slug} recipeName={recipe.name} />
+                </div>
               </div>
 
               <div className="p-3">

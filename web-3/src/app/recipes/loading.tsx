@@ -7,8 +7,9 @@ export default function RecipesLoading() {
         <div className="h-4 w-32 rounded bg-slate-200 dark:bg-slate-800 animate-pulse" />
       </div>
 
-      {/* Filters skeleton */}
-      <div className="flex justify-end">
+      {/* Search + filter skeleton */}
+      <div className="flex flex-wrap items-center gap-3">
+        <div className="h-10 flex-1 max-w-md rounded-xl bg-slate-200 dark:bg-slate-800 animate-pulse" />
         <div className="h-10 w-28 rounded-full bg-slate-200 dark:bg-slate-800 animate-pulse" />
       </div>
 
