@@ -1,34 +1,11 @@
-import { Suspense } from "react"
 import { IconArrowRight, IconChefHat } from "@tabler/icons-react"
 import Link from "next/link"
 import MasonryGrid from "../../components/MasonryGrid"
 import RecipeCard from "../../components/RecipeCard"
-import GalleryFilters from "./GalleryFilters"
-import {
-  getRecipes,
-  getTags,
-  getCuisines,
-  getIngredients,
-  getAllergens,
-  getUtensils,
-} from "../../lib/api"
-import type { SearchFilters } from "../../lib/types"
+import { getRecipes } from "../../lib/api"
 
-interface GalleryProps {
-  filters: SearchFilters
-}
-
-export default async function Gallery({ filters }: GalleryProps) {
-  const [recipesData, tagsData, cuisinesData, ingredientsData, allergensData, utensilsData] =
-    await Promise.all([
-      getRecipes({ ...filters, page: 1, limit: 12 }),
-      getTags(),
-      getCuisines(),
-      getIngredients(),
-      getAllergens(),
-      getUtensils(),
-    ])
-
+export default async function Gallery() {
+  const recipesData = await getRecipes({ page: 1, limit: 12 })
   const recipes = recipesData.data
   const total = recipesData.pagination.total
 
@@ -44,33 +21,12 @@ export default async function Gallery({ filters }: GalleryProps) {
         </p>
       </div>
 
-      <div className="flex justify-end">
-        <Suspense
-          fallback={
-            <div className="h-10 w-28 animate-pulse rounded-full bg-slate-200 dark:bg-slate-800" />
-          }
-        >
-          <GalleryFilters
-            tags={tagsData.data}
-            cuisines={cuisinesData.data}
-            ingredients={ingredientsData.data}
-            allergens={allergensData.data}
-            utensils={utensilsData.data}
-          />
-        </Suspense>
-      </div>
-
       {recipes.length === 0 ? (
         <div className="flex flex-col items-center gap-4 py-24 text-center">
           <IconChefHat className="w-16 h-16 text-slate-300 dark:text-slate-600" />
-          <div>
-            <p className="text-lg font-semibold text-slate-700 dark:text-slate-300">
-              No hay recetas con esos filtros
-            </p>
-            <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
-              Prueba a ajustar o eliminar algunos filtros
-            </p>
-          </div>
+          <p className="text-lg font-semibold text-slate-700 dark:text-slate-300">
+            No hay recetas disponibles
+          </p>
         </div>
       ) : (
         <MasonryGrid>
