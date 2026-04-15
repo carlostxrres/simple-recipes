@@ -12,7 +12,7 @@ interface StepsSectionProps {
 }
 
 export function StepsSection({ recipeId, steps }: StepsSectionProps) {
-  const { ids: checkedIds, toggle } = usePersistedSet(`recipe-steps-${recipeId}`)
+  const { ids: checkedIds, toggle, clear } = usePersistedSet(`recipe-steps-${recipeId}`)
 
   const completedCount = checkedIds.size
 
@@ -29,6 +29,17 @@ export function StepsSection({ recipeId, steps }: StepsSectionProps) {
 
   return (
     <CollapsibleSection title={title} icon={<IconListNumbers className="w-5 h-5" />}>
+      {completedCount > 0 && (
+        <div className="flex justify-end mb-4">
+          <button
+            type="button"
+            onClick={clear}
+            className="text-sm text-slate-400 transition hover:text-slate-700 dark:hover:text-slate-200"
+          >
+            Reiniciar pasos
+          </button>
+        </div>
+      )}
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
         {steps.map((step, index) => {
           const isChecked = checkedIds.has(step.id)

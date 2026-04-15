@@ -212,7 +212,7 @@ export function IngredientsSection({
 }: IngredientsSectionProps) {
   const [servings, setServings] = useState(2)
   const [copied, setCopied] = useState(false)
-  const { ids: checkedIds, toggle: toggleChecked } = usePersistedSet(
+  const { ids: checkedIds, toggle: toggleChecked, clear } = usePersistedSet(
     `recipe-ingredients-${recipeId}`,
   )
 
@@ -311,18 +311,29 @@ export function IngredientsSection({
           </div>
         </div>
 
-        <button
-          type="button"
-          onClick={copyShoppingList}
-          className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white/50 px-3 py-2 text-sm text-slate-600 transition hover:bg-white hover:text-slate-900 dark:border-slate-700 dark:bg-slate-800/40 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-100"
-        >
-          {copied ? (
-            <IconClipboardCheck className="w-4 h-4 text-green-500" />
-          ) : (
-            <IconClipboard className="w-4 h-4" />
+        <div className="flex items-center gap-2">
+          {totalChecked > 0 && (
+            <button
+              type="button"
+              onClick={() => { clear(); }}
+              className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white/50 px-3 py-2 text-sm text-slate-500 transition hover:bg-white hover:text-slate-700 dark:border-slate-700 dark:bg-slate-800/40 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-200"
+            >
+              Reiniciar
+            </button>
           )}
-          {copied ? "¡Copiado!" : "Copiar lista"}
-        </button>
+          <button
+            type="button"
+            onClick={copyShoppingList}
+            className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white/50 px-3 py-2 text-sm text-slate-600 transition hover:bg-white hover:text-slate-900 dark:border-slate-700 dark:bg-slate-800/40 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-100"
+          >
+            {copied ? (
+              <IconClipboardCheck className="w-4 h-4 text-green-500" />
+            ) : (
+              <IconClipboard className="w-4 h-4" />
+            )}
+            {copied ? "¡Copiado!" : "Copiar lista"}
+          </button>
+        </div>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">

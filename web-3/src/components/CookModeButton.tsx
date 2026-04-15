@@ -40,6 +40,7 @@ export default function CookModeButton() {
         wakeLockRef.current.addEventListener("release", () => setActive(false))
       } catch {
         // Permission denied or not supported
+        // to do: inform the user and set inactive again
       }
     }
   }
@@ -63,7 +64,7 @@ export default function CookModeButton() {
       ) : (
         <IconZzz className="h-3.5 w-3.5" />
       )}
-      {active ? "Modo cocina" : "Modo cocina"}
+      {active ? "Pantalla activa" : "Modo cocina"}
     </button>
   )
 }
