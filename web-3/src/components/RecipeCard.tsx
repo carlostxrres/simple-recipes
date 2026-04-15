@@ -31,7 +31,7 @@ export default function RecipeCard({ recipe }: RecipeCardProps) {
           )}
           {/* Favorite button overlay */}
           <div className="absolute top-2 right-2 pointer-events-auto">
-            <FavoriteButton recipeId={recipe.id} recipeName={recipe.name} />
+            <FavoriteButton recipeSlug={recipe.slug} recipeName={recipe.name} />
           </div>
         </div>
 

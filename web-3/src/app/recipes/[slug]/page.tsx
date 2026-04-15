@@ -180,7 +180,7 @@ export default async function RecipePage({ params }: RecipePageProps) {
                 </Link>
               ))}
               <div className="ml-auto">
-                <FavoriteButton recipeId={recipe.id} recipeName={recipe.name} />
+                <FavoriteButton recipeSlug={recipe.slug} recipeName={recipe.name} />
               </div>
             </div>
 

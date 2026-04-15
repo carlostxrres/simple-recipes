@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react"
 
-const STORAGE_KEY = "simple-eats-favorites"
+const STORAGE_KEY = "simple-eats-favs"
 
 function readStorage(): Set<string> {
   if (typeof window === "undefined") return new Set()
@@ -14,9 +14,9 @@ function readStorage(): Set<string> {
   }
 }
 
-function writeStorage(ids: Set<string>) {
+function writeStorage(slugs: Set<string>) {
   try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify([...ids]))
+    localStorage.setItem(STORAGE_KEY, JSON.stringify([...slugs]))
   } catch {
     // storage full or unavailable
   }
@@ -30,18 +30,18 @@ export function useFavorites() {
     setFavorites(readStorage())
   }, [])
 
-  const toggle = useCallback((recipeId: string) => {
+  const toggle = useCallback((recipeSlug: string) => {
     setFavorites((prev) => {
       const next = new Set(prev)
-      if (next.has(recipeId)) next.delete(recipeId)
-      else next.add(recipeId)
+      if (next.has(recipeSlug)) next.delete(recipeSlug)
+      else next.add(recipeSlug)
       writeStorage(next)
       return next
     })
   }, [])
 
   const isFavorite = useCallback(
-    (recipeId: string) => favorites.has(recipeId),
+    (recipeSlug: string) => favorites.has(recipeSlug),
     [favorites],
   )
 

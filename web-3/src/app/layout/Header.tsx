@@ -4,7 +4,8 @@ import { useState } from "react"
 import { IconMenu2, IconX } from "@tabler/icons-react"
 
 const links: { href: string; name: string }[] = [
-  // to do
+  { href: "/recipes", name: "Recetas" },
+  { href: "/favorites", name: "Favoritos" },
 ]
 
 export default function Header() {

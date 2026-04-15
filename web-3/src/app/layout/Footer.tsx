@@ -8,10 +8,10 @@ import ThemeToggle from "../../components/ThemeToggle"
 
 export default function Footer() {
   const links = [
-    { href: "/terms", name: "Terms" },
-    { href: "/privacy", name: "Privacy" },
+    { href: "/terminos", name: "Términos" },
+    { href: "/privacidad", name: "Privacidad" },
     { href: "/faq", name: "FAQ" },
-    { href: "mailto:support@simpleeats.xyz", name: "Contact" },
+    { href: "mailto:hola@simpleeats.xyz", name: "Contacto" },
   ]
 
   const socials = [

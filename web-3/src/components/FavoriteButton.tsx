@@ -4,13 +4,13 @@ import { IconHeart, IconHeartFilled } from "@tabler/icons-react"
 import { useFavorites } from "@/hooks/useFavorites"
 
 interface FavoriteButtonProps {
-  recipeId: string
+  recipeSlug: string
   recipeName: string
 }
 
-export default function FavoriteButton({ recipeId, recipeName }: FavoriteButtonProps) {
+export default function FavoriteButton({ recipeSlug, recipeName }: FavoriteButtonProps) {
   const { isFavorite, toggle } = useFavorites()
-  const active = isFavorite(recipeId)
+  const active = isFavorite(recipeSlug)
 
   return (
     <button
@@ -18,7 +18,7 @@ export default function FavoriteButton({ recipeId, recipeName }: FavoriteButtonP
       onClick={(e) => {
         e.preventDefault()
         e.stopPropagation()
-        toggle(recipeId)
+        toggle(recipeSlug)
       }}
       aria-label={active ? `Quitar ${recipeName} de favoritos` : `Guardar ${recipeName} en favoritos`}
       aria-pressed={active}
