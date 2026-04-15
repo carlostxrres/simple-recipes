@@ -1,4 +1,10 @@
+import type { Metadata } from "next"
 import { IconChefHat } from "@tabler/icons-react"
+
+export const metadata: Metadata = {
+  title: "Subir receta | Simple Eats",
+  description: "Próximamente podrás subir tus propias recetas a Simple Eats.",
+}
 
 export default function NewRecipePage() {
   return (

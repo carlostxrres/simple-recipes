@@ -8,6 +8,7 @@ import {
   IconChefHat,
 } from "@tabler/icons-react"
 import {
+  getRecipes,
   getRecipeBySlug,
   getDifficultyLabel,
   getDifficultyColor,
@@ -28,6 +29,15 @@ import type { AllergenEntry } from "@/lib/types"
 
 interface RecipePageProps {
   params: Promise<{ slug: string }>
+}
+
+export async function generateStaticParams() {
+  try {
+    const data = await getRecipes({ limit: 100, page: 1 })
+    return data.data.map((r) => ({ slug: r.slug }))
+  } catch {
+    return []
+  }
 }
 
 export async function generateMetadata({
