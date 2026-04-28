@@ -5,9 +5,15 @@ import RecipeCard from "../../components/RecipeCard"
 import { getRecipes } from "../../lib/api"
 
 export default async function Gallery() {
-  const recipesData = await getRecipes({ page: 1, limit: 12 })
-  const recipes = recipesData.data
-  const total = recipesData.pagination.total
+  let recipes: Awaited<ReturnType<typeof getRecipes>>["data"] = []
+  let total = 0
+  try {
+    const recipesData = await getRecipes({ page: 1, limit: 12 })
+    recipes = recipesData.data
+    total = recipesData.pagination.total
+  } catch {
+    // API unreachable at build time — page will be populated once revalidated
+  }
 
   return (
     <section id="gallery" className="flex flex-col gap-8">
