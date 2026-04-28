@@ -11,8 +11,8 @@ export default async function Gallery() {
     const recipesData = await getRecipes({ page: 1, limit: 12 })
     recipes = recipesData.data
     total = recipesData.pagination.total
-  } catch {
-    // API unreachable at build time — page will be populated once revalidated
+  } catch (err) {
+    console.error("[Gallery] Failed to fetch recipes:", err)
   }
 
   return (
