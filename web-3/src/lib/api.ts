@@ -54,7 +54,7 @@ export async function getRecipes(
   });
 
   if (!res.ok) {
-    throw new Error("Failed to fetch recipes");
+    throw new Error(`Failed to fetch recipes: ${res.status} ${res.statusText} (url: ${API_URL}/api/recipes)`)
   }
 
   return res.json();
