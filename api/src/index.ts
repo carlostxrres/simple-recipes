@@ -15,6 +15,7 @@
  * =============================================================================
  */
 
+import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import recipesRouter from "./routes/recipes";
@@ -30,7 +31,9 @@ const PORT = process.env.PORT || 3001;
 
 // Enable CORS (Cross-Origin Resource Sharing)
 // This allows the frontend (different port) to make requests to this API
-app.use(cors());
+app.use(cors({
+  origin: process.env.FRONTEND_URL || "http://localhost:3000",
+}));
 
 // Parse JSON request bodies
 // This allows us to read req.body when clients send JSON data

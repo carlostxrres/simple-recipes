@@ -34,7 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             Ir al contenido principal
           </a>
           <div className="min-h-screen bg-slate-50 text-slate-900 transition-colors dark:bg-slate-950 dark:text-slate-100">
-            <div className="relative mx-auto flex min-h-screen w-full max-w-295 flex-col px-6 pt-6 b-6 sm:px-10 lg:px-16 space-y-8">
+            <div className="relative mx-auto flex min-h-screen w-full max-w-295 flex-col px-6 pt-6 pb-6 sm:px-10 lg:px-16 space-y-8">
               <Header />
               <div id="main-content">{children}</div>
               <Footer />

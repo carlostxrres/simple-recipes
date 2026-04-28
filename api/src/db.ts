@@ -17,8 +17,7 @@ import { Pool } from "pg";
 // Create the connection pool
 // The pool will automatically manage connections for us
 const pool = new Pool({
-  connectionString:
-    "postgresql://postgres.xwpzmtcjxfyncnltgnmc:Nem06e0ULskBpWm6@aws-1-eu-west-3.pooler.supabase.com:6543/postgres",
+  connectionString: process.env.DATABASE_URL,
   ssl: { rejectUnauthorized: false },
   max: 10, // Maximum number of connections in the pool
 });

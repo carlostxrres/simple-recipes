@@ -9,7 +9,7 @@
  * =============================================================================
  */
 
-const SUPABASE_URL = "https://xwpzmtcjxfyncnltgnmc.supabase.co";
+const SUPABASE_URL = process.env.SUPABASE_URL || "https://xwpzmtcjxfyncnltgnmc.supabase.co";
 const BUCKET_NAME = "images";
 
 /**
