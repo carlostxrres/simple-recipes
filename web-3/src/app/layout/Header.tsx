@@ -28,13 +28,13 @@ export default function Header() {
   ]
 
   return (
-    <header className="flex flex-col gap-3 rounded border border-white/80 bg-white/90 px-4 py-3 shadow-[0_12px_40px_rgba(148,163,184,0.22)] backdrop-blur-md dark:border-slate-700/70 dark:bg-slate-900/80 dark:shadow-[0_12px_40px_rgba(15,23,42,0.55)] sm:flex-row sm:items-baseline sm:justify-between sm:px-6">
-      <div className="flex items-baseline justify-between gap-3">
+    <header className="flex flex-col gap-3 rounded border border-white/80 bg-white/90 px-4 py-3 shadow-[0_12px_40px_rgba(148,163,184,0.22)] backdrop-blur-md dark:border-slate-700/70 dark:bg-slate-900/80 dark:shadow-[0_12px_40px_rgba(15,23,42,0.55)] sm:flex-row sm:items-center sm:justify-between sm:px-6">
+      <div className="flex items-center justify-between gap-3">
         <Link
-          className="flex items-baseline gap-2 font-semibold uppercase tracking-[0.28em] text-slate-900 dark:text-slate-100"
+          className="flex items-center gap-3 font-semibold uppercase tracking-[0.28em] text-slate-900 dark:text-slate-100"
           href="/"
         >
-          <span className="text-xl">🥕</span>
+          <img src="/logo.svg" className="h-8" />
           <span>Simple eats</span>
         </Link>
 
