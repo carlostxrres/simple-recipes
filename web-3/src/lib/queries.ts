@@ -148,6 +148,8 @@ export async function getRecipes(
     i++;
   }
 
+  const filterParams = [...params];
+
   if (filters.seed) {
     dataQuery += ` ORDER BY md5(r.id || $${i})`;
     params.push(filters.seed);
@@ -158,7 +160,7 @@ export async function getRecipes(
   dataQuery += ` LIMIT $${i} OFFSET $${i + 1}`;
   params.push(limit, offset);
 
-  const [countResult] = await query<{ count: string }>(countQuery, params.slice(0, -2));
+  const [countResult] = await query<{ count: string }>(countQuery, filterParams);
   const recipes = await query<RecipeRow>(dataQuery, params);
 
   const total = parseInt(countResult.count);
