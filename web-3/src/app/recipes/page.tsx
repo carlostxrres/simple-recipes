@@ -6,6 +6,7 @@ import RecipeCard from "@/components/RecipeCard"
 import GalleryFilters from "@/app/sections/GalleryFilters"
 import ActiveFilterPills from "./ActiveFilterPills"
 import RecipeSearch from "./RecipeSearch"
+import ShuffleButton from "./ShuffleButton"
 import Pagination from "@/components/Pagination"
 import {
   getRecipes,
@@ -30,6 +31,7 @@ type RawParams = {
   excludeAllergens?: string | string[]
   maxTime?: string
   page?: string
+  seed?: string
 }
 
 function toArray(v: string | string[] | undefined): string[] {
@@ -60,6 +62,7 @@ export default async function RecipesPage({ searchParams }: RecipesPageProps) {
     excludeUtensils: toArray(p.excludeUtensils),
     excludeAllergens: toArray(p.excludeAllergens),
     maxTime: p.maxTime ? parseInt(p.maxTime) || undefined : undefined,
+    seed: p.seed,
   }
 
   const [recipesData, tagsData, cuisinesData, ingredientsData, allergensData, utensilsData] =
@@ -92,6 +95,9 @@ export default async function RecipesPage({ searchParams }: RecipesPageProps) {
       <div className="flex flex-wrap items-center gap-3">
         <Suspense fallback={<div className="h-9 flex-1 max-w-md rounded-xl bg-slate-200 dark:bg-slate-800 animate-pulse" />}>
           <RecipeSearch />
+        </Suspense>
+        <Suspense fallback={<div className="h-9 w-28 animate-pulse rounded-full bg-slate-200 dark:bg-slate-800" />}>
+          <ShuffleButton />
         </Suspense>
         <Suspense
           fallback={

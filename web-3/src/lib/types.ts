@@ -115,4 +115,5 @@ export interface SearchFilters {
   maxTime?: number;
   page?: number;
   limit?: number;
+  seed?: string;
 }

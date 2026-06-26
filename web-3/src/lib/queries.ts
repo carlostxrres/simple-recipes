@@ -148,7 +148,14 @@ export async function getRecipes(
     i++;
   }
 
-  dataQuery += ` ORDER BY md5(r.id || CURRENT_DATE::text), r.last_updated_at DESC LIMIT $${i} OFFSET $${i + 1}`;
+  if (filters.seed) {
+    dataQuery += ` ORDER BY md5(r.id || $${i})`;
+    params.push(filters.seed);
+    i++;
+  } else {
+    dataQuery += ` ORDER BY md5(r.id || CURRENT_DATE::text)`;
+  }
+  dataQuery += ` LIMIT $${i} OFFSET $${i + 1}`;
   params.push(limit, offset);
 
   const [countResult] = await query<{ count: string }>(countQuery, params.slice(0, -2));
