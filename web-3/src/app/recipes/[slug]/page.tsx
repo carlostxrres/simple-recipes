@@ -10,6 +10,8 @@ import {
 import {
   getRecipes,
   getRecipeBySlug,
+} from "@/lib/queries"
+import {
   getDifficultyLabel,
   getDifficultyColor,
   formatTime,

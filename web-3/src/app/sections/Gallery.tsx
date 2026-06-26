@@ -2,7 +2,7 @@ import { IconArrowRight, IconChefHat } from "@tabler/icons-react"
 import Link from "next/link"
 import MasonryGrid from "../../components/MasonryGrid"
 import RecipeCard from "../../components/RecipeCard"
-import { getRecipes } from "../../lib/api"
+import { getRecipes } from "../../lib/queries"
 
 export default async function Gallery() {
   let recipes: Awaited<ReturnType<typeof getRecipes>>["data"] = []

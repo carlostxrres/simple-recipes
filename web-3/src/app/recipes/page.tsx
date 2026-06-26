@@ -14,7 +14,7 @@ import {
   getIngredients,
   getAllergens,
   getUtensils,
-} from "@/lib/api"
+} from "@/lib/queries"
 import type { SearchFilters } from "@/lib/types"
 
 const PER_PAGE = 24
