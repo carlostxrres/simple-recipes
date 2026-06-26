@@ -7,11 +7,9 @@ import { useFavorites } from "@/hooks/useFavorites"
 import RecipeCard from "@/components/RecipeCard"
 import type { Recipe } from "@/lib/types"
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001"
-
 async function fetchRecipeBySlug(slug: string): Promise<Recipe | null> {
   try {
-    const res = await fetch(`${API_URL}/api/recipes/slug/${slug}`)
+    const res = await fetch(`/api/recipes/slug/${slug}`)
     if (!res.ok) return null
     const data = await res.json()
     return data.data as Recipe

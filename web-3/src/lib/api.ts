@@ -11,7 +11,12 @@ import type {
   Utensil,
 } from "./types";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001";
+function getApiBaseUrl(): string {
+  if (typeof window !== "undefined") return ""; // browser: relative URL
+  if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`; // Vercel server-side
+  return "http://localhost:3000"; // local dev
+}
+const API_URL = getApiBaseUrl();
 
 // Helper function to build query string
 function buildQueryString(params: Record<string, string | string[] | number | undefined>): string {
