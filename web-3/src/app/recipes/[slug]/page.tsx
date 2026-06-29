@@ -26,6 +26,7 @@ import { AllergensSection } from "./allergens-section"
 import { UtensilsSection } from "./utensils-section"
 import { StepsSection } from "./steps-section"
 import { NutritionSection } from "./nutrition-section"
+import { NotesSection } from "./notes-section"
 import { RelatedSection } from "./related-section"
 import RecipeViewTracker from "@/components/RecipeViewTracker"
 import type { Metadata } from "next"
@@ -263,6 +264,9 @@ export default async function RecipePage({ params }: RecipePageProps) {
           protein={recipe.nutrition_protein}
           sodium={recipe.nutrition_sodium}
         />
+
+        {/* Notes */}
+        <NotesSection recipeId={recipe.id} />
 
         {/* Utensils */}
         {recipe.utensils.length > 0 && (
