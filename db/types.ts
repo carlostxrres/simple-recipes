@@ -133,5 +133,6 @@ interface Utensil {
 interface Step {
     id: StepId;
     instructionsHTML: string;
+    tip?: string;
     imageURL?: string;
 }

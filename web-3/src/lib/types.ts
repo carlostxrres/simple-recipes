@@ -39,6 +39,7 @@ export interface Step {
   recipe_id: string;
   step_order: number;
   instructions: string;
+  tip: string | null;
   has_image: boolean;
   image_url: string | null;
 }

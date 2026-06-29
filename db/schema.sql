@@ -111,6 +111,7 @@ CREATE TABLE steps (
     recipe_id TEXT NOT NULL REFERENCES recipes(id),  -- each step belongs to one recipe
     step_order INTEGER NOT NULL,                      -- 1, 2, 3... to maintain order
     instructions TEXT NOT NULL,
+    tip TEXT,
     has_image BOOLEAN NOT NULL DEFAULT FALSE         -- image URL derived from ID
 );
 
