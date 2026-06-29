@@ -4,6 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 import { IconMenu2, IconX } from "@tabler/icons-react"
 import { useFavorites } from "@/hooks/useFavorites"
+import Logo from "@/components/Logo"
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -34,7 +35,7 @@ export default function Header() {
           className="flex items-center gap-3 font-semibold uppercase tracking-[0.28em] text-slate-900 dark:text-slate-100"
           href="/"
         >
-          <img src="/logo.svg" className="h-8" />
+          <Logo size={32} />
           <span>Simple eats</span>
         </Link>
 
