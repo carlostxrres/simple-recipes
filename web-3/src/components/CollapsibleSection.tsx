@@ -52,7 +52,7 @@ export default function CollapsibleSection({
               transition={{ duration: 0.22, ease: "easeInOut" }}
               style={{ overflow: "hidden" }}
             >
-              <div className="px-6 pb-6">{children}</div>
+              <div className="px-6 pb-6 pt-3">{children}</div>
             </motion.div>
           )}
         </AnimatePresence>
