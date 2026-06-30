@@ -316,3 +316,9 @@ input[type="number"] {
         transform: translateX(0);
     }
 }
+
+/* Sileo overrides */
+
+[data-sileo-title] {
+  text-transform: initial !important;
+}

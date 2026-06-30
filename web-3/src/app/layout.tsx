@@ -40,7 +40,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <div id="main-content">{children}</div>
               <Footer />
               <ScrollToTop />
-              <Toaster position="bottom-right" />
+              <Toaster position="bottom-right" options={{
+                fill: "#e7ebf0", // to do: manage light/dark mode and standardize colors
+                roundness: 8,
+                styles: {
+                  title: "text-slate-900 dark:text-slate-100",
+                  description: "text-slate-900 dark:text-slate-100",
+                },
+
+              }} />
             </div>
           </div>
         </ThemeProvider>
@@ -48,3 +56,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   )
 }
+
+// bg-slate-50 dark:bg-slate-950 
+// 
