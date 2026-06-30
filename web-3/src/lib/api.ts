@@ -9,7 +9,7 @@ import type {
   Allergen,
   Ingredient,
   Utensil,
-} from "./types";
+} from "@/lib/types";
 
 function getApiBaseUrl(): string {
   if (typeof window !== "undefined") return ""; // browser: relative URL
@@ -145,4 +145,4 @@ export async function getIngredients(): Promise<{ success: boolean; data: Ingred
   return res.json();
 }
 
-export { getDifficultyLabel, getDifficultyColor, formatTime, formatQuantity } from "./format";
+export { getDifficultyLabel, getDifficultyColor, formatTime, formatQuantity } from "@/lib/format";

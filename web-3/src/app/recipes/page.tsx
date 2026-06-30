@@ -4,9 +4,9 @@ import type { Metadata } from "next"
 import MasonryGrid from "@/components/MasonryGrid"
 import RecipeCard from "@/components/RecipeCard"
 import GalleryFilters from "@/app/sections/GalleryFilters"
-import ActiveFilterPills from "./ActiveFilterPills"
-import RecipeSearch from "./RecipeSearch"
-import ShuffleButton from "./ShuffleButton"
+import ActiveFilterPills from "@/app/recipes/ActiveFilterPills"
+import RecipeSearch from "@/app/recipes/RecipeSearch"
+import ShuffleButton from "@/app/recipes/ShuffleButton"
 import Pagination from "@/components/Pagination"
 import {
   getRecipes,

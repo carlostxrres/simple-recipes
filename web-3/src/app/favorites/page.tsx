@@ -1,8 +1,8 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { IconArrowLeft } from "@tabler/icons-react"
-import FavoritesContent from "./FavoritesContent"
-import RecentlyViewedSection from "./RecentlyViewedSection"
+import FavoritesContent from "@/app/favorites/FavoritesContent"
+import RecentlyViewedSection from "@/app/favorites/RecentlyViewedSection"
 
 export const metadata: Metadata = {
   title: "Favoritos | Simple Eats",

@@ -13,9 +13,9 @@ import {
   IconMinus,
   IconClock,
 } from "@tabler/icons-react"
-import type { Tag, Cuisine, Ingredient, Allergen, Utensil } from "../../lib/types"
-import { getIngredientImageUrl } from "../../lib/imageUrl"
-import { formatTime } from "../../lib/format"
+import type { Tag, Cuisine, Ingredient, Allergen, Utensil } from "@/lib/types"
+import { getIngredientImageUrl } from "@/lib/imageUrl"
+import { formatTime } from "@/lib/format"
 
 // ─── Time slider ────────────────────────────────────────────────────────────
 

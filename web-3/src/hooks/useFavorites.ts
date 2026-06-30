@@ -2,7 +2,7 @@
 
 import { useCallback } from "react"
 import { sileo } from "sileo"
-import { usePersistedSet } from "./usePersistedSet"
+import { usePersistedSet } from "@/hooks/usePersistedSet"
 
 const STORAGE_KEY = "simple-eats-favs"
 

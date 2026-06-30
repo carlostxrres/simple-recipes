@@ -6,8 +6,8 @@
  * Client components (browser) should continue using api.ts (HTTP fetch).
  */
 
-import { query, queryOne } from "./db";
-import { getRecipeImageUrl, getStepImageUrl } from "./imageUrl";
+import { query, queryOne } from "@/lib/db";
+import { getRecipeImageUrl, getStepImageUrl } from "@/lib/imageUrl";
 import type {
   Recipe,
   RecipeDetail,
@@ -22,7 +22,7 @@ import type {
   PaginatedResponse,
   SingleResponse,
   SearchFilters,
-} from "./types";
+} from "@/lib/types";
 
 type RecipeRow = Omit<Recipe, "image_url">;
 type StepRow = Omit<Step, "image_url">;

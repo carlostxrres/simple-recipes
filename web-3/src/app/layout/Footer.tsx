@@ -4,7 +4,7 @@ import {
   IconBrandInstagram,
   IconBrandDiscord,
 } from "@tabler/icons-react"
-import ThemeToggle from "../../components/ThemeToggle"
+import ThemeToggle from "@/components/ThemeToggle"
 
 export default function Footer() {
   const links = [
