@@ -33,7 +33,7 @@ export default function RecipeCard({ recipe }: RecipeCardProps) {
           {/* Action buttons overlay */}
           <div className="absolute top-2 right-2 flex flex-col gap-1.5 pointer-events-auto">
             <FavoriteButton recipeSlug={recipe.slug} recipeName={recipe.name} />
-            <NotesButton recipeSlug={recipe.slug} />
+            <NotesButton recipeId={recipe.id} />
           </div>
         </div>
 

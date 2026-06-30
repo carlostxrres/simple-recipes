@@ -5,11 +5,11 @@ import { IconNotes } from "@tabler/icons-react"
 import { useRecipeNote } from "@/hooks/useRecipeNote"
 
 interface NotesButtonProps {
-  recipeSlug: string
+  recipeId: string
 }
 
-export default function NotesButton({ recipeSlug }: NotesButtonProps) {
-  const { note, hydrated } = useRecipeNote(recipeSlug)
+export default function NotesButton({ recipeId }: NotesButtonProps) {
+  const { note, hydrated } = useRecipeNote(recipeId)
   const buttonRef = useRef<HTMLButtonElement>(null)
   const popoverRef = useRef<HTMLDivElement>(null)
 
