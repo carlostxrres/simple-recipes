@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 import Link from "next/link"
-import { IconHeartOff, IconArrowLeft } from "@tabler/icons-react"
+import { IconHeartOff } from "@tabler/icons-react"
 import { useFavorites } from "@/hooks/useFavorites"
 import RecipeCard from "@/components/RecipeCard"
 import type { Recipe } from "@/lib/types"
@@ -20,15 +20,9 @@ async function fetchRecipeBySlug(slug: string): Promise<Recipe | null> {
 }
 
 export default function FavoritesContent() {
-  const { favorites } = useFavorites()
+  const { favorites, hydrated } = useFavorites()
   const [recipes, setRecipes] = useState<Recipe[]>([])
-  const [hydrated, setHydrated] = useState(false)
   const [loading, setLoading] = useState(false)
-
-  // Track hydration separately so we don't flash an empty state before localStorage loads
-  useEffect(() => {
-    setHydrated(true)
-  }, [])
 
   const slugs = [...favorites]
   const slugKey = slugs.join(",")

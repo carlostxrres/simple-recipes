@@ -13,26 +13,25 @@ function readSet(key: string): Set<string> {
 }
 
 function writeSet(key: string, ids: Set<string>) {
-  try {
-    if (ids.size === 0) {
-      localStorage.removeItem(key)
-    } else {
-      localStorage.setItem(key, JSON.stringify([...ids]))
-    }
-  } catch {
-    // storage full or unavailable
+  if (ids.size === 0) {
+    localStorage.removeItem(key)
+  } else {
+    localStorage.setItem(key, JSON.stringify([...ids]))
   }
 }
 
 /**
  * A Set<string> backed by localStorage. Hydrates after mount to avoid SSR
  * mismatch. Automatically removes the key when the set becomes empty.
+ * Optional onWriteError callback fires if localStorage.setItem throws (e.g. quota exceeded).
  */
-export function usePersistedSet(storageKey: string) {
+export function usePersistedSet(storageKey: string, onWriteError?: () => void) {
   const [ids, setIds] = useState<Set<string>>(new Set())
+  const [hydrated, setHydrated] = useState(false)
 
   useEffect(() => {
     setIds(readSet(storageKey))
+    setHydrated(true)
   }, [storageKey])
 
   const toggle = useCallback(
@@ -41,17 +40,25 @@ export function usePersistedSet(storageKey: string) {
         const next = new Set(prev)
         if (next.has(id)) next.delete(id)
         else next.add(id)
-        writeSet(storageKey, next)
+        try {
+          writeSet(storageKey, next)
+        } catch {
+          onWriteError?.()
+        }
         return next
       })
     },
-    [storageKey],
+    [storageKey, onWriteError],
   )
 
   const clear = useCallback(() => {
     setIds(new Set())
-    writeSet(storageKey, new Set())
-  }, [storageKey])
+    try {
+      writeSet(storageKey, new Set())
+    } catch {
+      onWriteError?.()
+    }
+  }, [storageKey, onWriteError])
 
-  return { ids, toggle, clear }
+  return { ids, toggle, clear, hydrated }
 }
