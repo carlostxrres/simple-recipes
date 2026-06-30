@@ -13,7 +13,9 @@ export default function NotesButton({ recipeId }: NotesButtonProps) {
   const buttonRef = useRef<HTMLButtonElement>(null)
   const popoverRef = useRef<HTMLDivElement>(null)
 
-  if (!hydrated || !note.trim()) return null
+  if (!hydrated || !note.trim()) {
+    return null
+  }
 
   return (
     <>
@@ -25,7 +27,9 @@ export default function NotesButton({ recipeId }: NotesButtonProps) {
           e.stopPropagation()
           const popover = popoverRef.current
           const button = buttonRef.current
-          if (!popover || !button) return
+          if (!popover || !button) {
+            return
+          }
           const rect = button.getBoundingClientRect()
           popover.style.top = `${rect.top}px`
           popover.style.left = `${rect.left - 8}px`

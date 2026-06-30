@@ -18,8 +18,11 @@ export default function RecipeSearch() {
 
   function navigate(term: string) {
     const params = new URLSearchParams(searchParams.toString())
-    if (term.trim()) params.set("search", term.trim())
-    else params.delete("search")
+    if (term.trim()) {
+      params.set("search", term.trim())
+    } else {
+      params.delete("search")
+    }
     params.delete("page")
     const qs = params.toString()
     router.push(qs ? `${pathname}?${qs}` : pathname)

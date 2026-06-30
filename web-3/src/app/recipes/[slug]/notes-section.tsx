@@ -11,7 +11,9 @@ export function NotesSection({ recipeId }: NotesSectionProps) {
   const { note, setNote, clearNote, hydrated } = useRecipeNote(recipeId)
   
 
-  if (!hydrated) return null
+  if (!hydrated) {
+    return null
+  }
 
   return (
     <CollapsibleSection

@@ -14,7 +14,9 @@ export default function ShuffleButton() {
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   function handleShuffle() {
-    if (busy) return
+    if (busy) {
+      return
+    }
     setBusy(true)
 
     const params = new URLSearchParams(searchParams.toString())

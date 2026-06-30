@@ -11,7 +11,9 @@ import { sileo } from "sileo"
 async function fetchRecipeBySlug(slug: string): Promise<Recipe | null> {
   try {
     const res = await fetch(`/api/recipes/slug/${slug}`)
-    if (!res.ok) return null
+    if (!res.ok) {
+      return null
+    }
     const data = await res.json()
     return data.data as Recipe
   } catch {
@@ -28,7 +30,9 @@ export default function FavoritesContent() {
   const slugKey = slugs.join(",")
 
   useEffect(() => {
-    if (!hydrated) return
+    if (!hydrated) {
+      return
+    }
     if (slugs.length === 0) {
       setRecipes([])
       return

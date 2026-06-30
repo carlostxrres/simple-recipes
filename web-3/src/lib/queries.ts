@@ -39,7 +39,9 @@ interface AllergenRow {
 async function attachAllergens(
   ingredients: IngredientRow[]
 ): Promise<RecipeIngredient[]> {
-  if (ingredients.length === 0) return [];
+  if (ingredients.length === 0) {
+    return [];
+  }
   const ids = ingredients.map((i) => i.ingredient_id);
   const rows = await query<AllergenRow>(
     `SELECT ia.ingredient_id, a.id, a.slug, a.name, ia.traces_of
@@ -194,7 +196,9 @@ export async function getRecipeBySlug(
     "SELECT * FROM recipes WHERE slug = $1",
     [slug]
   );
-  if (!recipe) throw new Error("Recipe not found");
+  if (!recipe) {
+    throw new Error("Recipe not found");
+  }
   return { success: true, data: await buildRecipeDetail(recipe) };
 }
 
@@ -205,7 +209,9 @@ export async function getRecipeById(
     "SELECT * FROM recipes WHERE id = $1",
     [id]
   );
-  if (!recipe) throw new Error("Recipe not found");
+  if (!recipe) {
+    throw new Error("Recipe not found");
+  }
   return { success: true, data: await buildRecipeDetail(recipe) };
 }
 

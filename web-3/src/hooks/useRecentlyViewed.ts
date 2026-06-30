@@ -12,7 +12,9 @@ export interface RecentEntry {
 }
 
 function readStorage(): RecentEntry[] {
-  if (typeof window === "undefined") return []
+  if (typeof window === "undefined") {
+    return []
+  }
   try {
     const raw = localStorage.getItem(STORAGE_KEY)
     return raw ? (JSON.parse(raw) as RecentEntry[]) : []

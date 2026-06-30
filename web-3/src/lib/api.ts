@@ -12,8 +12,12 @@ import type {
 } from "@/lib/types";
 
 function getApiBaseUrl(): string {
-  if (typeof window !== "undefined") return ""; // browser: relative URL
-  if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`; // Vercel server-side
+  if (typeof window !== "undefined") {
+    return ""; // browser: relative URL
+  }
+  if (process.env.VERCEL_URL) {
+    return `https://${process.env.VERCEL_URL}`; // Vercel server-side
+  }
   return "http://localhost:3000"; // local dev
 }
 const API_URL = getApiBaseUrl();
@@ -125,7 +129,9 @@ export async function getUtensils(): Promise<{ success: boolean; data: Utensil[]
     const res = await fetch(`${API_URL}/api/utensils`, {
       next: { revalidate: 300 },
     });
-    if (!res.ok) return { success: false, data: [] };
+    if (!res.ok) {
+      return { success: false, data: [] };
+    }
     return res.json();
   } catch {
     return { success: false, data: [] };

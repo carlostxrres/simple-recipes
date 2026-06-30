@@ -20,14 +20,20 @@ function buildUrl(
 ): string {
   const p = new URLSearchParams()
   for (const [k, v] of Object.entries(params)) {
-    if (k === "page") continue // reset pagination on filter change
+    if (k === "page") {
+      continue // reset pagination on filter change
+    }
     if (Array.isArray(v)) {
       v.forEach((s) => {
-        if (k === removeKey && (removeValue === undefined || s === removeValue)) return
+        if (k === removeKey && (removeValue === undefined || s === removeValue)) {
+          return
+        }
         p.append(k, s)
       })
     } else if (v) {
-      if (k !== removeKey) p.set(k, v)
+      if (k !== removeKey) {
+        p.set(k, v)
+      }
     }
   }
   const qs = p.toString()
@@ -105,7 +111,9 @@ export default function ActiveFilterPills({
     })
   }
 
-  if (pills.length === 0) return null
+  if (pills.length === 0) {
+    return null
+  }
 
   const cls: Record<Pill["variant"], string> = {
     default:

@@ -27,7 +27,9 @@ export async function RelatedSection({ currentId, cuisines, tags }: RelatedSecti
 
   const related = data.data.filter((r) => r.id !== currentId).slice(0, 4)
 
-  if (related.length === 0) return null
+  if (related.length === 0) {
+    return null
+  }
 
   const sectionLabel = cuisineSlug
     ? `Más recetas de cocina ${cuisines[0].name}`

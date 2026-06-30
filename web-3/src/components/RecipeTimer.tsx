@@ -40,7 +40,9 @@ export default function RecipeTimer({ totalMinutes }: RecipeTimerProps) {
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null)
 
   const stop = useCallback(() => {
-    if (intervalRef.current) clearInterval(intervalRef.current)
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current)
+    }
     intervalRef.current = null
   }, [])
 

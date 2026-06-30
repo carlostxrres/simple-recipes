@@ -67,15 +67,21 @@ function parseParams(p: URLSearchParams): FilterState {
 
 function toQueryString(f: FilterState): string {
   const p = new URLSearchParams()
-  if (f.search) p.set("search", f.search)
+  if (f.search) {
+    p.set("search", f.search)
+  }
   f.tags.forEach((t) => p.append("tag", t))
-  if (f.cuisine) p.set("cuisine", f.cuisine)
+  if (f.cuisine) {
+    p.set("cuisine", f.cuisine)
+  }
   f.includeIngredients.forEach((i) => p.append("includeIngredients", i))
   f.excludeIngredients.forEach((i) => p.append("excludeIngredients", i))
   f.includeUtensils.forEach((u) => p.append("includeUtensils", u))
   f.excludeUtensils.forEach((u) => p.append("excludeUtensils", u))
   f.excludeAllergens.forEach((a) => p.append("excludeAllergens", a))
-  if (f.maxTime > 0) p.set("maxTime", String(f.maxTime))
+  if (f.maxTime > 0) {
+    p.set("maxTime", String(f.maxTime))
+  }
   return p.toString()
 }
 
@@ -108,7 +114,9 @@ function FilterSection({
 
   // Re-open section when it becomes active (e.g. after a "clear all")
   useEffect(() => {
-    if (activeCount > 0) setOpen(true)
+    if (activeCount > 0) {
+      setOpen(true)
+    }
   }, [activeCount])
 
   return (
@@ -238,8 +246,12 @@ function ThreeStateList({
   const [query, setQuery] = useState("")
 
   function getState(slug: string): TriState {
-    if (includeList.includes(slug)) return "include"
-    if (excludeList.includes(slug)) return "exclude"
+    if (includeList.includes(slug)) {
+      return "include"
+    }
+    if (excludeList.includes(slug)) {
+      return "exclude"
+    }
     return "neutral"
   }
 
@@ -613,7 +625,9 @@ export default function GalleryFilters({
 
   // Close on outside click
   useEffect(() => {
-    if (!isOpen) return
+    if (!isOpen) {
+      return
+    }
     function handle(e: MouseEvent) {
       if (panelRef.current && !panelRef.current.contains(e.target as Node)) {
         closePanel()
@@ -625,9 +639,13 @@ export default function GalleryFilters({
 
   // Close on Escape
   useEffect(() => {
-    if (!isOpen) return
+    if (!isOpen) {
+      return
+    }
     function handle(e: KeyboardEvent) {
-      if (e.key === "Escape") closePanel()
+      if (e.key === "Escape") {
+        closePanel()
+      }
     }
     document.addEventListener("keydown", handle)
     return () => document.removeEventListener("keydown", handle)

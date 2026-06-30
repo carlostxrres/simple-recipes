@@ -3,7 +3,9 @@
 import { useState, useEffect, useCallback } from "react"
 
 function readSet(key: string): Set<string> {
-  if (typeof window === "undefined") return new Set()
+  if (typeof window === "undefined") {
+    return new Set()
+  }
   try {
     const raw = localStorage.getItem(key)
     return raw ? new Set(JSON.parse(raw) as string[]) : new Set()
@@ -38,8 +40,11 @@ export function usePersistedSet(storageKey: string, onWriteError?: () => void) {
     (id: string) => {
       setIds((prev) => {
         const next = new Set(prev)
-        if (next.has(id)) next.delete(id)
-        else next.add(id)
+        if (next.has(id)) {
+          next.delete(id)
+        } else {
+          next.add(id)
+        }
         try {
           writeSet(storageKey, next)
         } catch {

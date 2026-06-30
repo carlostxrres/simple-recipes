@@ -67,7 +67,9 @@ function AllergenBadges({
 }) {
   const [expanded, setExpanded] = useState(false)
 
-  if (badges.length === 0) return null
+  if (badges.length === 0) {
+    return null
+  }
 
   if (badges.length < STACK_THRESHOLD) {
     return (
@@ -224,7 +226,9 @@ export function IngredientsSection({
     const lines = unchecked.map(
       (i) => `• ${i.name}: ${formatQuantity(i.quantity_amount, i.quantity_unit, servings)}`,
     )
-    if (lines.length === 0) return
+    if (lines.length === 0) {
+      return
+    }
     try {
       await navigator.clipboard.writeText(lines.join("\n"))
       setCopied(true)

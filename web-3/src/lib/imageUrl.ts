@@ -36,9 +36,15 @@ function buildTransformParams(options: {
   quality?: number;
 }): string {
   const params = new URLSearchParams();
-  if (options.width) params.set("width", options.width.toString());
-  if (options.height) params.set("height", options.height.toString());
-  if (options.quality) params.set("quality", options.quality.toString());
+  if (options.width) {
+    params.set("width", options.width.toString());
+  }
+  if (options.height) {
+    params.set("height", options.height.toString());
+  }
+  if (options.quality) {
+    params.set("quality", options.quality.toString());
+  }
   const queryString = params.toString();
   return queryString ? `?${queryString}` : "";
 }

@@ -14,7 +14,9 @@ export default function ScrollToTop() {
     return () => window.removeEventListener("scroll", check)
   }, [])
 
-  if (!visible) return null
+  if (!visible) {
+    return null
+  }
 
   return (
     <button

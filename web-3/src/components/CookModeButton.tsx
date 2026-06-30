@@ -15,7 +15,9 @@ export default function CookModeButton() {
 
   // Re-acquire the lock when the page becomes visible again (e.g. after tab switch)
   useEffect(() => {
-    if (!active) return
+    if (!active) {
+      return
+    }
     async function reacquire() {
       if (document.visibilityState === "visible") {
         try {
@@ -48,7 +50,9 @@ export default function CookModeButton() {
     }
   }
 
-  if (!supported) return null
+  if (!supported) {
+    return null
+  }
 
   return (
     <button
