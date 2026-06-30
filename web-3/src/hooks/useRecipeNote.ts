@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react"
 import { sileo } from "sileo"
 
+export const NOTE_MAX_LENGTH = 1000
+
 export function useRecipeNote(recipeId: string) {
   const key = `recipe-note-${recipeId}`
   const [note, setNoteState] = useState("")
@@ -10,16 +12,18 @@ export function useRecipeNote(recipeId: string) {
 
   useEffect(() => {
     try {
-      setNoteState(localStorage.getItem(key) ?? "")
+      setNoteState((localStorage.getItem(key) ?? "").trim())
     } catch {}
     setHydrated(true)
   }, [key])
 
   function setNote(content: string) {
-    setNoteState(content)
+    const capped = content.slice(0, NOTE_MAX_LENGTH)
+    setNoteState(capped)
     try {
-      if (content.trim()) {
-        localStorage.setItem(key, content)
+      const trimmed = capped.trim()
+      if (trimmed) {
+        localStorage.setItem(key, trimmed)
       } else {
         localStorage.removeItem(key)
       }
