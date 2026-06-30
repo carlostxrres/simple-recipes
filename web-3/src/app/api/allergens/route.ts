@@ -1,11 +1,9 @@
 import { NextResponse } from "next/server";
-import { query } from "@/lib/db";
-import type { Allergen } from "@/lib/types";
+import { getAllergens } from "@/lib/queries";
 
 export async function GET() {
   try {
-    const allergens = await query<Allergen>("SELECT id, slug, name FROM allergens ORDER BY name");
-    return NextResponse.json({ success: true, data: allergens });
+    return NextResponse.json(await getAllergens());
   } catch (error) {
     console.error("Error fetching allergens:", error);
     return NextResponse.json({ success: false, error: "Failed to fetch allergens" }, { status: 500 });
