@@ -1,6 +1,8 @@
 import Link from "next/link"
 import { IconX } from "@tabler/icons-react"
 import type { Tag, Cuisine, Ingredient, Allergen, Utensil } from "@/lib/types"
+import { toArray } from "@/lib/utils"
+import { formatTime } from "@/lib/format"
 
 interface ActiveFilterPillsProps {
   searchParams: Record<string, string | string[] | undefined>
@@ -32,13 +34,6 @@ function buildUrl(
   return qs ? `/recipes?${qs}` : "/recipes"
 }
 
-function formatMaxTime(min: number): string {
-  if (min < 60) return `${min} min`
-  const h = Math.floor(min / 60)
-  const m = min % 60
-  return m ? `${h} h ${m} min` : `${h} h`
-}
-
 interface Pill {
   key: string
   label: string
@@ -56,7 +51,6 @@ export default function ActiveFilterPills({
 }: ActiveFilterPillsProps) {
   const pills: Pill[] = []
 
-  // Search
   if (p.search) {
     pills.push({
       key: "search",
@@ -66,115 +60,46 @@ export default function ActiveFilterPills({
     })
   }
 
-  // Tags
-  const tagValues = Array.isArray(p.tag) ? p.tag : p.tag ? [p.tag] : []
-  tagValues.forEach((slug) => {
+  toArray(p.tag).forEach((slug) => {
     const name = tags.find((t) => t.slug === slug)?.name ?? slug
-    pills.push({
-      key: `tag:${slug}`,
-      label: name,
-      removeUrl: buildUrl(p, "tag", slug),
-      variant: "default",
-    })
+    pills.push({ key: `tag:${slug}`, label: name, removeUrl: buildUrl(p, "tag", slug), variant: "default" })
   })
 
-  // Cuisine
   if (p.cuisine) {
     const name = cuisines.find((c) => c.slug === p.cuisine)?.name ?? String(p.cuisine)
-    pills.push({
-      key: "cuisine",
-      label: name,
-      removeUrl: buildUrl(p, "cuisine"),
-      variant: "default",
-    })
+    pills.push({ key: "cuisine", label: name, removeUrl: buildUrl(p, "cuisine"), variant: "default" })
   }
 
-  // Include ingredients
-  const incIng = Array.isArray(p.includeIngredients)
-    ? p.includeIngredients
-    : p.includeIngredients
-      ? [p.includeIngredients]
-      : []
-  incIng.forEach((slug) => {
+  toArray(p.includeIngredients).forEach((slug) => {
     const name = ingredients.find((i) => i.slug === slug)?.name ?? slug
-    pills.push({
-      key: `inc-ing:${slug}`,
-      label: `+${name}`,
-      removeUrl: buildUrl(p, "includeIngredients", slug),
-      variant: "green",
-    })
+    pills.push({ key: `inc-ing:${slug}`, label: `+${name}`, removeUrl: buildUrl(p, "includeIngredients", slug), variant: "green" })
   })
 
-  // Exclude ingredients
-  const excIng = Array.isArray(p.excludeIngredients)
-    ? p.excludeIngredients
-    : p.excludeIngredients
-      ? [p.excludeIngredients]
-      : []
-  excIng.forEach((slug) => {
+  toArray(p.excludeIngredients).forEach((slug) => {
     const name = ingredients.find((i) => i.slug === slug)?.name ?? slug
-    pills.push({
-      key: `exc-ing:${slug}`,
-      label: `−${name}`,
-      removeUrl: buildUrl(p, "excludeIngredients", slug),
-      variant: "red",
-    })
+    pills.push({ key: `exc-ing:${slug}`, label: `−${name}`, removeUrl: buildUrl(p, "excludeIngredients", slug), variant: "red" })
   })
 
-  // Include utensils
-  const incUten = Array.isArray(p.includeUtensils)
-    ? p.includeUtensils
-    : p.includeUtensils
-      ? [p.includeUtensils]
-      : []
-  incUten.forEach((slug) => {
+  toArray(p.includeUtensils).forEach((slug) => {
     const name = utensils.find((u) => u.slug === slug)?.name ?? slug
-    pills.push({
-      key: `inc-uten:${slug}`,
-      label: `+${name}`,
-      removeUrl: buildUrl(p, "includeUtensils", slug),
-      variant: "green",
-    })
+    pills.push({ key: `inc-uten:${slug}`, label: `+${name}`, removeUrl: buildUrl(p, "includeUtensils", slug), variant: "green" })
   })
 
-  // Exclude utensils
-  const excUten = Array.isArray(p.excludeUtensils)
-    ? p.excludeUtensils
-    : p.excludeUtensils
-      ? [p.excludeUtensils]
-      : []
-  excUten.forEach((slug) => {
+  toArray(p.excludeUtensils).forEach((slug) => {
     const name = utensils.find((u) => u.slug === slug)?.name ?? slug
-    pills.push({
-      key: `exc-uten:${slug}`,
-      label: `−${name}`,
-      removeUrl: buildUrl(p, "excludeUtensils", slug),
-      variant: "red",
-    })
+    pills.push({ key: `exc-uten:${slug}`, label: `−${name}`, removeUrl: buildUrl(p, "excludeUtensils", slug), variant: "red" })
   })
 
-  // Exclude allergens
-  const excAlg = Array.isArray(p.excludeAllergens)
-    ? p.excludeAllergens
-    : p.excludeAllergens
-      ? [p.excludeAllergens]
-      : []
-  excAlg.forEach((slug) => {
+  toArray(p.excludeAllergens).forEach((slug) => {
     const name = allergens.find((a) => a.slug === slug)?.name ?? slug
-    pills.push({
-      key: `exc-alg:${slug}`,
-      label: `sin ${name}`,
-      removeUrl: buildUrl(p, "excludeAllergens", slug),
-      variant: "amber",
-    })
+    pills.push({ key: `exc-alg:${slug}`, label: `sin ${name}`, removeUrl: buildUrl(p, "excludeAllergens", slug), variant: "amber" })
   })
 
-  // Max time
   const maxTime = p.maxTime ? parseInt(String(p.maxTime)) : 0
   if (maxTime > 0) {
     pills.push({
       key: "maxTime",
-      label: `≤ ${formatMaxTime(maxTime)}`,
+      label: `≤ ${formatTime(maxTime)}`,
       removeUrl: buildUrl(p, "maxTime"),
       variant: "time",
     })

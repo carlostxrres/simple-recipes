@@ -14,20 +14,15 @@ import {
   IconClock,
 } from "@tabler/icons-react"
 import type { Tag, Cuisine, Ingredient, Allergen, Utensil } from "../../lib/types"
-
-const SUPABASE_URL =
-  process.env.NEXT_PUBLIC_SUPABASE_URL ?? "https://xwpzmtcjxfyncnltgnmc.supabase.co"
+import { getIngredientImageUrl } from "../../lib/imageUrl"
+import { formatTime } from "../../lib/format"
 
 // ─── Time slider ────────────────────────────────────────────────────────────
 
 const TIME_OPTIONS = [0, 5, 10, 15, 20, 30, 45, 60, 90, 120]
 
 function formatMaxTime(min: number): string {
-  if (min === 0) return "Sin límite"
-  if (min < 60) return `${min} min`
-  const h = Math.floor(min / 60)
-  const m = min % 60
-  return m ? `${h} h ${m} min` : `${h} h`
+  return min === 0 ? "Sin límite" : formatTime(min)
 }
 
 // ─── Filter state ────────────────────────────────────────────────────────────
@@ -267,7 +262,7 @@ function ThreeStateList({
               item={item}
               state={getState(item.slug)}
               onCycle={onCycle}
-              imgUrl={showImages ? `${SUPABASE_URL}/storage/v1/object/public/images/ingredients/${item.slug}.png` : undefined}
+              imgUrl={showImages ? getIngredientImageUrl(item.slug) : undefined}
             />
           ))}
           <div className="my-1.5 border-t border-slate-100 dark:border-slate-800" />
@@ -281,7 +276,7 @@ function ThreeStateList({
             item={item}
             state={getState(item.slug)}
             onCycle={onCycle}
-            imgUrl={showImages ? `${SUPABASE_URL}/storage/v1/object/public/images/ingredients/${item.slug}.png` : undefined}
+            imgUrl={showImages ? getIngredientImageUrl(item.slug) : undefined}
           />
         ))}
         {visible.length === 0 && (

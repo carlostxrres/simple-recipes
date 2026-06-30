@@ -15,7 +15,7 @@ import {
   getDifficultyLabel,
   getDifficultyColor,
   formatTime,
-} from "@/lib/api"
+} from "@/lib/format"
 import { Badge } from "@/components/ui/Badge"
 import RecipeActions from "@/components/RecipeActions"
 import CookModeButton from "@/components/CookModeButton"

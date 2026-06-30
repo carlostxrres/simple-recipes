@@ -14,7 +14,8 @@ import {
 } from "@tabler/icons-react"
 import { Button } from "@/components/ui/Button"
 import CollapsibleSection from "@/components/CollapsibleSection"
-import { formatQuantity } from "@/lib/api"
+import { formatQuantity } from "@/lib/format"
+import { getIngredientImageUrl } from "@/lib/imageUrl"
 import { usePersistedSet } from "@/hooks/usePersistedSet"
 import type { RecipeIngredient, AllergenEntry } from "@/lib/types"
 import { sileo } from "sileo"
@@ -159,7 +160,7 @@ function IngredientItem({
       {imgVisible && !checked && (
         <div className="relative h-8 w-8 shrink-0 overflow-visible">
           <Image
-            src={`${process.env.NEXT_PUBLIC_SUPABASE_URL ?? "https://xwpzmtcjxfyncnltgnmc.supabase.co"}/storage/v1/object/public/images/ingredients/${ingredient.slug}.png`}
+            src={getIngredientImageUrl(ingredient.slug)}
             alt=""
             width={48}
             height={48}

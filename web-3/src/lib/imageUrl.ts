@@ -1,5 +1,7 @@
 const SUPABASE_URL =
-  process.env.SUPABASE_URL || "https://xwpzmtcjxfyncnltgnmc.supabase.co";
+  process.env.NEXT_PUBLIC_SUPABASE_URL ||
+  process.env.SUPABASE_URL ||
+  "https://xwpzmtcjxfyncnltgnmc.supabase.co";
 const BUCKET_NAME = "images";
 
 export function getRecipeImageUrl(
@@ -22,6 +24,10 @@ export function getStepImageUrl(
     return `${SUPABASE_URL}/storage/v1/render/image/public/${BUCKET_NAME}/steps/${stepId}.jpg${transforms}`;
   }
   return `${SUPABASE_URL}/storage/v1/object/public/${BUCKET_NAME}/steps/${stepId}.jpg`;
+}
+
+export function getIngredientImageUrl(slug: string): string {
+  return `${SUPABASE_URL}/storage/v1/object/public/${BUCKET_NAME}/ingredients/${slug}.png`;
 }
 
 function buildTransformParams(options: {

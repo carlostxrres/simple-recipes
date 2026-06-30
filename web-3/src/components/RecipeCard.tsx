@@ -1,7 +1,7 @@
 import { Badge } from "./ui/Badge"
 import FavoriteButton from "./FavoriteButton"
 import NotesButton from "./NotesButton"
-import { formatTime, getDifficultyLabel, getDifficultyColor } from "../lib/api"
+import { formatTime, getDifficultyLabel, getDifficultyColor } from "../lib/format"
 import { IconClock, IconFlame, IconChefHat } from "@tabler/icons-react"
 import type { Recipe } from "../lib/types"
 import Link from "next/link"
