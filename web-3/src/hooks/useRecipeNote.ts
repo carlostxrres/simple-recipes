@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { sileo } from "sileo"
 
 export function useRecipeNote(recipeId: string) {
   const key = `recipe-note-${recipeId}`
@@ -22,7 +23,12 @@ export function useRecipeNote(recipeId: string) {
       } else {
         localStorage.removeItem(key)
       }
-    } catch {}
+    } catch {
+      sileo.error({
+        title: "Error al guardar",
+        description: "No se pudo guardar la nota. Puede que el almacenamiento esté lleno.",
+      })
+    }
   }
 
   return { note, setNote, clearNote: () => setNote(""), hydrated }

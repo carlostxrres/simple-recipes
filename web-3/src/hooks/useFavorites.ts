@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect, useCallback } from "react"
+import { sileo } from "sileo"
 
 const STORAGE_KEY = "simple-eats-favs"
 
@@ -18,7 +19,10 @@ function writeStorage(slugs: Set<string>) {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify([...slugs]))
   } catch {
-    // storage full or unavailable
+    sileo.error({
+      title: "Error al guardar",
+      description: "No se pudo guardar el favorito. Puede que el almacenamiento esté lleno.",
+    })
   }
 }
 

@@ -6,6 +6,7 @@ import { IconHeartOff, IconArrowLeft } from "@tabler/icons-react"
 import { useFavorites } from "@/hooks/useFavorites"
 import RecipeCard from "@/components/RecipeCard"
 import type { Recipe } from "@/lib/types"
+import { sileo } from "sileo"
 
 async function fetchRecipeBySlug(slug: string): Promise<Recipe | null> {
   try {
@@ -40,8 +41,15 @@ export default function FavoritesContent() {
     }
     setLoading(true)
     Promise.all(slugs.map(fetchRecipeBySlug)).then((results) => {
-      setRecipes(results.filter((r): r is Recipe => r !== null))
+      const loaded = results.filter((r): r is Recipe => r !== null)
+      setRecipes(loaded)
       setLoading(false)
+      if (loaded.length < results.length) {
+        sileo.warning({
+          title: "Algunas recetas no pudieron cargarse",
+          description: "Puede ser un problema de conexión. Recarga para intentarlo de nuevo.",
+        })
+      }
     })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [hydrated, slugKey])

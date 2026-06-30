@@ -17,6 +17,7 @@ import CollapsibleSection from "@/components/CollapsibleSection"
 import { formatQuantity } from "@/lib/api"
 import { usePersistedSet } from "@/hooks/usePersistedSet"
 import type { RecipeIngredient, AllergenEntry } from "@/lib/types"
+import { sileo } from "sileo"
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
@@ -228,7 +229,10 @@ export function IngredientsSection({
       setCopied(true)
       setTimeout(() => setCopied(false), 2000)
     } catch {
-      // clipboard unavailable
+      sileo.warning({
+        title: "No se pudo copiar",
+        description: "Copia la lista de ingredientes manualmente.",
+      })
     }
   }, [regularIngredients, pantryIngredients, checkedIds, servings])
 

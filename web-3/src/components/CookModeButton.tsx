@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react"
 import { IconChefHat, IconZzz } from "@tabler/icons-react"
+import { sileo } from "sileo"
 
 export default function CookModeButton() {
   const [active, setActive] = useState(false)
@@ -39,8 +40,10 @@ export default function CookModeButton() {
         setActive(true)
         wakeLockRef.current.addEventListener("release", () => setActive(false))
       } catch {
-        // Permission denied or not supported
-        // to do: inform the user and set inactive again
+        sileo.warning({
+          title: "Modo cocina no disponible",
+          description: "No se pudo mantener la pantalla encendida. Puede que el permiso haya sido denegado.",
+        })
       }
     }
   }

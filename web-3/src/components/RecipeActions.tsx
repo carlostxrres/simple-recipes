@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { IconShare, IconPrinter, IconCheck } from "@tabler/icons-react"
+import { sileo } from "sileo"
 
 interface RecipeActionsProps {
   title: string
@@ -27,7 +28,10 @@ export default function RecipeActions({ title }: RecipeActionsProps) {
       setCopied(true)
       setTimeout(() => setCopied(false), 2000)
     } catch {
-      // clipboard API unavailable (e.g. non-https)
+      sileo.warning({
+        title: "No se pudo copiar",
+        description: "Copia el enlace manualmente desde la barra de direcciones.",
+      })
     }
   }
 

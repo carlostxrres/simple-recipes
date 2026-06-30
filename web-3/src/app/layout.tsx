@@ -4,6 +4,7 @@ import Footer from "./layout/Footer"
 import ThemeProvider from "../components/ThemeProvider"
 import ScrollToTop from "../components/ScrollToTop"
 import { Geist, Geist_Mono } from "next/font/google"
+import { Toaster } from "sileo"
 import "./globals.css"
 
 const geistSans = Geist({
@@ -39,6 +40,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <div id="main-content">{children}</div>
               <Footer />
               <ScrollToTop />
+              <Toaster position="bottom-right" />
             </div>
           </div>
         </ThemeProvider>
