@@ -233,6 +233,14 @@ input[type="number"] {
     -moz-appearance: textfield;
 }
 
+/* Markdown rendering in step instructions */
+.step-markdown p { margin: 0; }
+.step-markdown ul,
+.step-markdown ol { margin-left: 1.25rem; margin-top: 0.25rem; margin-bottom: 0.25rem; }
+.step-markdown ul { list-style-type: disc; }
+.step-markdown ol { list-style-type: decimal; }
+.step-markdown li + li { margin-top: 0.125rem; }
+
 /* Print styles */
 @media print {
   header,

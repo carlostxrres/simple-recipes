@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image"
+import ReactMarkdown from "react-markdown"
 import { IconListNumbers, IconCheck, IconBulb } from "@tabler/icons-react"
 import CollapsibleSection from "@/components/CollapsibleSection"
 import { usePersistedSet } from "@/hooks/usePersistedSet"
@@ -101,13 +102,13 @@ export function StepsSection({ recipeId, steps }: StepsSectionProps) {
                   </div>
                 )}
 
-                <p
-                  className={`leading-relaxed transition-colors ${
+                <div
+                  className={`step-markdown leading-relaxed transition-colors ${
                     isChecked ? "text-slate-400" : "text-text-primary"
                   }`}
                 >
-                  {step.instructions}
-                </p>
+                  <ReactMarkdown>{step.instructions}</ReactMarkdown>
+                </div>
                 {step.tip && (
                   <aside className="flex gap-2 rounded-lg bg-amber-50 px-3 py-2 text-sm text-amber-800 dark:bg-amber-900/20 dark:text-amber-300">
                     <IconBulb className="mt-0.5 h-4 w-4 shrink-0" />
