@@ -67,101 +67,89 @@ export async function getRecipes(
   const limit = Math.min(50, Math.max(1, filters.limit ?? 10));
   const offset = (page - 1) * limit;
 
-  const cuisineSlug = filters.cuisine;
   const tagSlugs = Array.isArray(filters.tag)
     ? filters.tag
     : filters.tag
     ? [filters.tag]
     : [];
-  const searchText = filters.search;
-  const maxTime = filters.maxTime ?? null;
   const includeIngredients = filters.includeIngredients ?? [];
   const excludeAllergens = filters.excludeAllergens ?? [];
 
-  let countQuery = "SELECT COUNT(*) FROM recipes r WHERE r.is_active = true";
-  let dataQuery = "SELECT r.* FROM recipes r WHERE r.is_active = true";
-  const params: unknown[] = [];
+  let where = "WHERE r.is_active = true";
+  const whereParams: unknown[] = [];
   let i = 1;
 
-  if (searchText) {
-    const filter = ` AND (r.name ILIKE $${i} OR r.headline ILIKE $${i})`;
-    countQuery += filter;
-    dataQuery += filter;
-    params.push(`%${searchText}%`);
+  if (filters.search) {
+    where += ` AND (r.name ILIKE $${i} OR r.headline ILIKE $${i})`;
+    whereParams.push(`%${filters.search}%`);
     i++;
   }
 
-  if (cuisineSlug) {
-    const filter = ` AND EXISTS (
+  if (filters.cuisine) {
+    where += ` AND EXISTS (
       SELECT 1 FROM recipe_cuisines rc
       JOIN cuisines c ON rc.cuisine_id = c.id
       WHERE rc.recipe_id = r.id AND c.slug = $${i}
     )`;
-    countQuery += filter;
-    dataQuery += filter;
-    params.push(cuisineSlug);
+    whereParams.push(filters.cuisine);
     i++;
   }
 
   for (const tagSlug of tagSlugs) {
-    const filter = ` AND EXISTS (
+    where += ` AND EXISTS (
       SELECT 1 FROM recipe_tags rt
       JOIN tags t ON rt.tag_id = t.id
       WHERE rt.recipe_id = r.id AND t.slug = $${i}
     )`;
-    countQuery += filter;
-    dataQuery += filter;
-    params.push(tagSlug);
+    whereParams.push(tagSlug);
     i++;
   }
 
-  if (maxTime !== null && maxTime > 0) {
-    const filter = ` AND r.time_minutes <= $${i}`;
-    countQuery += filter;
-    dataQuery += filter;
-    params.push(maxTime);
+  if (filters.maxTime && filters.maxTime > 0) {
+    where += ` AND r.time_minutes <= $${i}`;
+    whereParams.push(filters.maxTime);
     i++;
   }
 
   for (const ingredientSlug of includeIngredients) {
-    const filter = ` AND EXISTS (
+    where += ` AND EXISTS (
       SELECT 1 FROM recipe_ingredients ri
       JOIN ingredients ing ON ri.ingredient_id = ing.id
       WHERE ri.recipe_id = r.id AND ing.slug = $${i}
     )`;
-    countQuery += filter;
-    dataQuery += filter;
-    params.push(ingredientSlug);
+    whereParams.push(ingredientSlug);
     i++;
   }
 
   if (excludeAllergens.length > 0) {
-    const filter = ` AND NOT EXISTS (
+    where += ` AND NOT EXISTS (
       SELECT 1 FROM recipe_ingredients ri
       JOIN ingredient_allergens ia ON ri.ingredient_id = ia.ingredient_id
       JOIN allergens a ON ia.allergen_id = a.id
       WHERE ri.recipe_id = r.id AND a.slug = ANY($${i})
     )`;
-    countQuery += filter;
-    dataQuery += filter;
-    params.push(excludeAllergens);
+    whereParams.push(excludeAllergens);
     i++;
   }
 
-  const filterParams = [...params];
-
+  const dataParams = [...whereParams];
+  let orderClause: string;
   if (filters.seed) {
-    dataQuery += ` ORDER BY md5(r.id || $${i})`;
-    params.push(filters.seed);
+    orderClause = ` ORDER BY md5(r.id || $${i})`;
+    dataParams.push(filters.seed);
     i++;
   } else {
-    dataQuery += ` ORDER BY md5(r.id || CURRENT_DATE::text)`;
+    orderClause = ` ORDER BY md5(r.id || CURRENT_DATE::text)`;
   }
-  dataQuery += ` LIMIT $${i} OFFSET $${i + 1}`;
-  params.push(limit, offset);
+  dataParams.push(limit, offset);
 
-  const [countResult] = await query<{ count: string }>(countQuery, filterParams);
-  const recipes = await query<RecipeRow>(dataQuery, params);
+  const countSQL = `SELECT COUNT(*) FROM recipes r ${where}`;
+  const dataSQL = `SELECT r.* FROM recipes r ${where}${orderClause} LIMIT $${i} OFFSET $${i + 1}`;
+
+  const [[countResult], recipes] = await Promise.all([
+    query<{ count: string }>(countSQL, whereParams),
+    query<RecipeRow>(dataSQL, dataParams),
+  ]);
 
   const total = parseInt(countResult.count);
   return {
@@ -174,15 +162,7 @@ export async function getRecipes(
   };
 }
 
-export async function getRecipeBySlug(
-  slug: string
-): Promise<SingleResponse<RecipeDetail>> {
-  const recipe = await queryOne<RecipeRow>(
-    "SELECT * FROM recipes WHERE slug = $1",
-    [slug]
-  );
-  if (!recipe) throw new Error("Recipe not found");
-
+async function buildRecipeDetail(recipe: RecipeRow): Promise<RecipeDetail> {
   const [steps, ingredientsRaw, tags, cuisines, utensils] = await Promise.all([
     query<StepRow>("SELECT * FROM steps WHERE recipe_id = $1 ORDER BY step_order", [recipe.id]),
     query<IngredientRow>(
@@ -195,20 +175,38 @@ export async function getRecipeBySlug(
     query<Cuisine>(`SELECT c.* FROM cuisines c JOIN recipe_cuisines rc ON c.id = rc.cuisine_id WHERE rc.recipe_id = $1`, [recipe.id]),
     query<Utensil>(`SELECT u.* FROM utensils u JOIN recipe_utensils ru ON u.id = ru.utensil_id WHERE ru.recipe_id = $1`, [recipe.id]),
   ]);
-
   const ingredients = await attachAllergens(ingredientsRaw);
   return {
-    success: true,
-    data: {
-      ...recipe,
-      image_url: recipe.has_image ? getRecipeImageUrl(recipe.slug) : null,
-      steps: steps.map((s) => ({ ...s, image_url: s.has_image ? getStepImageUrl(s.id) : null })),
-      ingredients,
-      tags,
-      cuisines,
-      utensils,
-    },
+    ...recipe,
+    image_url: recipe.has_image ? getRecipeImageUrl(recipe.slug) : null,
+    steps: steps.map((s) => ({ ...s, image_url: s.has_image ? getStepImageUrl(s.id) : null })),
+    ingredients,
+    tags,
+    cuisines,
+    utensils,
   };
+}
+
+export async function getRecipeBySlug(
+  slug: string
+): Promise<SingleResponse<RecipeDetail>> {
+  const recipe = await queryOne<RecipeRow>(
+    "SELECT * FROM recipes WHERE slug = $1",
+    [slug]
+  );
+  if (!recipe) throw new Error("Recipe not found");
+  return { success: true, data: await buildRecipeDetail(recipe) };
+}
+
+export async function getRecipeById(
+  id: string
+): Promise<SingleResponse<RecipeDetail>> {
+  const recipe = await queryOne<RecipeRow>(
+    "SELECT * FROM recipes WHERE id = $1",
+    [id]
+  );
+  if (!recipe) throw new Error("Recipe not found");
+  return { success: true, data: await buildRecipeDetail(recipe) };
 }
 
 export async function getTags(): Promise<{ success: boolean; data: Tag[] }> {
@@ -226,9 +224,15 @@ export async function getAllergens(): Promise<{ success: boolean; data: Allergen
   return { success: true, data };
 }
 
-export async function getIngredients(): Promise<{ success: boolean; data: Ingredient[] }> {
+export async function getIngredients(
+  pantry?: boolean
+): Promise<{ success: boolean; data: Ingredient[] }> {
+  const whereClause =
+    pantry === true ? "WHERE is_pantry_ingredient = true" :
+    pantry === false ? "WHERE is_pantry_ingredient = false" :
+    "";
   const data = await query<Ingredient>(
-    "SELECT id, slug, name, is_pantry_ingredient FROM ingredients ORDER BY name"
+    `SELECT id, slug, name, is_pantry_ingredient FROM ingredients ${whereClause} ORDER BY name`
   );
   return { success: true, data };
 }
